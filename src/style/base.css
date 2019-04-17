@@ -1,0 +1,284 @@
+@charset "UTF-8";
+
+#loadingToast .weui-mask_transparent {
+  z-index: 8210;
+}
+
+#loadingToast .weui-toast {
+  margin: 0;
+  top: 6rem;
+  transform: translateX(-50%);
+  width: 2.66667rem;
+  height: 2.66667rem;
+}
+
+#loadingToast .weui-toast .weui-icon_toast {
+  margin: 0.86667rem 0 0;
+  width: 0.93333rem;
+  height: 0.93333rem;
+}
+
+#loadingToast .weui-toast .weui-icon-success-no-circle {
+  margin: 0.4rem auto 0;
+  display: block;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+#loadingToast .weui-toast .weui-toast__content {
+  color: #ffffff;
+  font-size: 0.32rem;
+  margin: 0.2rem 0 0;
+}
+
+* {
+  /* 防止点击闪烁 */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  /*webkit浏览器*/
+  user-select: none;
+  /* 缩放网页，文字大小不变 */
+  -webkit-text-size-adjust: none;
+}
+
+* textarea, * input {
+  -webkit-user-select: auto;
+  /*webkit浏览器*/
+  user-select: none;
+}
+
+*, :before, :after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="search"],
+input[type="reset"] {
+  -webkit-appearance: none;
+}
+
+html {
+  background: #f2f2f2;
+}
+
+body {
+  font-family: PingFangSC-Regular, Helvetica Neue, Helvetica, Arial, sans-serif;
+  width: 100%;
+  min-height: 100%;
+}
+
+body, ul, li {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+H1, h2, h3, h4 {
+  font-weight: normal;
+}
+
+input {
+  border: none;
+}
+
+img {
+  pointer-events: none;
+}
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn-bottom-fix {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #1aad19;
+  font-size: 0.36rem;
+  width: 100%;
+  height: 1.33333rem;
+  color: #fff;
+  line-height: 1.33333rem;
+  text-align: center;
+}
+
+.swiper-container:after {
+  padding: 0;
+}
+
+.dimmer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 800;
+}
+
+.dimmer.active {
+  opacity: 1;
+  display: block;
+}
+
+.dimmer .bind {
+  width: 6.13333rem;
+  height: 4.26667rem;
+  border-radius: 0.13333rem;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dimmer .bind .detail {
+  height: 2.8rem;
+  background: -webkit-linear-gradient(left, #ff8c1a, #ff6d00);
+  /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, #ff8c1a, #ff6d00);
+  /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #ff8c1a, #ff6d00);
+  /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #ff8c1a, #ff6d00);
+  /* 标准的语法（必须放在最后*/
+  border-radius: 0.13333rem 0.13333rem 0 0;
+}
+
+.dimmer .bind .detail .title {
+  text-align: center;
+  height: 1.33333rem;
+  line-height: 1.33333rem;
+  font-size: 0.37333rem;
+  color: #fff;
+}
+
+.dimmer .bind .detail .code {
+  text-align: center;
+}
+
+.dimmer .bind .detail .code span {
+  font-size: 0.37333rem;
+  color: #fff;
+  margin-right: 0.13333rem;
+}
+
+.dimmer .bind .detail .code input {
+  width: 3.66667rem;
+  height: 0.53333rem;
+  padding: 0.10667rem;
+  border-radius: 0.06667rem;
+  font-size: 0.32rem;
+  color: #000;
+}
+
+.dimmer .bind .submit {
+  height: 1.46667rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dimmer .bind .submit span {
+  border: 1px solid #ff6d00;
+  color: #ff6d00;
+  width: 2.66667rem;
+  height: 0.66667rem;
+  line-height: 0.66667rem;
+  border-radius: 0.33333rem;
+}
+
+.dimmer .bind .high-close {
+  position: absolute;
+  top: -0.98667rem;
+  right: 0.2rem;
+  width: 0.48rem;
+  height: 0.98667rem;
+}
+
+.dimmer .invite {
+  width: 6.13333rem;
+  height: 6.66667rem;
+}
+
+.dimmer .invite .code-qr {
+  width: 6.13333rem;
+  height: 5.2rem;
+}
+
+.dimmer .invite .code-qr .qr-code {
+  width: 3.06667rem;
+  height: 3.06667rem;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.dimmer .invite .code-qr .qr-code img {
+  width: 2.8rem;
+  height: 2.8rem;
+  margin: 0.13333rem;
+}
+
+.dimmer .invite .tips span {
+  border: 0;
+  width: 100%;
+}
+
+.dimmer .qrcode {
+  width: 8.24rem;
+  height: 8.74667rem;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dimmer .qrcode .pic {
+  width: 8.24rem;
+  height: 6.88rem;
+}
+
+.dimmer .qrcode .cancel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0.48rem;
+  height: 0.48rem;
+}
+
+.dimmer .qrcode .scan {
+  margin: 0.93333rem auto 0;
+  background: -webkit-linear-gradient(left, #ff6d00, #ff8c1a);
+  /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, #ff6d00, #ff8c1a);
+  /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #ff6d00, #ff8c1a);
+  /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #ff6d00, #ff8c1a);
+  /* 标准的语法（必须放在最后*/
+  width: 3.06667rem;
+  height: 0.93333rem;
+  border-radius: 0.46667rem;
+  line-height: 0.93333rem;
+  font-size: 0.37333rem;
+  color: #fff;
+  text-align: center;
+}
+
+.dimmer .qrcode .table-code {
+  margin-top: 0.26667rem;
+  font-size: 0.37333rem;
+  color: #ff6d00;
+  text-align: center;
+}
+.ql-container {
+  min-height: 40vh;
+}

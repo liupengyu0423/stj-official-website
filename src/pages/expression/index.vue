@@ -1,0 +1,239 @@
+<template>
+  <div class="expression">
+    <CommonHead />
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <h4>专注产品研发近20年， <br />在全国10多个省区累计使用超过100万套<br /> 全国80%的市场占有率
+          </h4>
+        </div>
+      </div>
+    </div>
+    <ul class="nav nav-tabs nav-justified">
+      <li role="presentation"
+          :class="index===click?'active nav-tabs-hover':'nav-tabs-hover'"
+          v-for="(item,index) in items"
+          :key="index">
+        <a class="changeActiveA"
+           @click="changeActive(index)">{{item.name}}
+          <span :class="click===0?'line1':'line2'"
+                v-if="click===index"></span>
+        </a>
+      </li>
+    </ul>
+    <div class="row examples">
+      <div class="col-sm-6 col-md-4 col-xs-6 col-lg-4"
+           v-for="(item,index) in click===0?examples1:examples2"
+           :key="index">
+        <div class="thumbnail"
+             @click="showimage(item.img)"
+             :style="'background:url('+item.img+') no-repeat center center;background-size:cover;'">
+          <div class="caption">
+            <h5>{{item.text}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="ShowImage_Form"
+         class="modal">
+      <div class="modal-header">
+        <button data-dismiss="modal"
+                class="close"
+                type="button"></button>
+      </div>
+      <div class="modal-body"
+           @click="close">
+        <div id="img_show"
+             @click="close">
+        </div>
+      </div>
+    </div>
+    <CommonFoot />
+  </div>
+</template>
+
+<script>
+import CommonHead from '@/components/head'
+import CommonFoot from '@/components/foot'
+export default {
+  name: 'expression',
+  components: {
+    CommonHead,
+    CommonFoot
+  },
+  data () {
+    return {
+      items: [{ name: '农村户厕污水一体化生物处理设备', href: 'unify' }, { name: '生物环保厕所', href: 'wrashroom' }],
+      click: 0,
+      examples1: [
+        { text: '农村户厕一体化生物处理设备(单户）', img: require('../../images/l2/l1.jpg') },
+        { text: '农村户厕一体化生物处理设备（单户）', img: require('../../images/l2/l2.jpg') },
+        { text: '农村户厕一体化生物处理设备（单户）', img: require('../../images/l2/l3.png') },
+        { text: '农村户厕一体化生物处理设备（多户）', img: require('../../images/l2/l4.png') },
+        { text: '农村户厕一体化生物处理设备（小集中）', img: require('../../images/l2/l5.jpg') },
+        { text: '农村户厕一体化生物处理设备（村集中）', img: require('../../images/l2/l6.jpg') }
+      ],
+      examples2: [
+        { text: '街头站立式环保厕所', img: require('../../images/c2/c1.jpg') },
+        { text: '街头站立式环保厕所', img: require('../../images/c2/c2.jpg') },
+        { text: '微生物降解环保厕所', img: require('../../images/c2/c3.jpg') },
+        { text: '微生物降解环保厕所', img: require('../../images/c2/c4.jpg') },
+        { text: '泡沫封堵式环保厕所', img: require('../../images/c2/c5.jpg') },
+        { text: '水循环式环保厕所', img: require('../../images/c2/c6.jpg') },
+        { text: '水冲式环保厕所', img: require('../../images/c2/c7.jpg') },
+        { text: '流动环保厕所', img: require('../../images/c2/c8.jpg') },
+        { text: '单体环保厕所', img: require('../../images/c2/c9.jpg') },
+        { text: '单体环保厕所', img: require('../../images/c2/c10.jpg') },
+        { text: '广场舞用环保厕所', img: require('../../images/c2/c11.jpg') },
+        { text: '旅游景点环保厕所', img: require('../../images/c2/c12.jpg') },
+        { text: '拖车式环保厕所', img: require('../../images/c2/c13.jpg') },
+        { text: '固定式环保厕所', img: require('../../images/c2/c14.jpg') },
+        { text: '火车用环保厕所', img: require('../../images/c2/c15.jpg') }
+      ]
+    }
+  },
+  methods: {
+    changeActive (index) {
+      this.click = index
+    },
+    showimage (source) {
+      $("#ShowImage_Form").find("#img_show").html("<img src='" + source + "' class='carousel-inner img-responsive img-rounded' />");
+      $("#ShowImage_Form").modal();
+    },
+    close () {
+      $("#ShowImage_Form").modal('hide');
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+.expression {
+  .line1,
+  .line2 {
+    display: inline-block;
+    width: 100px;
+    height: 2px;
+    background: #40f2d0;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -50px;
+  }
+  .changeActiveA {
+    position: relative;
+    width: 100%;
+    display: inline-block !important;
+  }
+  .navbar {
+    margin-bottom: 0;
+  }
+  .container {
+    margin: 0;
+    width: 100%;
+    padding: 8% 5%;
+    background: #f8faf9;
+    h4 {
+      line-height: 30px;
+      color: #1aa8aa;
+      font-family: PingFangSC-Regular;
+      font-size: 40px;
+      line-height: 54px;
+    }
+  }
+  .row {
+    margin-right: 0;
+  }
+  .nav-tabs-hover {
+    padding: 1.5vw;
+    text-align: center;
+  }
+  .nav-tabs-hover.active {
+    color: #1aa8aa;
+  }
+  .nav-tabs-hover a {
+    color: #303030 !important;
+    display: inline;
+    font-size: 16px;
+  }
+  .nav-tabs-hover.active a {
+    color: #1aa8aa !important;
+  }
+  .nav-tabs > li > a {
+    border: none;
+  }
+  .nav-tabs.nav-justified > li > a {
+    border-bottom: none;
+    padding: 1.5vw;
+  }
+  .nav-tabs.nav-justified {
+    // border-bottom: 1px solid #f3f3f3;
+  }
+  .nav-tabs.nav-justified > li > a {
+    border-bottom: none;
+  }
+  .nav-tabs.nav-justified > .active > a,
+  .nav-tabs.nav-justified > .active > a:focus,
+  .nav-tabs.nav-justified > .active > a:hover {
+    border: none;
+    color: #525b68;
+  }
+  .nav > .active > a,
+  .nav > li > a:focus,
+  .nav > li > a:hover {
+    background: #fff;
+    color: #1aa8aa !important;
+    border-bottom: 1px solid #1aa8aa;
+  }
+  .nav-tabs > li > a:hover {
+    border-color: #fff;
+  }
+  .row.examples {
+    width: 80vw;
+    padding: 60px 0 11% !important;
+    margin: 0 auto;
+    .col-sm-4,
+    .col-lg-4,
+    .col-md-4,
+    .col-xs-4 {
+      margin: 2vw 0;
+      // margin-left: 0.5vw;
+    }
+    .bottom_intro2 {
+      padding: 0;
+      padding-left: 6vw;
+    }
+    h4 {
+      text-align: center;
+      margin-bottom: 2vw;
+    }
+    .thumbnail {
+      height: 25vh;
+      position: relative;
+      border: none;
+      padding: 0;
+      background-size: auto 100%;
+      background-position: center;
+      .caption {
+        position: absolute;
+        bottom: 0;
+        background: #1aa8aa;
+        width: 100%;
+        opacity: 0.8;
+        padding: 10px 16px;
+        h5 {
+          color: #fff;
+          font-family: PingFangSC-Regular;
+          font-size: 20px;
+          width: 100% !important;
+        }
+      }
+    }
+    @media screen and (max-width: 550px) {
+      .thumbnail {
+        height: 16vh;
+      }
+    }
+  }
+}
+</style>
