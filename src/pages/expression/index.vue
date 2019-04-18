@@ -1,7 +1,7 @@
 <template>
   <div class="expression">
     <CommonHead />
-    <div class="container">
+    <div class="container container_banner">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <h4>专注产品研发近20年， <br />在全国10多个省区累计使用超过100万套<br /> 全国80%的市场占有率
@@ -56,6 +56,19 @@
 import CommonHead from '@/components/head'
 import CommonFoot from '@/components/foot'
 export default {
+  metaInfo: {
+    title: '生态洁环保科技股份有限公司',
+    meta: [
+      {
+        name: 'keywords',
+        content: '生态洁环保科技股份有限公司'
+      },
+      {
+        name: 'description',
+        content: '生态洁环保科技股份有限公司'
+      }
+    ]
+  },
   name: 'expression',
   components: {
     CommonHead,
@@ -109,6 +122,10 @@ export default {
 
 <style lang="scss" scoped>
 .expression {
+  .container_banner {
+    background: url('../../images/expre_banner.png') no-repeat center center;
+    background-size: cover;
+  }
   .line1,
   .line2 {
     display: inline-block;
@@ -132,10 +149,10 @@ export default {
     margin: 0;
     width: 100%;
     padding: 8% 5%;
-    background: #f8faf9;
+    // background: #f8faf9;
     h4 {
       line-height: 30px;
-      color: #1aa8aa;
+      color: #fff;
       font-family: PingFangSC-Regular;
       font-size: 40px;
       line-height: 54px;
@@ -144,8 +161,15 @@ export default {
   .row {
     margin-right: 0;
   }
+  .nav-tabs.nav-justified {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #fff;
+  }
   .nav-tabs-hover {
-    padding: 1.5vw;
+    padding: 29px 0;
     text-align: center;
   }
   .nav-tabs-hover.active {
@@ -164,7 +188,7 @@ export default {
   }
   .nav-tabs.nav-justified > li > a {
     border-bottom: none;
-    padding: 1.5vw;
+    padding: 0 15px 29px;
   }
   .nav-tabs.nav-justified {
     // border-bottom: 1px solid #f3f3f3;
@@ -189,14 +213,18 @@ export default {
     border-color: #fff;
   }
   .row.examples {
-    width: 80vw;
-    padding: 60px 0 11% !important;
+    // width: 80vw;
+    padding: 60px 0 11%;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     .col-sm-4,
     .col-lg-4,
     .col-md-4,
     .col-xs-4 {
-      margin: 2vw 0;
+      margin: 27px 8px;
       // margin-left: 0.5vw;
     }
     .bottom_intro2 {
@@ -208,7 +236,7 @@ export default {
       margin-bottom: 2vw;
     }
     .thumbnail {
-      height: 25vh;
+      height: 100%;
       position: relative;
       border: none;
       padding: 0;
@@ -224,9 +252,29 @@ export default {
         h5 {
           color: #fff;
           font-family: PingFangSC-Regular;
-          font-size: 20px;
+          font-size: 14px;
           width: 100% !important;
         }
+      }
+    }
+    > div {
+      width: 432px;
+      height: 274px;
+    }
+    @media (min-width: 1440px) {
+      > div {
+        width: 432px; /* no */
+        height: 274px; /* no */
+      }
+      .thumbnail {
+        width: 100%; /* no */
+        height: 100%; /* no */
+      }
+      .col-sm-4,
+      .col-lg-4,
+      .col-md-4,
+      .col-xs-4 {
+        margin: 27px 8px; /* no */
       }
     }
     @media screen and (max-width: 550px) {
@@ -234,6 +282,11 @@ export default {
         height: 16vh;
       }
     }
+  }
+}
+@media (min-width: 1440px) {
+  .row.examples {
+    padding: 60px 60px 11% !important; /* no */
   }
 }
 </style>

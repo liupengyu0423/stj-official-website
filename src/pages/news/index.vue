@@ -1,7 +1,7 @@
 <template>
   <div class="news">
     <CommonHead />
-    <div class="container">
+    <div class="container container_banner">
       <div class="row">
         <div class="col-lg-3 col-md-4 col-sm-8 col-xs-12">
           <h4>新闻中心
@@ -21,8 +21,7 @@
             <p class="title">{{item.title}}</p>
             <p class="date">{{item.date}}</p>
             <p class="detail">{{item.detail}}</p>
-            <a
-               class="learn_detail"
+            <a class="learn_detail"
                @click="learn_detail(item)">了解详情</a>
           </div>
         </div>
@@ -75,6 +74,19 @@
 import CommonHead from '@/components/head'
 import CommonFoot from '@/components/foot'
 export default {
+  metaInfo: {
+    title: '生态洁环保科技股份有限公司',
+    meta: [
+      {
+        name: 'keywords',
+        content: '生态洁环保科技股份有限公司'
+      },
+      {
+        name: 'description',
+        content: '生态洁环保科技股份有限公司'
+      }
+    ]
+  },
   name: 'news',
   data () {
     return {
@@ -131,6 +143,10 @@ export default {
 
 <style lang="scss" scoped>
 .news {
+  .container_banner {
+    background: url('../../images/news_banner.png') no-repeat center center;
+    background-size: cover;
+  }
   .col-sm {
     border-bottom: 1px solid #ebebeb;
     padding-top: 4.6vw;
@@ -153,6 +169,10 @@ export default {
   }
   .row.examples {
     padding: 2% 2%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     h4 {
       font-size: 40px;
       text-align: center;
@@ -166,7 +186,7 @@ export default {
     .thumbnail > img {
       margin: 0;
       width: 100%;
-      height: 24vw;
+      height: 18vw;
     }
     .caption {
       padding: 0;
@@ -192,7 +212,9 @@ export default {
         font-family: PingFangSC-Light;
         margin: 0 0 16px;
         display: -webkit-box;
+        /* ! autoprefixer: off */
         -webkit-box-orient: vertical;
+        /* autoprefixer: on */
         -webkit-line-clamp: 2;
         overflow: hidden;
       }
@@ -201,6 +223,28 @@ export default {
         color: #7a7e7c;
         font-family: PingFangSC-Light;
       }
+    }
+    @media (min-width: 1440px) {
+      .col-sm-4,
+      .col-lg-4,
+      .col-md-4,
+      .col-xs-4 {
+        width: 460px; /* no */
+        padding: 46px 47.5px; /* no */
+      }
+      .thumbnail {
+        margin-bottom: 0; /* no */
+      }
+      .thumbnail > img {
+        margin: 0; /* no */
+        width: 380px; /* no */
+        height: 246px; /* no */
+      }
+    }
+  }
+  @media (min-width: 1440px) {
+    .row.examples {
+      padding: 0 50px; /* no */
     }
   }
   .navbar {
@@ -213,7 +257,7 @@ export default {
     margin: 0;
     width: 100%;
     padding: 146px 0 146px 56px;
-    background: #1aa8aa;
+    // background: #1aa8aa;
     h4 {
       line-height: 54px;
       color: #f8faf9;

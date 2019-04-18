@@ -4,28 +4,28 @@
     <Swiper />
     <div class="environment">
       <div class="row">
-        <div class="col-sm-0 col-sm-4 col-md-4 col-lg-4 col-xs-12">
+        <div class="col-sm-0 col-sm-4 col-md-4 col-lg-4 col-xs-12 thumbnail-envir">
           <div class="thumbnail">
-            <img src="../../images/envir.png"
-                 alt="">
+            <!-- <img src="../../images/envir.png"
+                 alt=""> -->
             <div class="caption">
               <p class="list-group-item-p">人居环境建设</p>
             </div>
           </div>
         </div>
-        <div class="col-sm-0 col-sm-4 col-md-4 col-lg-4 col-xs-12">
+        <div class="col-sm-0 col-sm-4 col-md-4 col-lg-4 col-xs-12 thumbnail-innocuity">
           <div class="thumbnail">
-            <img src="../../images/innocuity.png"
-                 alt="">
+            <!-- <img src="../../images/innocuity.png"
+                 alt=""> -->
             <div class="caption">
               <p class="list-group-item-p">无害化</p>
             </div>
           </div>
         </div>
-        <div class="col-sm-0 col-sm-4 col-md-4 col-lg-4 col-xs-12">
+        <div class="col-sm-0 col-sm-4 col-md-4 col-lg-4 col-xs-12 thumbnail-integration">
           <div class="thumbnail">
-            <img src="../../images/integration.png"
-                 alt="">
+            <!-- <img src="../../images/integration.png"
+                 alt=""> -->
             <div class="caption">
               <p class="list-group-item-p">厕所洗浴厨房一体化</p>
             </div>
@@ -159,6 +159,19 @@ import CommonHead from '@/components/head'
 import CommonFoot from '@/components/foot'
 import Swiper from '@/components/swiper'
 export default {
+  metaInfo: {
+    title: '生态洁环保科技股份有限公司',
+    meta: [
+      {
+        name: 'keywords',
+        content: '生态洁环保科技股份有限公司'
+      },
+      {
+        name: 'description',
+        content: '生态洁环保科技股份有限公司'
+      }
+    ]
+  },
   name: 'home',
   data () {
     return {
@@ -208,6 +221,24 @@ export default {
 .environment .row {
   display: flex;
   padding: 0;
+  .thumbnail-envir {
+    background: url('../../images/envir.png') no-repeat center center;
+    background-size: cover;
+    min-width: 480px;
+    height: 160px;
+  }
+  .thumbnail-innocuity {
+    background: url('../../images/innocuity.png') no-repeat center center;
+    background-size: cover;
+    min-width: 480px;
+    height: 160px;
+  }
+  .thumbnail-integration {
+    background: url('../../images/integration.png') no-repeat center center;
+    background-size: cover;
+    min-width: 480px;
+    height: 160px;
+  }
   img {
     width: 100%;
   }
@@ -306,8 +337,8 @@ export default {
 .list-group-item-p {
   color: #fff;
   position: absolute;
-  top: 48px;
-  font-size: 32px;
+  top: 52px;
+  font-size: 28px;
   width: 100%;
   text-align: center;
   font-family: PingFangSC-Regular;
@@ -338,7 +369,7 @@ export default {
   box-sizing: border-box;
   h4 {
     color: #fff;
-    font-size: 56px;
+    font-size: 46px;
   }
   .tix {
     font-size: 24px !important;
@@ -355,7 +386,7 @@ export default {
 }
 .col-sm-13 {
   h2 {
-    font-size: 38px;
+    font-size: 30px;
     color: #1aa8aa;
     padding-top: 120px;
     margin-bottom: 35.5px;
@@ -408,8 +439,8 @@ export default {
   .thumbnail {
     display: flex;
     img {
-      width: 50%;
-      height: 20vh;
+      width: 300px;
+      height: 190px;
       margin-right: 2%;
       display: inline-block;
     }
@@ -419,25 +450,54 @@ export default {
     }
     .detail {
       font-size: 14px;
-      height: 80%;
+      // height: 42px;
       overflow: hidden;
       color: #303030;
       display: -webkit-box;
+      /* ! autoprefixer: off */
       -webkit-box-orient: vertical;
-      -webkit-line-clamp: 3;
+      /* autoprefixer: on */
+      -webkit-line-clamp: 2;
       overflow: hidden;
     }
     .title {
+      width: 235px;
+      height: 52px;
       font-size: 18px;
       color: #303030;
       margin-top: 0.5vw;
-      width: 20vw;
+      display: -webkit-box;
+      /* ! autoprefixer: off */
+      -webkit-box-orient: vertical;
+      /* autoprefixer: on */
+      -webkit-line-clamp: 2;
       overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+    }
+    @media (min-width: 1440px) {
+      img {
+        width: 300px; /* no */
+        height: 190px; /* no */
+      }
+      .title {
+        height: 52px; /* no */
+        width: 235px;
+        /* no */
+      }
+      .detail {
+        width: 248px;
+        /* no */
+        height: 42px;
+        /* no */
+        line-height: 22px;
+        /* no */
+      }
     }
   }
   .examples {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     > div {
       margin-bottom: 37px;
       padding-left: 96px;
@@ -448,6 +508,15 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+      }
+    }
+    @media (min-width: 1440px) {
+      > div {
+        box-sizing: border-box;
+        width: 648px; /* no */
+        margin-bottom: 37px; /* no */
+        padding-left: 96px; /* no */
+        padding-bottom: 33px; /* no */
       }
     }
     .title {
@@ -508,7 +577,7 @@ export default {
     h5 {
       color: #303030;
       font-family: PingFangSC-Regular;
-      font-size: 18px;
+      font-size: 14px;
     }
   }
   .more {

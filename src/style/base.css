@@ -85,9 +85,9 @@ input {
   border: none;
 }
 
-img {
+/* img {
   pointer-events: none;
-}
+} */
 
 a:link, a:visited, a:hover, a:active {
   text-decoration: none;

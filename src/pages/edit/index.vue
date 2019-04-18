@@ -2,9 +2,11 @@
   <div class="about">
     <CommonHead />
     <div class="news-edit">
-      <mavon-editor v-model="content"/>
+      <mavon-editor v-model="content" />
       <div>
-        <button type="button" class="btn btn-primary" @click="submit">提交</button>
+        <button type="button"
+                class="btn btn-primary"
+                @click="submit">提交</button>
       </div>
     </div>
     <CommonFoot />
@@ -15,6 +17,19 @@
 import CommonHead from '@/components/head'
 import CommonFoot from '@/components/foot'
 export default {
+  metaInfo: {
+    title: '生态洁环保科技股份有限公司',
+    meta: [
+      {
+        name: 'keywords',
+        content: '生态洁环保科技股份有限公司'
+      },
+      {
+        name: 'description',
+        content: '生态洁环保科技股份有限公司'
+      }
+    ]
+  },
   name: 'about',
   data () {
     return {
@@ -46,10 +61,10 @@ export default {
   margin: 40px auto 0;
   min-height: 65vh;
   .quill-editor {
-    min-height: 40vh!important;
+    min-height: 40vh !important;
   }
 }
 .btn {
-  margin: 10px 0; 
+  margin: 10px 0;
 }
 </style>

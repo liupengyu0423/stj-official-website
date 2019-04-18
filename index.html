@@ -16,5 +16,12 @@
   <div id="app"></div>
   <!-- built files will be auto injected -->
 </body>
+<script>
+  $(window).resize(function () {          //当浏览器大小变化时
+    if ($(window).width() >= 1440) {
+      $('html').css('fontSize', '139.4px')
+    }
+  });
+</script>
 
 </html>

@@ -1,7 +1,7 @@
 <template>
   <div class="news">
     <CommonHead />
-    <div class="container">
+    <div class="container container_banner">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <h4>生态洁产品受到国家领导关注<br>被中央电视台报道
@@ -21,8 +21,7 @@
             <p class="title">{{item.title}}</p>
             <p class="date">{{item.date}}</p>
             <!-- <p class="detail">{{item.detail}}</p> -->
-            <a
-               class="learn_detail"
+            <a class="learn_detail"
                @click="learn_detail(item)">了解详情</a>
           </div>
         </div>
@@ -71,6 +70,19 @@ import CommonHead from '@/components/head'
 import CommonFoot from '@/components/foot'
 import 'lib-flexible'
 export default {
+  metaInfo: {
+    title: '生态洁环保科技股份有限公司',
+    meta: [
+      {
+        name: 'keywords',
+        content: '生态洁环保科技股份有限公司'
+      },
+      {
+        name: 'description',
+        content: '生态洁环保科技股份有限公司'
+      }
+    ]
+  },
   name: 'news',
   data () {
     return {
@@ -120,6 +132,10 @@ export default {
 
 <style lang="scss" scoped>
 .news {
+  .container_banner {
+    background: url('../../images/leader_banner.png') no-repeat center center;
+    background-size: cover;
+  }
   .col-sm {
     border-bottom: 1px solid #ebebeb;
     padding-top: 4.6vw;
@@ -145,6 +161,10 @@ export default {
   }
   .row.examples {
     padding: 2% 2%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     h4 {
       font-size: 40px;
       text-align: center;
@@ -154,6 +174,7 @@ export default {
     .thumbnail {
       position: relative;
       border: none;
+      // margin-bottom: 10px;
     }
     .thumbnail a > img,
     .thumbnail > img {
@@ -168,7 +189,7 @@ export default {
         font-size: 18px;
         color: #3e403f;
         font-family: PingFangSC-Regular;
-        margin: 28px 0 8px;
+        margin: 28px 0 18px;
         width: 100%;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -177,7 +198,7 @@ export default {
       .date {
         font-size: 12px;
         font-family: PingFangSC-Light;
-        margin-bottom: 8px;
+        margin-bottom: 12px;
       }
       .detail {
         font-size: 14px;
@@ -195,6 +216,28 @@ export default {
         font-family: PingFangSC-Light;
       }
     }
+    @media (min-width: 1440px) {
+      .col-sm-4,
+      .col-lg-4,
+      .col-md-4,
+      .col-xs-4 {
+        width: 460px; /* no */
+        padding: 46px 47.5px; /* no */
+      }
+      .thumbnail {
+        margin-bottom: 0; /* no */
+      }
+      .thumbnail > img {
+        margin: 0; /* no */
+        width: 380px; /* no */
+        height: 246px; /* no */
+      }
+    }
+  }
+  @media (min-width: 1440px) {
+    .row.examples {
+      padding: 0 50px; /* no */
+    }
   }
   .navbar {
     margin-bottom: 0;
@@ -206,7 +249,7 @@ export default {
     margin: 0;
     width: 100%;
     padding: 146px 0 146px 56px;
-    background: #1aa8aa;
+    // background: #1aa8aa;
     h4 {
       line-height: 54px;
       color: #f8faf9;

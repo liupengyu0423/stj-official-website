@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-default"
+  <nav :class="hash==='#/about'||hash==='#/product'||hash==='#/washroom'||hash==='#/expression'?'navbar navbar-default':'navbar navbar-default navbar-sticky'"
        role="navigation">
     <div class="container-fluid">
       <div class="navbar-header nav-title">
@@ -24,7 +24,7 @@
             :key="index"
             v-if="item.tab_C!=='产品中心'">
           <router-link :to="item.tab_E"
-             class="dropdown-toggle router-link-one">{{item.tab_C}}</router-link>
+                       class="dropdown-toggle router-link-one">{{item.tab_C}}</router-link>
           <div class="line"></div>
         </li>
         <li v-else
@@ -67,16 +67,26 @@ export default {
       item_tab: [
         { tab_C: '农村户厕污水一体化生物处理设备', tab_E: 'product' },
         { tab_C: '生物环保厕所', tab_E: 'washroom' }
-      ]
+      ],
+      hash: ''
     }
   },
   created () {
-
+    this.hash = location.hash
+    console.log(location.hash)
   }
 }
 </script>
 
 <style lang="scss" scoped>
+.caret {
+  border-top: 10px dashed #fff;
+}
+@media (min-width: 770px) {
+  .caret {
+    border-top: 4px dashed #fff;
+  }
+}
 .navbar-header {
   width: 100%;
 }
@@ -88,6 +98,12 @@ export default {
 }
 .navbar-default {
   background: #1aa8aa;
+}
+.navbar-sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 .container-fluid {
   background: #fff;

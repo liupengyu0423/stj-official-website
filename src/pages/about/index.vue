@@ -20,8 +20,7 @@
           :class="index===click?'active nav-tabs-hover':'nav-tabs-hover'"
           v-for="(item,index) in items"
           :key="index">
-        <a @click="changeActive(index)"
-           :href="'#'+item.href">{{item.name}}</a>
+        <a @click="changeActive(index,item.href)">{{item.name}}</a>
       </li>
     </ul>
     <div class="container container_intro"
@@ -156,6 +155,19 @@
 import CommonHead from '@/components/head'
 import CommonFoot from '@/components/foot'
 export default {
+  metaInfo: {
+    title: '生态洁环保科技股份有限公司',
+    meta: [
+      {
+        name: 'keywords',
+        content: '生态洁环保科技股份有限公司'
+      },
+      {
+        name: 'description',
+        content: '生态洁环保科技股份有限公司'
+      }
+    ]
+  },
   name: 'about',
   data () {
     return {
@@ -197,8 +209,9 @@ export default {
 
   },
   methods: {
-    changeActive (index) {
+    changeActive (index, id) {
       this.click = index
+      document.querySelector("#" + id).scrollIntoView(true);
     },
     showimage (source) {
       $("#ShowImage_Form").find("#img_show").html("<img src='" + source + "' class='carousel-inner img-responsive img-rounded' />");
@@ -303,7 +316,6 @@ export default {
       color: #fff;
       font-family: PingFangSC-Regular;
       font-size: 20px;
-      font-size: 。8rem;
       margin-top: 2vw;
     }
   }
@@ -314,7 +326,7 @@ export default {
     border: none;
   }
   .nav-tabs-hover {
-    padding: 10px 15px;
+    padding: 29px 0;
     text-align: center;
   }
   .nav-tabs-hover a {
@@ -322,31 +334,32 @@ export default {
     display: inline;
     font-size: 16px;
   }
+  .nav-tabs.nav-justified {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #fff;
+  }
   .nav-tabs.nav-justified > li > a {
     border-bottom: none;
+    padding: 0 15px 29px;
   }
-  // .nav-tabs.nav-justified > .active > a,
-  // .nav-tabs.nav-justified > .active > a:focus,
-  // .nav-tabs.nav-justified > .active > a:hover {
-  //   border: none;
-  //   color: #525b68;
-  // }
   .nav-tabs-hover.active {
     color: #1aa8aa;
   }
   .nav-tabs-hover.active a {
     border: none;
     color: #1aa8aa !important;
-    border-bottom: 2px solid #40f2d0 !important;
-    padding: 0 15px 10px;
+    // border-bottom: 2px solid #40f2d0 !important;
+    padding: 0 15px 29px;
   }
   .nav > .active > a,
   .nav > li > a:focus,
   .nav > li > a:hover {
     background: #fff;
     border-bottom: 2px solid #40f2d0 !important;
-    border-bottom: 1px solid #1aa8aa;
-    padding: 0 15px 10px;
+    padding: 0 15px 29px;
   }
   .nav-tabs > li > a:hover {
     border-color: #fff;
@@ -419,6 +432,10 @@ export default {
     }
     .bottom_intro2 {
       padding-left: 140px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
     }
     // .bottom_intro2 {
     //   padding: 0;
@@ -452,7 +469,7 @@ export default {
       h5 {
         color: #303030;
         font-family: PingFangSC-Regular;
-        font-size: 18px;
+        font-size: 14px;
         text-align: left;
       }
     }
@@ -460,6 +477,23 @@ export default {
       font-size: 9px;
       color: #747c77;
       text-align: center;
+    }
+    @media (min-width: 1440px) {
+      .col-sm-4,
+      .col-lg-4,
+      .col-md-4,
+      .col-xs-4 {
+        width: 460px; /* no */
+        padding: 46px 40px; /* no */
+      }
+      .thumbnail {
+        margin-bottom: 0; /* no */
+      }
+      .thumbnail > img {
+        margin: 0; /* no */
+        width: 380px; /* no */
+        height: 246px; /* no */
+      }
     }
   }
 }

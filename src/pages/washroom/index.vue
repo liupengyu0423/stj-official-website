@@ -145,6 +145,19 @@
 import CommonHead from '@/components/head'
 import CommonFoot from '@/components/foot'
 export default {
+  metaInfo: {
+    title: '生态洁环保科技股份有限公司',
+    meta: [
+      {
+        name: 'keywords',
+        content: '生态洁环保科技股份有限公司'
+      },
+      {
+        name: 'description',
+        content: '生态洁环保科技股份有限公司'
+      }
+    ]
+  },
   name: 'unify',
   data () {
     return {
@@ -246,7 +259,7 @@ export default {
 }
 
 .nav-tabs-hover {
-  padding: 10px 15px;
+  padding: 29px 0;
   text-align: center;
 }
 
@@ -254,8 +267,15 @@ export default {
   color: #303030 !important;
   display: inline;
   font-size: 16px;
-  padding: 0 15px 10px;
+  padding: 0 15px 29px;
   // border-bottom: 1px solid #fff;
+}
+.nav-tabs.nav-justified {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
 }
 .nav-tabs-hover.active {
   color: #1aa8aa;

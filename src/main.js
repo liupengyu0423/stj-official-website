@@ -7,7 +7,9 @@ import './style/base.css'
 import './style/common.css'
 import 'swiper/dist/css/swiper.css';
 import 'lib-flexible'
+import MetaInfo from 'vue-meta-info'
 
+Vue.use(MetaInfo)
 Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({
