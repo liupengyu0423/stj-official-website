@@ -278,8 +278,12 @@ export default {
       }
     }
     @media screen and (max-width: 550px) {
-      .thumbnail {
-        height: 16vh;
+      .col-sm-6,
+      .col-md-4,
+      .col-xs-6,
+      .col-lg-4 {
+        padding-right: 6px;
+        padding-left: 6px;
       }
     }
   }
@@ -287,6 +291,24 @@ export default {
 @media (min-width: 1440px) {
   .row.examples {
     padding: 60px 60px 11% !important; /* no */
+  }
+}
+@media (min-width: 1500px) and (max-width: 1920px) {
+  .examples {
+    padding: 38px 50px;
+    /* no */
+  }
+}
+@media (max-width: 1440px) {
+  .examples {
+    padding: 38px 30px;
+    /* no */
+  }
+}
+@media (min-width: 2000px) {
+  .examples {
+    padding: 38px 300px;
+    /* no */
   }
 }
 </style>

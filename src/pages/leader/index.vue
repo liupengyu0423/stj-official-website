@@ -18,7 +18,8 @@
           <img :src="item.img"
                @click="showimage(item.img)">
           <div class="caption">
-            <p class="title">{{item.title}}</p>
+            <p class="title"
+               @click="learn_detail(item)">{{item.title}}</p>
             <p class="date">{{item.date}}</p>
             <!-- <p class="detail">{{item.detail}}</p> -->
             <a class="learn_detail"

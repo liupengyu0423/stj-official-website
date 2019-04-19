@@ -1,13 +1,15 @@
 <template>
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <a href="#"><img src="../images/banner1.png"
-               alt=""></a>
+      <div class="swiper-slide swiper-slide1">
+        <a href="#">
+          <!-- <img src="../images/banner1.png"
+               alt="">--></a>
       </div>
-      <div class="swiper-slide">
-        <a href="#"><img src="../images/banner2.png"
-               alt=""></a>
+      <div class="swiper-slide swiper-slide2">
+        <a href="#">
+          <!-- <img src="../images/banner2.png"
+               alt="">--></a>
       </div>
     </div>
     <!-- 如果需要分页器 -->
@@ -56,11 +58,14 @@ export default {
 }
 .swiper-container {
   width: 100%;
-  height: 100%;
-  .swiper-wrapper,
-  .swiper-wrapper img {
-    width: 100%;
-    height: 100%;
+  height: 760px;
+  .swiper-slide1 {
+    background: url('../images/banner1.png') no-repeat center center;
+    background-size: cover;
+  }
+  .swiper-slide2 {
+    background: url('../images/banner2.png') no-repeat center center;
+    background-size: cover;
   }
   .swiper-button-prev,
   .swiper-container-rtl .swiper-button-next {
@@ -73,6 +78,11 @@ export default {
   .swiper-button-prev,
   .swiper-button-next {
     background-size: 27px 36px;
+  }
+}
+@media (min-width: 1440px) {
+  .swiper-container {
+    height: 760px; /* no */
   }
 }
 </style>

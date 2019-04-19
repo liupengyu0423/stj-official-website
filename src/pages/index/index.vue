@@ -42,24 +42,26 @@
         <p class="intro_title">为农村厕所革命和生态文明建设做出贡献</p>
         <p>生态洁是国内唯一一家取得驰名商标的环保厕所和污水处理设备研发制造企业</p>
         <p>专注产品研发近20年，在全国10多个省区累计使用超过100万套</p>
-        <ul class="instro-radius-ul">
-          <li class="instro-radius">
-            <h4>ISO</h4>
-            <p class="tix">体系认证</p>
-            <p class="tix">
-              <strong class="zl">3</strong>个</p>
-          </li>
-          <li class="instro-radius">
-            <h4>50+</h4>
-            <p class="zl">专利</p>
-          </li>
-          <li class="instro-radius">
-            <p class="tix">核心技术</p>
-            <p class="tix">列入国家</p>
-            <p class="jh">
-              <strong class="four">863</strong>计划</p>
-          </li>
-        </ul>
+        <div class="instro-radius-div">
+          <ul class="instro-radius-ul">
+            <li class="instro-radius">
+              <h4>ISO</h4>
+              <p class="tix">体系认证</p>
+              <p class="tix">
+                <strong class="zl">3</strong>个</p>
+            </li>
+            <li class="instro-radius">
+              <h4>50+</h4>
+              <p class="zl">专利</p>
+            </li>
+            <li class="instro-radius">
+              <p class="tix">核心技术</p>
+              <p class="tix">列入国家</p>
+              <p class="jh">
+                <strong class="four">863</strong>计划</p>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="row scheme">
@@ -96,18 +98,18 @@
         <span class="spure_text">已安装的省份</span>
       </div>
     </div>
-    <div class="container-fluid map">
-      <h4>新闻中心</h4>
+    <div class="container-fluid map container-fluid-map">
+      <h4 class="news_title">新闻中心</h4>
       <div class="row examples">
         <div class="col-sm-6 col-md-6 col-xs-12 col-lg-6"
              v-for="(item,index) in examples"
              :key="index">
           <div class="thumbnail">
             <img :src="item.img"
-                 class="center-block"
                  @click="showimage(item.img)">
             <div class="caption">
-              <p class="title">{{item.title}}</p>
+              <p class="title"
+                 @click="learn_detail(item)">{{item.title}}</p>
               <p class="detail">{{item.detail}}</p>
               <router-link :to="'/newsDetail?id='+item.id"
                            class="learn_detail"
@@ -130,23 +132,29 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container container-bj">
       <div class="responsive-div">
+        <div class="catch-btn catch-btn-left"
+             @click="ic_left">
+        </div>
         <div class="row">
           <div class="bottom_intro bottom_intro2 col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <h4>褒奖</h4>
-            <div class="col-sm-6 col-lg-4 col-md-4 col-xs-6"
-                 v-for="(item,index) in examples2"
+            <div class="col-sm-4 col-lg-4 col-md-4 col-xs-4"
+                 v-for="(item,index) in examples1"
                  :key="index">
-              <div class="thumbnail"
+              <div class="thumbnail thumbnail-bj"
                    @click="showimage(item.img)"
-                   :style="'background:url('+item.img+') no-repeat;background-size:cover'">
+                   :style="'background:url('+item.img+') no-repeat center center/cover'">
                 <div class="caption">
                   <h5>{{item.text}}</h5>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <div class="catch-btn catch-btn-right"
+             @click="ic_right">
         </div>
       </div>
     </div>
@@ -181,6 +189,7 @@ export default {
         { title: '住建部总工程师陈宜明参观公司产品', img: require('../../images/n1/n3.jpg'), id: 2, date: '2019-03-08', detail: '2018年10月13日，住建部总工程师陈宜明到第七届中国国际住宅产业暨建筑工业化产品与设备博览会生态洁公司展位参观。在公司展品旁，他详细了解了农村户厕一体化生物处理设备的工艺、运行、维护等情况，对农村改厕和一体化生物处理模式大加赞赏，希望生态洁公司再接再厉。继续为全国农村“厕所革命”做出更大的贡献。本次展会由住房和城乡建设部主办。' },
         { title: '山东省莱芜市莱城区领导观摩生态洁产品', img: require('../../images/n1/n4.jpg'), id: 3, date: '2019-03-08', detail: ' 2018年6月19日，莱芜市莱城区委书记马宝岭，区长秦蕾带领区五大班子以及区直部门及各乡镇领导观摩公司安装在口镇的农村户厕一体化生物处理设备。在口镇林家庄和栖龙湾村安装现场。马书记及各位领导详细询问了设备运行情况，并提出了指导意见。希望生态洁继续努力，为莱芜的农村厕改和污水治理工作作出持续贡献' }
       ],
+      examples1: [],
       examples2: [
         { text: '低碳单位', img: require('../../images/ry/r10.jpg') },
         { text: '科技进步', img: require('../../images/ry/r11.jpg') },
@@ -188,6 +197,22 @@ export default {
         { text: '消费满意', img: require('../../images/ry/r13.jpg') },
         { text: '环保单位', img: require('../../images/ry/r14.jpg') },
         { text: '创业基地', img: require('../../images/ry/r15.jpg') }
+      ],
+      examples3: [
+        { text: '高新技术企业', img: require('../../images/ry/r1.jpg') },
+        { text: '院士工作站', img: require('../../images/ry/r2.jpg') },
+        { text: '火炬计划重点高新技术企业', img: require('../../images/ry/r3.jpg') },
+        { text: '中国驰名商标', img: require('../../images/ry/r4.jpg') },
+        { text: '工人先锋号', img: require('../../images/ry/r5.jpg') },
+        { text: '优秀科技品牌', img: require('../../images/ry/r6.jpg') }
+      ],
+      examples4: [
+        { text: '山东名牌', img: require('../../images/ry/r7.jpg') },
+        { text: '中国专利山东明星企业', img: require('../../images/ry/r8.jpg') },
+        { text: '山东最具发展潜力民营企业', img: require('../../images/ry/r9.jpg') },
+        { text: '污水推广证书', img: require('../../images/ry/r16.jpg') },
+        { text: '中国专利山东明星企业证书', img: require('../../images/ry/r17.jpg') },
+        { text: '生活污水处理设备的应用', img: require('../../images/ry/r18.jpg') }
       ]
     }
   },
@@ -197,14 +222,34 @@ export default {
     Swiper
   },
   created () {
+    this.examples1 = this.examples2
   },
   methods: {
+    ic_left () {
+      if (this.examples1 === this.examples2) {
+        this.examples1 = this.examples3
+      } else if (this.examples1 === this.examples3) {
+        this.examples1 = this.examples3
+      } else if (this.examples1 === this.examples4) {
+        this.examples1 = this.examples2
+      }
+    },
+    ic_right () {
+      if (this.examples1 === this.examples2) {
+        this.examples1 = this.examples4
+      } else if (this.examples2 === this.examples4) {
+        this.examples1 = this.examples4
+      } else if (this.examples1 === this.examples3) {
+        this.examples1 = this.examples2
+      }
+    },
     blowimg () {
       console.log($('img.intro_img').zoomify())
       $('img.intro_img').zoomify();
     },
     learn_detail (news) {
       localStorage.setItem('news', JSON.stringify(news))
+      this.$router.push('/newsDetail?id=' + news.id)
     },
     showimage (source) {
       $("#ShowImage_Form").find("#img_show").html("<img src='" + source + "' class='carousel-inner img-responsive img-rounded' />");
@@ -246,12 +291,89 @@ export default {
     margin-bottom: 0;
   }
 }
+.catch-btn {
+  width: 50px;
+  height: 50px;
+}
+.catch-btn-left {
+  position: absolute;
+  top: 346px;
+  left: -40px;
+  background: url('../../images/ic_left.png') no-repeat center center/cover;
+}
+.catch-btn-right {
+  background: url('../../images/ic_right.png') no-repeat center center/cover;
+  position: absolute;
+  top: 346px;
+  right: -60px;
+}
+@media (max-width: 768px) {
+  .catch-btn {
+    width: 50px;
+    height: 50px;
+  }
+  .catch-btn-left {
+    position: absolute;
+    top: 346px;
+    left: -40px;
+    background: url('../../images/ic_left.png') no-repeat center center/cover;
+  }
+  .catch-btn-right {
+    background: url('../../images/ic_right.png') no-repeat center center/cover;
+    position: absolute;
+    top: 346px;
+    right: -60px;
+  }
+  .bottom_intro {
+    // margin-left: 40px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .catch-btn {
+    width: 50px;
+    height: 50px;
+  }
+  .catch-btn-left {
+    position: absolute;
+    top: 346px;
+    left: -60px;
+    background: url('../../images/ic_left.png') no-repeat center center/cover;
+  }
+  .catch-btn-right {
+    background: url('../../images/ic_right.png') no-repeat center center/cover;
+    position: absolute;
+    top: 346px;
+    right: -80px;
+  }
+}
+// @media (min-width: 1440px) {
+//   .catch-btn-left {
+//     position: absolute;
+//     top: 406px;
+//     // left: 184px;
+//   }
+//   .catch-btn-right {
+//     position: absolute;
+//     top: 406px;
+//     // right: 184px;
+//   }
+// }
+.container-bj {
+  background: #ebf4f4;
+  width: 100%;
+  .responsive-div {
+    width: 1220px;
+    margin: 51px auto 0;
+    position: relative;
+  }
+}
 .bottom_intro {
   h4 {
     font-size: 30px;
     font-family: PingFangSC-Thin;
     color: #424644;
   }
+  padding-bottom: 180px;
 }
 .list-group-item {
   display: inline-block;
@@ -353,10 +475,25 @@ export default {
 .thumbnail .caption {
   padding: 0;
 }
-.instro-radius-ul {
+.instro-radius-div {
   display: flex;
-  justify-content: space-around;
-  margin-top: 80px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.instro-radius-ul {
+  width: 907px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 80px 240px 0;
+}
+@media (min-width: 1440px) {
+  .instro-radius-ul {
+    width: 907px; /* no */
+    margin: 80px 240px 0; /* no */
+  }
 }
 .instro-radius {
   width: 172px;
@@ -365,8 +502,9 @@ export default {
   border-radius: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   box-sizing: border-box;
+  padding: 20px 0;
   h4 {
     color: #fff;
     font-size: 46px;
@@ -412,13 +550,19 @@ export default {
     margin-top: -8vw;
   }
 }
+.container-fluid-map {
+  padding: 0 56px;
+}
 .map {
-  padding-bottom: 30px;
+  padding-bottom: 101px;
   h4 {
     font-family: PingFangSC-Thin;
     text-align: center;
     padding: 120px 0 102px 0;
     font-size: 32px;
+  }
+  .news_title {
+    padding: 120px 0 80px 0;
   }
   .spure_div {
     float: left;
@@ -441,7 +585,7 @@ export default {
     img {
       width: 300px;
       height: 190px;
-      margin-right: 2%;
+      margin-right: 0;
       display: inline-block;
     }
     .learn_detail {
@@ -461,8 +605,9 @@ export default {
       overflow: hidden;
     }
     .title {
-      width: 235px;
+      width: 80%;
       height: 52px;
+      line-height: 26px;
       font-size: 18px;
       color: #303030;
       margin-top: 0.5vw;
@@ -499,23 +644,40 @@ export default {
     align-items: center;
     justify-content: center;
     > div {
-      margin-bottom: 37px;
-      padding-left: 96px;
+      margin-bottom: 37px; // padding-left: 96px;
       padding-bottom: 33px;
       border-bottom: 1px solid #ebebeb;
+      &:first-of-type {
+        padding-top: 38px;
+        border-top: 1px solid #ebebeb;
+      }
       .caption {
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        margin-left: 32px;
+      }
+    }
+    .thumbnail a > img,
+    .thumbnail > img {
+      margin-left: 0;
+    }
+    @media (min-width: 768px) {
+      > div {
+        &:first-of-type,
+        &:nth-of-type(2) {
+          padding-top: 38px;
+          border-top: 1px solid #ebebeb;
+        }
       }
     }
     @media (min-width: 1440px) {
       > div {
         box-sizing: border-box;
-        width: 648px; /* no */
-        margin-bottom: 37px; /* no */
-        padding-left: 96px; /* no */
+        width: 648px;
+        /* no */
+        margin-bottom: 37px; /* no */ // padding-left: 96px; /* no */
         padding-bottom: 33px; /* no */
       }
     }
@@ -524,6 +686,24 @@ export default {
     }
     .detail {
       margin-bottom: 26px;
+    }
+  }
+  @media (min-width: 1500px) and (max-width: 1920px) {
+    .examples {
+      padding: 38px 50px;
+      /* no */
+    }
+  }
+  @media (max-width: 1440px) {
+    .examples {
+      padding: 38px 30px;
+      /* no */
+    }
+  }
+  @media (min-width: 2000px) {
+    .examples {
+      padding: 38px 300px;
+      /* no */
     }
   }
 }
@@ -547,15 +727,26 @@ export default {
 .responsive-div {
   padding: 10px 0;
   box-sizing: border-box;
+  .col-sm-4,
+  .col-lg-4,
+  .col-md-4,
+  .col-xs-4 {
+    padding: 0;
+  }
   h4 {
     text-align: center;
-    margin-bottom: 2vw;
-  }
-  .col-xs-6 .thumbnail {
-    height: 18vh;
+    margin-bottom: 72px;
   }
   .thumbnail {
-    height: 30vh;
+    width: 378px;
+    height: 240px;
+  }
+  .thumbnail-bj {
+    background-size: cover;
+    border: 1px solid #e8e8e8 !important;
+  }
+  .thumbnail {
+    // height: 30vh;
     position: relative;
     border: none;
     margin-bottom: 32px;
@@ -577,7 +768,7 @@ export default {
     h5 {
       color: #303030;
       font-family: PingFangSC-Regular;
-      font-size: 14px;
+      font-size: 18px;
     }
   }
   .more {

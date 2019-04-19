@@ -87,6 +87,9 @@ export default {
     border-top: 4px dashed #fff;
   }
 }
+.navbar {
+  border-radius: 0;
+}
 .navbar-header {
   width: 100%;
 }

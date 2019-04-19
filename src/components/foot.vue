@@ -5,7 +5,7 @@
       <ul class="quickly_li">
         <li v-for="(item,index) in quickly"
             :key="index">
-          <a href="#">{{item}}</a>
+          <a :href="'/#/'+item.tab_E">{{item.tab_C}}</a>
         </li>
       </ul>
     </div>
@@ -22,10 +22,11 @@
         <p class="hot_line_bot">400-618-9911</p>
       </div>
     </div>
-    <div class="footer_logo">
-      <img src="../images/stj_logo_footer.png"
-           alt="">
-    </div>
+    <!-- <div class="footer_logo"> -->
+    <img src="../images/stj_logo_footer.png"
+         alt=""
+         class="footer_logo img-responsive">
+    <!-- </div> -->
     <div class="bottom">
       <p>页面版权所有： 生态洁环保科技股份有限公司</p>
       <p>地址：山东省济南市莱芜区赢牟西大街003号</p>
@@ -38,7 +39,13 @@ export default {
   name: 'CommonFoot',
   data () {
     return {
-      quickly: ['首页', '产品中心', '互联网+', '应用案例', '领导关怀', '新闻中心', '关于我们'],
+      quickly: [{ tab_C: '首页', tab_E: 'index' },
+      { tab_C: '产品中心', tab_E: 'product' },
+      { tab_C: '互联网+', tab_E: 'net' },
+      { tab_C: '应用案例', tab_E: 'expression' },
+      { tab_C: '领导关怀', tab_E: 'leader' },
+      { tab_C: '新闻中心', tab_E: 'news' },
+      { tab_C: '关于我们', tab_E: 'about' }],
       call: ['T. 0634-6270330', 'F. 0634-6270292', 'E. stj@chinastj.com']
     }
   }
@@ -50,6 +57,7 @@ footer {
   width: 100%;
   background: #2a2f2f;
   padding: 46px 140px 0 140px;
+  position: relative;
   > div {
     display: inline-block;
     vertical-align: top;
@@ -61,16 +69,23 @@ footer {
   }
   .quickly_li,
   .call_li {
+    margin-top: 28px;
     a {
       color: #747c77 !important;
       font-size: 14px;
       line-height: 30px;
+      font-family: PingFangSC-Regular;
     }
   }
   .call {
-    margin-left: 1em;
+    margin-left: 138px;
     a {
       font-size: 13px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .call {
+      margin-left: 138px; /* no */
     }
   }
   .hot_line_top,
@@ -83,9 +98,20 @@ footer {
   }
   .hot_line_bot {
     font-size: 20px;
+    margin-top: 5px;
   }
   .footer_logo {
-    float: right;
+    width: 189px;
+    height: 30px;
+    position: absolute;
+    top: 144px;
+    right: 140px;
+  }
+  @media (min-width: 1440px) {
+    .footer_logo {
+      top: 144px; /* no */
+      right: 240px; /* no */
+    }
   }
   .bottom {
     display: block;

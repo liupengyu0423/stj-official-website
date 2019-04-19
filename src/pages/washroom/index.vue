@@ -22,101 +22,107 @@
           <a @click="changeActive(index)">{{item.name}}</a>
         </li>
       </ul>
-      <div class="container responsive-div"
-           v-if="click===1">
-        <div class="row-lg-1 center-auto">
-          <div class="row row_col1">
-            <div class="bes_1 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <h4>生物环保厕所</h4>
-            </div>
-          </div>
-          <div class="row row_col2">
-            <div class="bes_2 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <p>利用经过优化的微生物菌剂，对人体排泄物进行高效分解，并将微量残<br />留物转化成生态有机肥的高科技产品。
-              </p>
-            </div>
-          </div>
-          <a href="/expression">
-            <p class="text-muted">查看应用案例 ></p>
-          </a>
-        </div>
-      </div>
-      <div class="container responsive-div2"
-           v-if="click ===1">
-        <div class="container">
-          <div class="row-lg-2 center-auto">
+      <div class="hahah1">
+        <div class="container responsive-div"
+             v-if="click===1">
+          <div class="row-lg-1 center-auto">
             <div class="row row_col1">
               <div class="bes_1 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <h4>产品特点</h4>
+                <h4>生物环保厕所</h4>
+              </div>
+            </div>
+            <div class="row row_col2">
+              <div class="bes_2 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <p>利用经过优化的微生物菌剂，对人体排泄物进行高效分解，并将微量残<br />留物转化成生态有机肥的高科技产品。
+                </p>
+              </div>
+            </div>
+            <a href="/expression">
+              <p class="text-muted">查看应用案例 ></p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hahah2">
+        <div class="container responsive-div2"
+             v-if="click ===1">
+          <div class="container">
+            <div class="row-lg-2 center-auto">
+              <div class="row row_col1">
+                <div class="bes_1 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <h4>产品特点</h4>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="row row_list">
-          <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
-            <h5>
-              <a>免除污染</a>
-            </h5>
-            <ul>
-              <li>直接将人的排泄物原位处理，一年可减少36万吨+清洁水</li>
-            </ul>
+          <div class="row row_list">
+            <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+              <h5>
+                <a>免除污染</a>
+              </h5>
+              <ul>
+                <li>直接将人的排泄物原位处理，一年可减少36万吨+清洁水</li>
+              </ul>
+            </div>
+            <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+              <h5>
+                <a>经济节能</a>
+              </h5>
+              <ul>
+                <li>运行费用低廉、无须冲水，一年可节水1000吨+，可节约清运、处理费用10000+元</li>
+              </ul>
+            </div>
+            <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+              <h5>
+                <a>安装方便</a>
+              </h5>
+              <ul>
+                <li>无需铺设排污管网，可根据地形随处安放，建设费用低</li>
+              </ul>
+            </div>
           </div>
-          <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
-            <h5>
-              <a>经济节能</a>
-            </h5>
-            <ul>
-              <li>运行费用低廉、无须冲水，一年可节水1000吨+，可节约清运、处理费用10000+元</li>
-            </ul>
-          </div>
-          <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
-            <h5>
-              <a>安装方便</a>
-            </h5>
-            <ul>
-              <li>无需铺设排污管网，可根据地形随处安放，建设费用低</li>
-            </ul>
-          </div>
-        </div>
-        <div class="row row_list">
-          <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
-            <h5>
-              <a>外形美观</a>
-            </h5>
-            <ul>
-              <li>外观造型和文化色彩具多样性，具有景观效应，提升城市、旅游景区形象</li>
-            </ul>
-          </div>
-          <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
-            <h5>
-              <a>用途广泛</a>
-            </h5>
-            <ul>
-              <li>适用于城镇、风景名胜区、广场、公园、居民小区、车站、码头等人员密集场所，以及火车、轮船上</li>
-            </ul>
-          </div>
-          <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
-            <h5>
-              <a>产品多样</a>
-            </h5>
-            <ul>
-              <li>水循环式、泡沫封堵式、水冲式、打包式等多种产品类型</li>
-            </ul>
+          <div class="row row_list">
+            <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+              <h5>
+                <a>外形美观</a>
+              </h5>
+              <ul>
+                <li>外观造型和文化色彩具多样性，具有景观效应，提升城市、旅游景区形象</li>
+              </ul>
+            </div>
+            <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+              <h5>
+                <a>用途广泛</a>
+              </h5>
+              <ul>
+                <li>适用于城镇、风景名胜区、广场、公园、居民小区、车站、码头等人员密集场所，以及火车、轮船上</li>
+              </ul>
+            </div>
+            <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+              <h5>
+                <a>产品多样</a>
+              </h5>
+              <ul>
+                <li>水循环式、泡沫封堵式、水冲式、打包式等多种产品类型</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-      <div class="responsive-div6"
-           v-if="click===1">
-        <h4>产品展示</h4>
-        <div class="row">
-          <div class="col-sm-6 col-md-4 col-xs-6 col-lg-4"
-               v-for="(item,index) in examples2"
-               :key="index">
-            <div class="thumbnail"
-                 @click="showimage(item.img)"
-                 :style="'background-image:url('+item.img+')'">
-              <div class="caption">
-                <h5>{{item.text}}</h5>
+      <div class="hahah6">
+        <div class="responsive-div6"
+             v-if="click===1">
+          <h4>产品展示</h4>
+          <div class="row">
+            <div class="row-div col-sm-6 col-md-4 col-xs-6 col-lg-4"
+                 v-for="(item,index) in examples2"
+                 :key="index">
+              <div class="thumbnail"
+                   @click="showimage(item.img)"
+                   :style="'background:url('+item.img+') no-repeat center center/100% 100%;'">
+                <div class="caption">
+                  <h5>{{item.text}}</h5>
+                </div>
               </div>
             </div>
           </div>
@@ -165,19 +171,62 @@ export default {
       click: 1,
       list_group_items: ['STJ-单户式', 'STJ-多户式', 'STJ-村集中式'],
       click_group: 0,
-      examples: [
-        { text: '北京八达岭长城', img: require('../../images/y1/y1.jpg') },
-        { text: '奥林匹克水上公园', img: require('../../images/y1/y2.jpg') },
-        { text: '上海奉贤', img: require('../../images/y1/y3.jpg') }
+      examples: [],
+      examples1: [
+        { text: '内蒙鄂托克旗', img: require('../../images/l3/l1.jpg') },
+        { text: '新疆喀什', img: require('../../images/l3/l2.jpg') },
+        { text: '广西上林县', img: require('../../images/l3/l3.jpg') }
       ],
       examples2: [
-        { text: '微生物降解环保厕所', img: require('../../images/c1/c1.jpg') },
-        { text: '街头站立式环保厕所', img: require('../../images/c1/c2.jpg') },
-        { text: '泡沫封堵式环保厕所', img: require('../../images/c1/c3.jpg') }
+        { text: '街头站立式环保厕所', img: require('../../images/c2/c1.jpg') },
+        { text: '街头站立式环保厕所', img: require('../../images/c2/c2.jpg') },
+        { text: '微生物降解环保厕所', img: require('../../images/c2/c3.jpg') },
+        { text: '微生物降解环保厕所', img: require('../../images/c2/c4.jpg') },
+        { text: '泡沫封堵式环保厕所', img: require('../../images/c2/c5.jpg') },
+        { text: '水循环式环保厕所', img: require('../../images/c2/c6.jpg') },
+        { text: '水冲式环保厕所', img: require('../../images/c2/c7.jpg') },
+        { text: '流动环保厕所', img: require('../../images/c2/c8.jpg') },
+        { text: '单体环保厕所', img: require('../../images/c2/c9.jpg') },
+        { text: '单体环保厕所', img: require('../../images/c2/c10.jpg') },
+        { text: '广场舞用环保厕所', img: require('../../images/c2/c11.jpg') },
+        { text: '旅游景点环保厕所', img: require('../../images/c2/c12.jpg') },
+        { text: '拖车式环保厕所', img: require('../../images/c2/c13.jpg') },
+        { text: '固定式环保厕所', img: require('../../images/c2/c14.jpg') },
+        { text: '火车用环保厕所', img: require('../../images/c2/c15.jpg') }
+      ],
+      examples3: [
+        { text: '陕西洛川县', img: require('../../images/l3/l4.jpg') },
+        { text: '青海门源县', img: require('../../images/l3/l5.jpg') },
+        { text: '宁夏利通区', img: require('../../images/l3/l6.jpg') }
+      ],
+      examples5: [
+        { text: '宁夏灵武市', img: require('../../images/l3/l7.jpg') },
+        { text: '山东齐河县', img: require('../../images/l3/l8.jpg') },
+        { text: '山东荣成市', img: require('../../images/l3/l9.jpg') }
       ]
     }
   },
+  created () {
+  },
   methods: {
+    ic_left () {
+      if (this.examples === this.examples1) {
+        this.examples = this.examples3
+      } else if (this.examples === this.examples3) {
+        this.examples = this.examples3
+      } else if (this.examples === this.examples5) {
+        this.examples = this.examples1
+      }
+    },
+    ic_right () {
+      if (this.examples === this.examples1) {
+        this.examples = this.examples5
+      } else if (this.examples === this.examples5) {
+        this.examples = this.examples5
+      } else if (this.examples === this.examples3) {
+        this.examples = this.examples1
+      }
+    },
     changeActive (index) {
       if (index) {
         location.href = '/#/washroom'
@@ -237,6 +286,11 @@ export default {
   background-size: cover;
   padding: 90px 0 150px 56px;
 }
+@media (min-width: 1440px) {
+  .xi-col-lg-.col-lg- {
+    padding: 180px 0 299px 200px;
+  }
+}
 .row_col2 {
   margin-top: 2%;
   p {
@@ -245,7 +299,22 @@ export default {
     color: #303030;
   }
 }
-
+.hahah1 {
+  width: 100%;
+  background: #ebf4f4;
+}
+.hahah2 {
+  width: 100%;
+  background: #08a5a7;
+}
+.hahah3 {
+  width: 100%;
+  background: #e8f6f4;
+}
+.hahah6 {
+  width: 100%;
+  background: #fff;
+}
 .col-lg-0 h4 {
   color: #1aa8aa;
   font-family: PingFangSC-Regular;
@@ -308,20 +377,24 @@ export default {
   padding: 0 !important;
 }
 .responsive-div {
-  width: 100%;
-  background: url('../../images/wc.png') #ebf4f4 no-repeat;
-  background-size: contain;
+  width: 1440px;
+  height: 560px;
+  margin: 0 auto !important;
+  background: url('../../images/wrashroom.png') #ebf4f4 no-repeat;
+  background-size: 693px 460px;
   background-position: 90% center;
 }
 .responsive-div2 {
-  width: 100%;
+  width: 1440px;
+  min-height: 910px;
+  margin: 0 auto !important;
   background: #08a5a7;
   .img-responsive {
     float: right;
     display: inline-block;
   }
   .row_list {
-    padding: 0 0 102px 140px;
+    padding: 0 0 118px 140px;
     // line-height: 23px;
     h5 {
       font-size: 14px;
@@ -383,17 +456,20 @@ export default {
     font-family: PingFangSC-Regular;
   }
 }
-
+.row_col1 .bes_1,
+.row_col2 .bes_2 {
+  padding-left: 0;
+}
 .bes_1 h4 {
   font-size: 32px;
   color: #303030;
-  padding: 60px 0 16px 140px;
+  padding: 120px 0 32px 140px;
   font-family: PingFangSC-Semibold;
 }
 .bes_2 p {
   font-size: 18px;
   color: #303030;
-  padding: 0 0 44px 140px;
+  padding: 0 0 88px 140px;
   font-family: PingFangSC-Regular;
 }
 .text-muted {
@@ -492,30 +568,97 @@ export default {
     font-size: 16px;
   }
 }
+.catch-btn {
+  width: 50px;
+  height: 50px;
+}
+.catch-btn-left {
+  position: absolute;
+  top: 346px;
+  left: -60px;
+  background: url('../../images/ic_left.png') no-repeat center center/cover;
+}
+.catch-btn-right {
+  background: url('../../images/ic_right.png') no-repeat center center/cover;
+  position: absolute;
+  top: 346px;
+  right: -40px;
+}
+@media (max-width: 768px) {
+  .catch-btn {
+    width: 80px;
+    height: 80px;
+  }
+  .catch-btn-left {
+    position: absolute;
+    top: 346px;
+    left: -80px;
+    background: url('../../images/ic_left.png') no-repeat center center/cover;
+  }
+  .catch-btn-right {
+    background: url('../../images/ic_right.png') no-repeat center center/cover;
+    position: absolute;
+    top: 346px;
+    right: -60px;
+  }
+  .bottom_intro {
+    margin-left: 40px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .catch-btn {
+    width: 80px;
+    height: 80px;
+  }
+  .catch-btn-left {
+    position: absolute;
+    top: 346px;
+    left: -60px;
+    background: url('../../images/ic_left.png') no-repeat center center/cover;
+  }
+  .catch-btn-right {
+    background: url('../../images/ic_right.png') no-repeat center center/cover;
+    position: absolute;
+    top: 346px;
+    right: -80px;
+  }
+}
 .responsive-div6 {
-  padding: 60px 10% 50px !important;
+  position: relative;
+  width: 1161px;
+  // height: 708px;
+  margin: 0 auto;
+  // padding: 60px 10% 50px !important;
   box-sizing: border-box;
-  background: #ebf4f4;
+  // background: #ebf4f4;
   // margin-top: 50px;
+  .row-div {
+    width: 377px;
+    height: 240px;
+    padding: 0 7.5px;
+    // margin-right: 15px;
+    margin-bottom: 72px;
+  }
   h4 {
+    margin-bottom: 88px;
+    padding-top: 120px;
     text-align: center;
-    margin-bottom: 44px;
     font-family: PingFangSC-Semibold;
     font-size: 32px;
   }
   .thumbnail {
-    height: 30vh;
+    width: 100%;
+    height: 100%;
     position: relative;
     border: none;
     padding: 0;
-    background-size: auto 100%;
-    background-position: center;
+    border-radius: 0;
   }
-  @media screen and (max-width: 550px) {
-    .thumbnail {
-      height: 16vh;
-    }
-  }
+  // @media screen and (max-width: 550px) {
+  //   .thumbnail {
+  //     height: 16vh;
+  //   }
+  // }
   img {
     width: 100%;
     height: 12vw;
@@ -542,6 +685,8 @@ export default {
   }
 }
 .row {
+  margin-left: 0;
   margin-right: 0;
+  margin: 0 auto;
 }
 </style>

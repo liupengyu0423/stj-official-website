@@ -105,45 +105,55 @@
          id="message">
       <div class="row">
         <div class="bottom_intro col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <p>生态洁产品广泛运用到包括</p>
+          <p class="title">生态洁产品广泛运用到包括</p>
           <p class="center">“南极科考站、北京奥运会场馆、十一届全运会场馆、上海世博会、重庆大剧院、雪野湖旅游区、</p>
           <p class="center">全国各大铁路局以及广阔的新农村社区建设中！</p>
           <p>公司作为主要起草单位参与制定了《小型生活污水成套处理设备》行业标准及《生物降解免水冲厕所》、</p>
           <p>《农村生活污水处理工程技术规程》等地方标准。</p>
         </div>
       </div>
-      <div class="responsive-div">
-        <div class="row">
-          <div class="bottom_intro bottom_intro2 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <h4>荣誉奖项</h4>
-            <p>通过了ISO9001质量管理体系、ISO14001环境管理体系和ISO18001职业健康管理体系三个国际标准化管理体系认证。 党、国家和省市部委领导王歧山、李建国、韩长赋、龚正、姜大明、田力普等领导都参观过公司产品，并做出高度评价。
-            </p>
-            <div class="col-sm-6 col-md-4 col-xs-6 col-lg-4"
-                 v-for="(item,index) in examples"
-                 :key="index">
-              <div class="thumbnail"
-                   @click="showimage(item.img)"
-                   :style="'background:url('+item.img+') no-repeat center center;background-size:auto 100%;'">
-                <div class="caption">
-                  <h5>{{item.text}}</h5>
+      <div class="container container-bj">
+        <div class="responsive-div">
+          <div class="row">
+            <div class="bottom_intro bottom_intro2 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <h4>荣誉奖项</h4>
+              <p>通过了ISO9001质量管理体系、ISO14001环境管理体系和ISO18001职业健康管理体系三个国际标准化管理体系认证。 党、国家和省市部委领导王歧山、李建国、韩长赋、龚正、姜大明、田力普等领导都参观过公司产品，并做出高度评价。
+              </p>
+              <div class="qqqqq">
+                <div class="catch-btn catch-btn-left"
+                     @click="ic_left">
+                </div>
+                <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4"
+                     v-for="(item,index) in examples1"
+                     :key="index">
+                  <div class="thumbnail thumbnail-bj"
+                       @click="showimage(item.img)"
+                       :style="'background:url('+item.img+') no-repeat center center/cover'">
+                    <div class="caption">
+                      <h5>{{item.text}}</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="catch-btn catch-btn-right"
+                     @click="ic_right">
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div id="ShowImage_Form"
-         class="modal">
-      <div class="modal-header">
-        <button data-dismiss="modal"
-                class="close"
-                type="button"></button>
-      </div>
-      <div class="modal-body"
-           @click="close">
-        <div id="img_show"
+      <div id="ShowImage_Form"
+           class="modal">
+        <div class="modal-header">
+          <button data-dismiss="modal"
+                  class="close"
+                  type="button"></button>
+        </div>
+        <div class="modal-body"
              @click="close">
+          <div id="img_show"
+               @click="close">
+          </div>
         </div>
       </div>
     </div>
@@ -192,23 +202,55 @@ export default {
         content: '是专业环保产品研发、设计、生产销售于一体的股份制高科技企业。\n公司以先进的技术，优良的品质，专业的服务为客户提供最优质的服务。\n主要从事环保装备制造、工程承包、环保项目投资、工程建设、运营服务。形成一体化处理设备、农村污水集<br/>成处理系统、生物环保卫生间等系列产品。',
         laster: '公司建有院士工作站、省级工程技术研究中心，生态洁与国内最大的综合性微生物学研究机构——\n中国科学院微生物研究所合作，从事微生物学基础和应用研究。'
       }],
-      examples: [
+      examples1: [],
+      examples2: [
+        { text: '低碳单位', img: require('../../images/ry/r10.jpg') },
+        { text: '科技进步', img: require('../../images/ry/r11.jpg') },
+        { text: '厕所大赛', img: require('../../images/ry/r12.jpg') },
+        { text: '消费满意', img: require('../../images/ry/r13.jpg') },
+        { text: '环保单位', img: require('../../images/ry/r14.jpg') },
+        { text: '创业基地', img: require('../../images/ry/r15.jpg') }
+      ],
+      examples3: [
         { text: '高新技术企业', img: require('../../images/ry/r1.jpg') },
-        { text: '火炬计划重点高新技术企业', img: require('../../images/ry/r2.jpg') },
-        { text: '院士工作站', img: require('../../images/ry/r3.jpg') },
+        { text: '院士工作站', img: require('../../images/ry/r2.jpg') },
+        { text: '火炬计划重点高新技术企业', img: require('../../images/ry/r3.jpg') },
         { text: '中国驰名商标', img: require('../../images/ry/r4.jpg') },
         { text: '工人先锋号', img: require('../../images/ry/r5.jpg') },
-        { text: '优秀科技品牌', img: require('../../images/ry/r6.jpg') },
+        { text: '优秀科技品牌', img: require('../../images/ry/r6.jpg') }
+      ],
+      examples4: [
         { text: '山东名牌', img: require('../../images/ry/r7.jpg') },
         { text: '中国专利山东明星企业', img: require('../../images/ry/r8.jpg') },
-        { text: '山东最具发展潜力民营企业', img: require('../../images/ry/r9.jpg') }
+        { text: '山东最具发展潜力民营企业', img: require('../../images/ry/r9.jpg') },
+        { text: '污水推广证书', img: require('../../images/ry/r16.jpg') },
+        { text: '中国专利山东明星企业证书', img: require('../../images/ry/r17.jpg') },
+        { text: '生活污水处理设备的应用', img: require('../../images/ry/r18.jpg') }
       ]
     }
   },
   created () {
-
+    this.examples1 = this.examples2
   },
   methods: {
+    ic_left () {
+      if (this.examples1 === this.examples2) {
+        this.examples1 = this.examples3
+      } else if (this.examples1 === this.examples3) {
+        this.examples1 = this.examples3
+      } else if (this.examples1 === this.examples4) {
+        this.examples1 = this.examples2
+      }
+    },
+    ic_right () {
+      if (this.examples1 === this.examples2) {
+        this.examples1 = this.examples4
+      } else if (this.examples2 === this.examples4) {
+        this.examples1 = this.examples4
+      } else if (this.examples1 === this.examples3) {
+        this.examples1 = this.examples2
+      }
+    },
     changeActive (index, id) {
       this.click = index
       document.querySelector("#" + id).scrollIntoView(true);
@@ -400,55 +442,59 @@ export default {
     background: #ebf4f4;
     text-align: center;
   }
-  .bottom_intro {
-    padding: 120px 140px;
-  }
   .bottom_intro p {
     color: #303030;
     font-size: 18px;
+    line-height: 40px;
+  }
+  .bottom_intro .title {
+    padding-top: 120px;
   }
   .bottom_intro h4 {
     color: #303030;
     font-size: 32px;
+    margin-top: 90px;
     margin-bottom: 56px !important;
     font-family: PingFangSC-Semibold;
   }
   .bottom_intro2 p {
-    margin-bottom: 48px;
+    margin-bottom: 96px;
   }
   .bottom_intro .center {
     color: #1aa8aa;
   }
   .responsive-div {
-    padding: 0 3vw !important;
+    // padding: 0 3vw !important;
     box-sizing: border-box;
     .col-sm-4,
     .col-lg-4,
     .col-md-4,
     .col-xs-4 {
       padding: 0;
-      padding: 20px 10px;
-      // margin-left: 0.5vw;
     }
     .bottom_intro2 {
-      padding-left: 140px;
+      // padding-left: 140px;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
+    }
+    .thumbnail {
+      width: 378px;
+      height: 240px;
     }
     // .bottom_intro2 {
     //   padding: 0;
     //   padding-left: 6vw;
     // }
     .thumbnail {
-      height: 30vh;
       position: relative;
       border: none;
       padding: 0;
       background-size: auto 100%;
       background-position: center;
-      margin: 5px;
+      margin-bottom: 32px;
+      margin-left: 20px;
     }
     @media screen and (max-width: 550px) {
       .thumbnail {
@@ -478,23 +524,94 @@ export default {
       color: #747c77;
       text-align: center;
     }
-    @media (min-width: 1440px) {
-      .col-sm-4,
-      .col-lg-4,
-      .col-md-4,
-      .col-xs-4 {
-        width: 460px; /* no */
-        padding: 46px 40px; /* no */
-      }
-      .thumbnail {
-        margin-bottom: 0; /* no */
-      }
-      .thumbnail > img {
-        margin: 0; /* no */
-        width: 380px; /* no */
-        height: 246px; /* no */
-      }
+    // @media (min-width: 1440px) {
+    //   .col-sm-4,
+    //   .col-lg-4,
+    //   .col-md-4,
+    //   .col-xs-4 {
+    //     width: 460px; /* no */
+    //     // padding: 46px 40px; /* no */
+    //   }
+    //   .thumbnail {
+    //     margin-bottom: 0; /* no */
+    //   }
+    //   .thumbnail > img {
+    //     margin: 0; /* no */
+    //     width: 380px; /* no */
+    //     height: 246px; /* no */
+    //   }
+    // }
+  }
+}
+.catch-btn {
+  width: 50px;
+  height: 50px;
+}
+.catch-btn-left {
+  position: absolute;
+  top: 230px;
+  left: -80px;
+  background: url('../../images/ic_left.png') no-repeat center center/cover;
+}
+.catch-btn-right {
+  background: url('../../images/ic_right.png') no-repeat center center/cover;
+  position: absolute;
+  top: 230px;
+  right: -100px;
+}
+@media (max-width: 768px) {
+  .catch-btn {
+    width: 50px;
+    height: 50px;
+  }
+  .catch-btn-left {
+    position: absolute;
+    top: 230px;
+    left: -40px;
+    background: url('../../images/ic_left.png') no-repeat center center/cover;
+  }
+  .catch-btn-right {
+    background: url('../../images/ic_right.png') no-repeat center center/cover;
+    position: absolute;
+    top: 230px;
+    right: -60px;
+  }
+  .bottom_intro {
+    // margin-left: 40px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .catch-btn {
+    width: 50px;
+    height: 50px;
+  }
+  .catch-btn-left {
+    position: absolute;
+    top: 230px;
+    left: -60px;
+    background: url('../../images/ic_left.png') no-repeat center center/cover;
+  }
+  .catch-btn-right {
+    background: url('../../images/ic_right.png') no-repeat center center/cover;
+    position: absolute;
+    top: 230px;
+    right: -80px;
+  }
+}
+.container-bj {
+  background: #ebf4f4;
+  width: 100%;
+  padding-bottom: 221px !important;
+  .responsive-div {
+    width: 1220px;
+    margin: 51px auto 0;
+    .qqqqq {
+      position: relative;
     }
+  }
+  .thumbnail-bj {
+    background-size: cover;
+    border: 1px solid #e8e8e8 !important;
   }
 }
 </style>
