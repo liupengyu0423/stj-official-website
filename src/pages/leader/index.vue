@@ -134,7 +134,7 @@ export default {
 <style lang="scss" scoped>
 .news {
   .container_banner {
-    background: url('../../images/leader_banner.png') no-repeat center center;
+    background: url("../../images/leader_banner.png") no-repeat center center;
     background-size: cover;
   }
   .col-sm {
@@ -217,7 +217,7 @@ export default {
         font-family: PingFangSC-Light;
       }
     }
-    @media (min-width: 1440px) {
+    @media (min-width: 1441px) {
       .col-sm-4,
       .col-lg-4,
       .col-md-4,

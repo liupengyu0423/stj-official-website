@@ -267,19 +267,19 @@ export default {
   display: flex;
   padding: 0;
   .thumbnail-envir {
-    background: url('../../images/envir.png') no-repeat center center;
+    background: url("../../images/envir.png") no-repeat center center;
     background-size: cover;
     min-width: 480px;
     height: 160px;
   }
   .thumbnail-innocuity {
-    background: url('../../images/innocuity.png') no-repeat center center;
+    background: url("../../images/innocuity.png") no-repeat center center;
     background-size: cover;
     min-width: 480px;
     height: 160px;
   }
   .thumbnail-integration {
-    background: url('../../images/integration.png') no-repeat center center;
+    background: url("../../images/integration.png") no-repeat center center;
     background-size: cover;
     min-width: 480px;
     height: 160px;
@@ -299,10 +299,10 @@ export default {
   position: absolute;
   top: 346px;
   left: -40px;
-  background: url('../../images/ic_left.png') no-repeat center center/cover;
+  background: url("../../images/ic_left.png") no-repeat center center/cover;
 }
 .catch-btn-right {
-  background: url('../../images/ic_right.png') no-repeat center center/cover;
+  background: url("../../images/ic_right.png") no-repeat center center/cover;
   position: absolute;
   top: 346px;
   right: -60px;
@@ -316,10 +316,10 @@ export default {
     position: absolute;
     top: 346px;
     left: -40px;
-    background: url('../../images/ic_left.png') no-repeat center center/cover;
+    background: url("../../images/ic_left.png") no-repeat center center/cover;
   }
   .catch-btn-right {
-    background: url('../../images/ic_right.png') no-repeat center center/cover;
+    background: url("../../images/ic_right.png") no-repeat center center/cover;
     position: absolute;
     top: 346px;
     right: -60px;
@@ -337,10 +337,10 @@ export default {
     position: absolute;
     top: 346px;
     left: -60px;
-    background: url('../../images/ic_left.png') no-repeat center center/cover;
+    background: url("../../images/ic_left.png") no-repeat center center/cover;
   }
   .catch-btn-right {
-    background: url('../../images/ic_right.png') no-repeat center center/cover;
+    background: url("../../images/ic_right.png") no-repeat center center/cover;
     position: absolute;
     top: 346px;
     right: -80px;
@@ -396,7 +396,7 @@ export default {
   height: 702px;
   position: relative;
   pointer-events: auto;
-  background: url('../../images/intro.png') no-repeat center center;
+  background: url("../../images/intro.png") no-repeat center center;
   background-position: auto 100%;
   background-size: cover;
   .intro_img {
@@ -431,7 +431,7 @@ export default {
   );
   padding-left: 79px;
   .scheme_left {
-    background: url('../../images/product.png') no-repeat;
+    background: url("../../images/product.png") no-repeat;
     background-size: contain;
   }
   .thumbnail {
@@ -672,7 +672,7 @@ export default {
         }
       }
     }
-    @media (min-width: 1440px) {
+    @media (min-width: 1441px) {
       > div {
         box-sizing: border-box;
         width: 648px;
