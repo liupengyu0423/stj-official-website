@@ -3,7 +3,7 @@
     <CommonHead />
     <div class="container container_banner">
       <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-9">
           <h4>生态洁产品受到国家领导关注<br>被中央电视台报道
           </h4>
         </div>
@@ -132,9 +132,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media (max-width: 768px) {
+  .news .container {
+    padding: 146px 0 146px 20px !important;
+  }
+  .row.examples .col-xs-4 {
+    width: 33% !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+}
 .news {
   .container_banner {
-    background: url("../../images/leader_banner.png") no-repeat center center;
+    background: url('../../images/leader_banner.png') no-repeat center center;
     background-size: cover;
   }
   .col-sm {
@@ -185,6 +199,7 @@ export default {
     }
     .caption {
       padding: 0;
+      display: inline;
       // margin-top: 2.8vw;
       .title {
         font-size: 18px;
@@ -223,7 +238,7 @@ export default {
       .col-md-4,
       .col-xs-4 {
         width: 460px; /* no */
-        padding: 46px 47.5px; /* no */
+        padding: 60px 47.5px; /* no */
       }
       .thumbnail {
         margin-bottom: 0; /* no */
@@ -238,6 +253,16 @@ export default {
   @media (min-width: 1440px) {
     .row.examples {
       padding: 0 50px; /* no */
+    }
+  }
+  @media (min-width: 1300px) {
+    .row.examples {
+      padding: 60px 150px 11% !important; /* no */
+    }
+  }
+  @media (min-width: 2560px) {
+    .row.examples {
+      padding: 60px 500px 11% !important; /* no */
     }
   }
   .navbar {

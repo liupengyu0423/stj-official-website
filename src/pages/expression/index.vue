@@ -121,7 +121,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media (max-width: 768px) {
+  .expression .row.examples > div.col-xs-6 {
+    width: 47% !important;
+  }
+  .expression .row.examples {
+    display: flex;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    padding-top: 0 !important;
+  }
+}
 .expression {
+  @media (min-width: 1300px) {
+    .row.examples {
+      padding: 60px 150px 11% !important; /* no */
+    }
+  }
+  @media (min-width: 2560px) {
+    .row.examples {
+      padding: 60px 500px 11% !important; /* no */
+    }
+  }
   .container_banner {
     background: url('../../images/expre_banner.png') no-repeat center center;
     background-size: cover;
@@ -248,7 +269,6 @@ export default {
         background: #1aa8aa;
         width: 100%;
         opacity: 0.8;
-        padding: 10px 16px;
         h5 {
           color: #fff;
           font-family: PingFangSC-Regular;
@@ -261,7 +281,13 @@ export default {
       width: 432px;
       height: 274px;
     }
-    @media (min-width: 1440px) {
+    @media screen and (max-width: 700px) {
+      > div {
+        width: 45%; /* no */
+        height: 120px; /* no */
+      }
+    }
+    @media screen and (min-width: 1440px) {
       > div {
         width: 432px; /* no */
         height: 274px; /* no */
@@ -286,29 +312,6 @@ export default {
         padding-left: 6px;
       }
     }
-  }
-}
-@media (min-width: 1440px) {
-  .row.examples {
-    padding: 60px 60px 11% !important; /* no */
-  }
-}
-@media (min-width: 1500px) and (max-width: 1920px) {
-  .examples {
-    padding: 38px 50px;
-    /* no */
-  }
-}
-@media (max-width: 1440px) {
-  .examples {
-    padding: 38px 30px;
-    /* no */
-  }
-}
-@media (min-width: 2000px) {
-  .examples {
-    padding: 38px 300px;
-    /* no */
   }
 }
 </style>

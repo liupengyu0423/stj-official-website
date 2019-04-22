@@ -17,7 +17,7 @@
         <div class="thumbnail">
           <img :src="item.img"
                @click="showimage(item.img)">
-          <div class="caption">
+          <div class="caption caption2">
             <p class="title"
                @click="learn_detail(item)">{{item.title}}</p>
             <p class="date">{{item.date}}</p>
@@ -143,9 +143,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media (max-width: 768px) {
+  .row.examples .col-xs-4 {
+    width: 31% !important;
+  }
+  .row.examples .col-xs-4 {
+    width: 33% !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+}
 .news {
   .container_banner {
-    background: url("../../images/news_banner.png") no-repeat center center;
+    background: url('../../images/news_banner.png') no-repeat center center;
     background-size: cover;
   }
   .col-sm {
@@ -168,6 +182,9 @@ export default {
       border: none;
     }
   }
+  .row {
+    margin-right: 0;
+  }
   .row.examples {
     padding: 2% 2%;
     display: flex;
@@ -178,10 +195,12 @@ export default {
       font-size: 40px;
       text-align: center;
       margin-bottom: 20px;
+      font-family: PingFangSC-Regular;
     }
     .thumbnail {
       position: relative;
       border: none;
+      // margin-bottom: 10px;
     }
     .thumbnail a > img,
     .thumbnail > img {
@@ -189,12 +208,15 @@ export default {
       width: 100%;
       height: 18vw;
     }
-    .caption {
+    .caption.caption2 {
       padding: 0;
+      display: inline;
+      // margin-top: 2.8vw;
       .title {
         font-size: 18px;
         color: #3e403f;
         font-family: PingFangSC-Regular;
+        margin: 10px 0;
         margin: 28px 0 8px;
         width: 100%;
         overflow: hidden;
@@ -206,6 +228,7 @@ export default {
         margin-bottom: 8px;
         color: #7a7e7c;
         font-family: PingFangSC-Light;
+        margin-bottom: 12px;
       }
       .detail {
         font-size: 14px;
@@ -231,7 +254,7 @@ export default {
       .col-md-4,
       .col-xs-4 {
         width: 460px; /* no */
-        padding: 46px 47.5px; /* no */
+        padding: 60px 47.5px; /* no */
       }
       .thumbnail {
         margin-bottom: 0; /* no */
@@ -246,6 +269,16 @@ export default {
   @media (min-width: 1440px) {
     .row.examples {
       padding: 0 50px; /* no */
+    }
+  }
+  @media (min-width: 1300px) {
+    .row.examples {
+      padding: 60px 150px 11% !important; /* no */
+    }
+  }
+  @media (min-width: 2560px) {
+    .row.examples {
+      padding: 60px 500px 11% !important; /* no */
     }
   }
   .navbar {

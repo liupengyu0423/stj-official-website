@@ -377,6 +377,73 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media (max-width: 768px) {
+  .responsive-div,
+  .responsive-div3,
+  .responsive-div4 {
+    background-size: 693px 460px;
+    background-position: center 30px !important;
+    width: 100% !important;
+    height: 800px !important;
+    .row-lg-1,
+    .list-group,
+    .col-lg- {
+      padding-top: 340px !important;
+    }
+  }
+  .responsive-div2,
+  .responsive-div3 {
+    width: 100% !important;
+  }
+  .responsive-div4 {
+    width: 100% !important;
+    height: 1000px !important;
+    background: url('../../images/theory.png') no-repeat center 40px !important;
+    background-size: contain !important;
+    .col-lg- {
+      padding-top: 600px !important;
+    }
+  }
+  .responsive-div5,
+  .responsive-div6 {
+    width: 100% !important;
+    height: 1000px !important;
+    img {
+      padding: 0 20px;
+    }
+  }
+  .responsive-div6 {
+    height: 800px !important;
+    .catch-btn-left {
+      width: 50px;
+      height: 50px;
+      top: 407px;
+      left: 10px;
+    }
+    .catch-btn-right {
+      width: 50px;
+      height: 50px;
+      top: 407px;
+      right: 10px;
+    }
+    .row {
+      padding-left: 80px;
+    }
+    .row-div {
+      width: 300px !important;
+      height: 200px !important;
+      margin-bottom: 20px !important;
+    }
+  }
+  .row_list {
+    .col-md-3,
+    .col-lg-3,
+    .col-sm-4,
+    .col-xs-12 {
+      margin-left: 0 !important;
+    }
+  }
+}
 .list-group-item {
   display: inline-block;
   flex: 1;
@@ -405,7 +472,8 @@ export default {
   width: 100%;
   background: url('../../images/unify.png') no-repeat;
   background-size: cover;
-  padding: 180px 0 299px 56px;
+  height: 680px;
+  padding: 180px 0 0 56px;
 }
 @media (min-width: 1440px) {
   .xi-col-lg-.col-lg- {
@@ -435,7 +503,9 @@ export default {
   font-family: PingFangSC-Regular;
   font-size: 18px;
 }
-
+.nav {
+  box-shadow: #eee 2px 4px 5px;
+}
 .nav-tabs-hover {
   padding: 29px 0;
   text-align: center;
@@ -552,6 +622,15 @@ export default {
     }
     div {
       // margin: 0 90px 60px 0;
+    }
+    .col-md-3,
+    .col-lg-3,
+    .col-sm-4,
+    .col-xs-12 {
+      margin-left: 100px;
+      &:first-of-type {
+        margin-left: 0;
+      }
     }
   }
   .row .col-md-3,

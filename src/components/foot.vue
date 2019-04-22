@@ -53,6 +53,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media (max-width: 768px) {
+  footer {
+    padding: 20px 0px 0 40px !important;
+  }
+  footer .footer_logo {
+    top: 50px !important;
+    right: 40px !important;
+  }
+}
 footer {
   width: 100%;
   background: #2a2f2f;

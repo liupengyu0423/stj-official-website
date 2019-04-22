@@ -65,26 +65,28 @@
       </div>
     </div>
     <div class="row scheme">
-      <div class="col-sm-13 col-sm-6 col-md-6 col-lg-6 col-xs-6">
-        <div class="thumbnail">
-          <h2>产品中心</h2>
-          <p class="top">农村户厕一体化生物处理建设</p>
-          <p class="center">利用微生物降解原理，对生活污水进行截流、吸附和分解，最终实现对污水完全净化并循环利用的新型农村生活污水处理设备</p>
-          <router-link to="/product"
-                       class="all">了解所有产品</router-link>
-          <img src="../../images/product.png"
-               alt="">
+      <div class="scheme-1">
+        <div class="scheme-2 col-sm-13 col-sm-6 col-md-6 col-lg-6 col-xs-6">
+          <div class="thumbnail">
+            <h2>产品中心</h2>
+            <p class="top">农村户厕一体化生物处理建设</p>
+            <p class="center">利用微生物降解原理，对生活污水进行截流、吸附和分解，最终实现对污水完全净化并循环利用的新型农村生活污水处理设备</p>
+            <router-link to="/product"
+                         class="all">了解所有产品</router-link>
+            <img src="../../images/product.png"
+                 alt="">
+          </div>
         </div>
-      </div>
-      <div class="col-sm-13 col-sm-6 col-md-6 col-lg-6 col-xs-6">
-        <div class="thumbnail">
-          <h2>互联网+智慧方案</h2>
-          <p class="top">农村户厕一体化生物处理设备</p>
-          <p class="center">利用微生物降解原理，对生活污水进行截流、吸附和分解，最终实现对污水完全净化并循环利用的新型农村生活污水处理设备</p>
-          <router-link to="/net"
-                       class="all">了解所有方案</router-link>
-          <img src="../../images/fa.png"
-               alt="">
+        <div class="scheme-2 col-sm-13 col-sm-6 col-md-6 col-lg-6 col-xs-6">
+          <div class="thumbnail">
+            <h2>互联网+智慧方案</h2>
+            <p class="top">农村户厕一体化生物处理设备</p>
+            <p class="center">利用微生物降解原理，对生活污水进行截流、吸附和分解，最终实现对污水完全净化并循环利用的新型农村生活污水处理设备</p>
+            <router-link to="/net"
+                         class="all">了解所有方案</router-link>
+            <img src="../../images/fa.png"
+                 alt="">
+          </div>
         </div>
       </div>
     </div>
@@ -140,7 +142,7 @@
         <div class="row">
           <div class="bottom_intro bottom_intro2 col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <h4>褒奖</h4>
-            <div class="col-sm-4 col-lg-4 col-md-4 col-xs-4"
+            <div class="col-sm-4 col-lg-4 col-md-4 col-xs-6"
                  v-for="(item,index) in examples1"
                  :key="index">
               <div class="thumbnail thumbnail-bj"
@@ -263,23 +265,91 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media (max-width: 768px) {
+  .scheme .scheme-1 {
+    width: 100% !important;
+    .col-sm-13 {
+      padding-left: 30px !important;
+    }
+  }
+  .swiper-container {
+    width: 100%;
+    height: 375px !important;
+  }
+  .environment .row .thumbnail-envir {
+    min-width: 0 !important;
+  }
+  .thumbnail-envir {
+    background: url('../../images/envir.png') no-repeat center center;
+    background-size: cover;
+    min-width: 0 !important;
+    height: 160px;
+  }
+  .thumbnail-innocuity {
+    background: url('../../images/innocuity.png') no-repeat center center;
+    background-size: cover;
+    min-width: 0 !important;
+    height: 160px;
+  }
+  .thumbnail-integration {
+    background: url('../../images/integration.png') no-repeat center center;
+    background-size: cover;
+    min-width: 0 !important;
+    height: 160px;
+  }
+  .instro-radius {
+    margin-left: 20px;
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+  .col-sm-13 .center {
+    width: 90% !important;
+  }
+  .map .news_title {
+    padding: 60px 0 30px 0 !important;
+  }
+  .container-bj .responsive-div {
+    width: 100% !important;
+  }
+  .responsive-div .thumbnail {
+    width: 300px !important;
+    margin-left: 0 !important;
+  }
+  .col-sm-4,
+  .col-lg-4,
+  .col-md-4,
+  .col-xs-6 {
+    width: 48% !important;
+  }
+  .catch-btn-left {
+    top: 480px !important;
+    left: -20px !important;
+    z-index: 10000;
+  }
+  .catch-btn-right {
+    top: 480px !important;
+    right: -30px !important;
+    z-index: 10000;
+  }
+}
 .environment .row {
   display: flex;
   padding: 0;
   .thumbnail-envir {
-    background: url("../../images/envir.png") no-repeat center center;
+    background: url('../../images/envir.png') no-repeat center center;
     background-size: cover;
     min-width: 480px;
     height: 160px;
   }
   .thumbnail-innocuity {
-    background: url("../../images/innocuity.png") no-repeat center center;
+    background: url('../../images/innocuity.png') no-repeat center center;
     background-size: cover;
     min-width: 480px;
     height: 160px;
   }
   .thumbnail-integration {
-    background: url("../../images/integration.png") no-repeat center center;
+    background: url('../../images/integration.png') no-repeat center center;
     background-size: cover;
     min-width: 480px;
     height: 160px;
@@ -299,10 +369,10 @@ export default {
   position: absolute;
   top: 346px;
   left: -40px;
-  background: url("../../images/ic_left.png") no-repeat center center/cover;
+  background: url('../../images/ic_left.png') no-repeat center center/cover;
 }
 .catch-btn-right {
-  background: url("../../images/ic_right.png") no-repeat center center/cover;
+  background: url('../../images/ic_right.png') no-repeat center center/cover;
   position: absolute;
   top: 346px;
   right: -60px;
@@ -312,14 +382,23 @@ export default {
     width: 50px;
     height: 50px;
   }
+  .container-bj {
+    background: #ebf4f4;
+    width: 100%;
+    .responsive-div {
+      width: 100%;
+      margin: 51px auto 0;
+      position: relative;
+    }
+  }
   .catch-btn-left {
     position: absolute;
     top: 346px;
     left: -40px;
-    background: url("../../images/ic_left.png") no-repeat center center/cover;
+    background: url('../../images/ic_left.png') no-repeat center center/cover;
   }
   .catch-btn-right {
-    background: url("../../images/ic_right.png") no-repeat center center/cover;
+    background: url('../../images/ic_right.png') no-repeat center center/cover;
     position: absolute;
     top: 346px;
     right: -60px;
@@ -337,10 +416,10 @@ export default {
     position: absolute;
     top: 346px;
     left: -60px;
-    background: url("../../images/ic_left.png") no-repeat center center/cover;
+    background: url('../../images/ic_left.png') no-repeat center center/cover;
   }
   .catch-btn-right {
-    background: url("../../images/ic_right.png") no-repeat center center/cover;
+    background: url('../../images/ic_right.png') no-repeat center center/cover;
     position: absolute;
     top: 346px;
     right: -80px;
@@ -396,7 +475,7 @@ export default {
   height: 702px;
   position: relative;
   pointer-events: auto;
-  background: url("../../images/intro.png") no-repeat center center;
+  background: url('../../images/intro.png') no-repeat center center;
   background-position: auto 100%;
   background-size: cover;
   .intro_img {
@@ -429,17 +508,46 @@ export default {
     #ffffff 50%,
     #ebf4f4 100%
   );
+  // height: 578px;
   padding-left: 79px;
   .scheme_left {
-    background: url("../../images/product.png") no-repeat;
+    background: url('../../images/product.png') no-repeat;
     background-size: contain;
   }
   .thumbnail {
     margin-bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .scheme-1 {
+    width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .scheme-2 {
+    width: 600px;
+    height: 100%;
+  }
+  @media (min-width: 1440px) {
+    .scheme-2 {
+      width: 600px;
+      /* no */
+      height: 100%;
+      /* no */
+    }
+    img {
+      margin-top: -88px !important;
+      /* no */
+    }
+  }
+  .all {
+    position: relative;
+    z-index: 9999999;
   }
 }
 .col-sm-13 {
-  padding-left: 64px !important;
+  padding-left: 184px !important;
 }
 .thumbnail {
   padding: 0 !important;
@@ -677,7 +785,8 @@ export default {
         box-sizing: border-box;
         width: 648px;
         /* no */
-        margin-bottom: 37px; /* no */ // padding-left: 96px; /* no */
+        margin-bottom: 37px; /* no */
+        // padding-left: 96px; /* no */
         padding-bottom: 33px; /* no */
       }
     }
@@ -761,8 +870,12 @@ export default {
   }
   .caption {
     position: absolute;
+    height: 40px;
+    display: flex;
+    align-items: center;
     bottom: 0px;
-    background: rgba(255, 255, 255, 0.88);
+    background: #f3fffd;
+    opacity: 0.9;
     width: 100%;
     padding: 8px 0 7px 14px;
     h5 {

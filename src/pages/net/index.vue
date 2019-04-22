@@ -34,11 +34,11 @@
              class="img-responsive">
         <div class="row row_col1">
           <div class="row1 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-            <h4 style="color:#303030">运维 APP
+            <h4>运维 APP
             </h4>
             <p class="top"
-               style="color:#303030">每一台生态洁厕所，都是高效运维的典范。</p>
-            <p style="color:#303030">生态洁 IoT 物联网终端设备与管理后台无缝衔接，每一次设备故障都会自动报警、创建售后工单，并自动分配给相关的运维人员，未来提供类似滴滴打车的抢单、派单模式，运维效率大大增加。</p>
+              >每一台生态洁厕所，都是高效运维的典范。</p>
+            <p>生态洁 IoT 物联网终端设备与管理后台无缝衔接，每一次设备故障都会自动报警、创建售后工单，并自动分配给相关的运维人员，未来提供类似滴滴打车的抢单、派单模式，运维效率大大增加。</p>
           </div>
         </div>
       </div>
@@ -98,6 +98,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media (max-width: 768px) {
+  .net .xi-col-lg-.col-lg- .row {
+    padding: 20px 0 0 20px !important;
+  }
+  .net .xi-col-lg-2 .row,
+  .net .xi-col-lg-3 .row,
+  .net .xi-col-lg-4 .row {
+    padding: 40px 0 0 20px !important;
+  }
+}
 .net {
   .container-fluid {
     padding: 0;
@@ -165,6 +175,7 @@ export default {
     }
     .top {
       margin-bottom: 40px;
+      font-size: 18px;
     }
   }
   .xi-col-lg-3 {

@@ -101,7 +101,7 @@
         </div>
       </div>
     </div>
-    <div class="container container_intro2"
+    <div class="container container_intro2 container_intro3"
          id="message">
       <div class="row">
         <div class="bottom_intro col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -123,7 +123,7 @@
                 <div class="catch-btn catch-btn-left"
                      @click="ic_left">
                 </div>
-                <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4"
+                <div class="col-sm-4 col-md-4 col-xs-6 col-lg-4"
                      v-for="(item,index) in examples1"
                      :key="index">
                   <div class="thumbnail thumbnail-bj"
@@ -271,6 +271,53 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media (max-width: 768px) {
+  .about .container-fluid .xi-col-lg-.col-lg- .row {
+    padding-left: 40px !important;
+  }
+  .about h6 {
+    margin: 120px 0 58px 40px !important;
+  }
+  .about p.two_title,
+  .about p.content {
+    margin: 10px 0 20px 40px !important;
+  }
+  .about p.laster {
+    margin: 10px 0 40px 40px !important;
+  }
+  .about .responsive-div6 .develop .date:last-of-type img {
+    left: 0 !important;
+  }
+  .container.container_intro2 .row .bottom_intro {
+    padding: 0 20px !important;
+  }
+  .container-bj .responsive-div {
+    width: 100% !important;
+  }
+  .responsive-div .thumbnail,
+  .thumbnail-bj {
+    width: 300px !important;
+  }
+  .catch-btn-left {
+    top: 320px !important;
+    left: 10px !important;
+    z-index: 10000;
+  }
+  .catch-btn-right {
+    top: 320px !important;
+    right: -10px !important;
+    z-index: 10000;
+  }
+  .col-sm-4,
+  .col-lg-4,
+  .col-md-4,
+  .col-xs-6 {
+    width: 46% !important;
+  }
+  .qqqqq {
+    padding-left: 35px;
+  }
+}
 .about {
   .responsive-div6 {
     padding: 6vw 12vw 5vw !important;
@@ -339,7 +386,7 @@ export default {
       position: relative;
       height: 534px;
       background: url('../../images/about.png') no-repeat center center;
-      background-size: auto 100%;
+      background-size: cover;
       .row {
         position: absolute;
         top: 0;
@@ -360,6 +407,9 @@ export default {
       font-size: 20px;
       margin-top: 2vw;
     }
+  }
+  .nav {
+    box-shadow: #eee 2px 4px 5px;
   }
   .navbar {
     margin-bottom: 0;
@@ -442,10 +492,15 @@ export default {
     background: #ebf4f4;
     text-align: center;
   }
+  .container_intro2 .row {
+    text-align: center;
+  }
+  .container_intro3 {
+    text-align: left;
+  }
   .bottom_intro p {
     color: #303030;
     font-size: 18px;
-    line-height: 40px;
   }
   .bottom_intro .title {
     padding-top: 120px;
@@ -509,14 +564,13 @@ export default {
     .caption {
       position: absolute;
       bottom: 0;
-      background: rgba(255, 255, 255, 0.88);
+      background: #f3fffd;
       padding: 0.7vw 1vw;
       width: 100%;
       h5 {
         color: #303030;
         font-family: PingFangSC-Regular;
-        font-size: 14px;
-        text-align: left;
+        font-size: 18px;
       }
     }
     .more {

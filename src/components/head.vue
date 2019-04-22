@@ -79,6 +79,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media (max-width: 768px) {
+  .nav > li > a {
+    font-size: 14px !important; /*no*/
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #fff !important;
+  }
+}
 .caret {
   border-top: 10px dashed #fff;
 }
