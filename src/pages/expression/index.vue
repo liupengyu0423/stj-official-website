@@ -133,6 +133,9 @@ export default {
   }
 }
 .expression {
+  .nav {
+    box-shadow: #eee 2px 4px 5px;
+  }
   @media (min-width: 1300px) {
     .row.examples {
       padding: 60px 150px 11% !important; /* no */
@@ -159,9 +162,9 @@ export default {
     margin-left: -50px;
   }
   .changeActiveA {
-    position: relative;
     width: 100%;
     display: inline-block !important;
+    position: static;
   }
   .navbar {
     margin-bottom: 0;
@@ -192,6 +195,7 @@ export default {
   .nav-tabs-hover {
     padding: 29px 0;
     text-align: center;
+    position: relative;
   }
   .nav-tabs-hover.active {
     color: #1aa8aa;
@@ -209,7 +213,7 @@ export default {
   }
   .nav-tabs.nav-justified > li > a {
     border-bottom: none;
-    padding: 0 15px 29px;
+    padding: 0 15px 0;
   }
   .nav-tabs.nav-justified {
     // border-bottom: 1px solid #f3f3f3;
