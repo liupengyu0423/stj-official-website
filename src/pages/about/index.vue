@@ -271,7 +271,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@media (max-width: 768px) {
+@media (max-width: 760px) {
   .about .container-fluid .xi-col-lg-.col-lg- .row {
     padding-left: 40px !important;
   }
@@ -567,6 +567,7 @@ export default {
       background: #f3fffd;
       padding: 0.7vw 1vw;
       width: 100%;
+      text-align: left;
       h5 {
         color: #303030;
         font-family: PingFangSC-Regular;
@@ -666,6 +667,7 @@ export default {
   .thumbnail-bj {
     background-size: cover;
     border: 1px solid #e8e8e8 !important;
+    cursor: url('../../images/big.png'), auto;
   }
 }
 </style>

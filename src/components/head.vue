@@ -79,7 +79,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@media (max-width: 768px) {
+@media (max-width: 760px) {
   .nav > li > a {
     font-size: 14px !important; /*no*/
   }

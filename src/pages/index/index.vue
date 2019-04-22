@@ -266,6 +266,16 @@ export default {
 
 <style lang="scss" scoped>
 @media (max-width: 768px) {
+  .instro-radius {
+    p {
+      margin: 0 !important;
+    }
+    h4 {
+      margin: 0 !important;
+    }
+  }
+}
+@media (max-width: 760px) {
   .scheme .scheme-1 {
     width: 100% !important;
     .col-sm-13 {
@@ -695,6 +705,7 @@ export default {
       height: 190px;
       margin-right: 0;
       display: inline-block;
+      cursor: url('../../images/big.png'), auto;
     }
     .learn_detail {
       font-size: 12px;
@@ -792,6 +803,10 @@ export default {
     }
     .title {
       margin-bottom: 16px;
+      cursor: pointer;
+      &:hover {
+        color: #1aa8aa;
+      }
     }
     .detail {
       margin-bottom: 26px;
@@ -853,6 +868,7 @@ export default {
   .thumbnail-bj {
     background-size: cover;
     border: 1px solid #e8e8e8 !important;
+    cursor: url('../../images/big.png'), auto;
   }
   .thumbnail {
     // height: 30vh;

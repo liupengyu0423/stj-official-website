@@ -256,7 +256,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@media (max-width: 768px) {
+@media (max-width: 760px) {
   .responsive-div,
   .responsive-div3,
   .responsive-div4 {
@@ -267,7 +267,7 @@ export default {
     .row-lg-1,
     .list-group,
     .col-lg- {
-      padding-top: 340px !important;
+      padding-top: 360px !important;
     }
   }
   .responsive-div2,
@@ -505,6 +505,17 @@ export default {
         margin-left: 0;
       }
     }
+    @media (max-width: 998px) {
+      .col-md-3,
+      .col-lg-3,
+      .col-sm-4,
+      .col-xs-12 {
+        margin-left: 0;
+        &:first-of-type {
+          margin-left: 0;
+        }
+      }
+    }
   }
   .row .col-md-3,
   .row .col-md-4 {
@@ -729,6 +740,7 @@ export default {
     border: none;
     padding: 0;
     border-radius: 0;
+    cursor: url('../../images/big.png'), auto;
   }
   // @media screen and (max-width: 550px) {
   //   .thumbnail {

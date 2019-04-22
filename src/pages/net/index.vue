@@ -36,8 +36,7 @@
           <div class="row1 col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <h4>运维 APP
             </h4>
-            <p class="top"
-              >每一台生态洁厕所，都是高效运维的典范。</p>
+            <p class="top">每一台生态洁厕所，都是高效运维的典范。</p>
             <p>生态洁 IoT 物联网终端设备与管理后台无缝衔接，每一次设备故障都会自动报警、创建售后工单，并自动分配给相关的运维人员，未来提供类似滴滴打车的抢单、派单模式，运维效率大大增加。</p>
           </div>
         </div>
@@ -98,7 +97,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@media (max-width: 768px) {
+@media (max-width: 760px) {
   .net .xi-col-lg-.col-lg- .row {
     padding: 20px 0 0 20px !important;
   }

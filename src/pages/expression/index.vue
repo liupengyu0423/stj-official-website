@@ -138,12 +138,32 @@ export default {
   }
   @media (min-width: 1300px) {
     .row.examples {
-      padding: 60px 150px 11% !important; /* no */
+      padding: 60px 25px 11% !important; /* no */
     }
   }
-  @media (min-width: 2560px) {
+  @media (min-width: 1400px) {
     .row.examples {
-      padding: 60px 500px 11% !important; /* no */
+      padding: 60px 40px 11% !important; /* no */
+    }
+  }
+  @media (min-width: 1600px) {
+    .row.examples {
+      padding: 60px 100px 11% !important; /* no */
+    }
+  }
+  @media (min-width: 1800px) {
+    .row.examples {
+      padding: 60px 200px 11% !important; /* no */
+    }
+  }
+  @media (min-width: 2100px) {
+    .row.examples {
+      padding: 60px 300px 11% !important; /* no */
+    }
+  }
+  @media (min-width: 2500px) {
+    .row.examples {
+      padding: 60px 600px 11% !important; /* no */
     }
   }
   .container_banner {
@@ -267,6 +287,7 @@ export default {
       padding: 0;
       background-size: auto 100%;
       background-position: center;
+      cursor: url('../../images/big.png'), auto;
       .caption {
         position: absolute;
         bottom: 0;
