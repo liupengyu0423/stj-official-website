@@ -4,7 +4,7 @@
     <div class="container-fluid">
       <div class="col-lg- xi-col-lg-">
         <div class="row row_col1">
-          <div class="col-lg-0 col-lg-6 col-md-6 col-sm-10 col-xs-10">
+          <div class="col-lg-0 col-lg-6 col-md-10 col-sm-10 col-xs-10">
             <h4>响应习主席"厕所革命"的号召<br />为实施乡村振兴战略贡献力量</h4>
           </div>
         </div>
@@ -56,7 +56,7 @@
             </div>
           </div>
           <div class="row row_list">
-            <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+            <div class="col-md-3 col-lg-3 col-sm-4 col-xs-6">
               <h5>
                 <a>免除污染</a>
               </h5>
@@ -64,7 +64,7 @@
                 <li>直接将人的排泄物原位处理，一年可减少36万吨+清洁水</li>
               </ul>
             </div>
-            <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+            <div class="col-md-3 col-lg-3 col-sm-4 col-xs-6">
               <h5>
                 <a>经济节能</a>
               </h5>
@@ -72,7 +72,7 @@
                 <li>运行费用低廉、无须冲水，一年可节水1000吨+，可节约清运、处理费用10000+元</li>
               </ul>
             </div>
-            <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+            <div class="col-md-3 col-lg-3 col-sm-4 col-xs-6">
               <h5>
                 <a>安装方便</a>
               </h5>
@@ -80,9 +80,7 @@
                 <li>无需铺设排污管网，可根据地形随处安放，建设费用低</li>
               </ul>
             </div>
-          </div>
-          <div class="row row_list">
-            <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+            <div class="col-md-3 col-lg-3 col-sm-4 col-xs-6">
               <h5>
                 <a>外形美观</a>
               </h5>
@@ -90,7 +88,7 @@
                 <li>外观造型和文化色彩具多样性，具有景观效应，提升城市、旅游景区形象</li>
               </ul>
             </div>
-            <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+            <div class="col-md-3 col-lg-3 col-sm-4 col-xs-6">
               <h5>
                 <a>用途广泛</a>
               </h5>
@@ -98,7 +96,7 @@
                 <li>适用于城镇、风景名胜区、广场、公园、居民小区、车站、码头等人员密集场所，以及火车、轮船上</li>
               </ul>
             </div>
-            <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+            <div class="col-md-3 col-lg-3 col-sm-4 col-xs-6">
               <h5>
                 <a>产品多样</a>
               </h5>
@@ -114,7 +112,7 @@
              v-if="click===1">
           <h4>产品展示</h4>
           <div class="row">
-            <div class="row-div col-sm-6 col-md-4 col-xs-6 col-lg-4"
+            <div class="row-div col-sm-6 col-md-4 col-xs-12 col-lg-4"
                  v-for="(item,index) in examples2"
                  :key="index">
               <div class="thumbnail"
@@ -292,7 +290,7 @@ export default {
     }
   }
   .responsive-div6 {
-    height: 800px !important;
+    height: auto !important;
     .catch-btn-left {
       width: 50px;
       height: 50px;
@@ -309,9 +307,15 @@ export default {
       padding-left: 80px;
     }
     .row-div {
-      width: 300px !important;
-      height: 200px !important;
+      width: 600px !important;
+      height: 384px !important;
       margin-bottom: 20px !important;
+    }
+    padding-bottom: 221px !important;
+    .caption {
+      h5 {
+        font-size: 24px !important;
+      }
     }
   }
   .row_list {
@@ -322,7 +326,107 @@ export default {
       margin-left: 0 !important;
     }
   }
+  .xi-col-lg- {
+    .col-lg-13 p {
+      width: 65%;
+    }
+  }
+  .nav-tabs.nav-justified {
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-tabs.nav-justified > li {
+    width: 50% !important;
+  }
+  .nav-tabs.nav-justified > li > a {
+    border-radius: 0;
+    font-size: 22px !important;
+  }
+  .responsive-div {
+    text-align: center;
+    .bes_1 h4 {
+      padding-left: 0 !important;
+    }
+    .bes_2 p {
+      padding-left: 0 !important;
+    }
+    .text-muted {
+      padding-left: 0 !important;
+    }
+    .bes_2 {
+      padding-right: 0 !important;
+    }
+  }
+  .responsive-div2 {
+    .row-lg-2 {
+      text-align: center;
+    }
+    .bes_1 h4 {
+      padding-left: 0 !important;
+    }
+    .bes_2 p {
+      padding-left: 0 !important;
+    }
+    .text-muted {
+      padding-left: 0 !important;
+    }
+    .bes_2 {
+      padding-right: 0 !important;
+    }
+    .row_list {
+      padding-left: 60px !important;
+      > div {
+        height: 250px !important;
+      }
+    }
+  }
+  .responsive-div3 .list-group {
+    padding-left: 0 !important;
+    text-align: center;
+    > div {
+      a {
+        margin: auto;
+      }
+    }
+    .list-group-item {
+      border-radius: 0;
+    }
+  }
+  .responsive-div4 {
+    .col-lg- {
+      padding-left: 31px !important;
+      padding-right: 31px !important;
+      text-align: center;
+      .col-xs-8,
+      .col-xs-10 {
+        width: 100%;
+      }
+    }
+  }
 }
+// @media (min-width: 768px) and (max-width: 768px) {
+//   .responsive-div4 {
+//     background-size: contain !important;
+//     .col-lg- {
+//       padding: 120px 370px 140px !important;
+//       text-align: center;
+//       .col-lg-01 {
+//         width: 100%;
+//       }
+//       .col-lg-13 p {
+//         font-size: 22px !important;
+//       }
+//       h4 {
+//         font-size: 36px;
+//       }
+//     }
+//   }
+//   .nav-tabs-hover {
+//     a {
+//       font-size: 24px !important;
+//     }
+//   }
+// }
 .list-group-item {
   display: inline-block;
   flex: 1;
@@ -351,7 +455,8 @@ export default {
   width: 100%;
   background: url('../../images/unify.png') no-repeat;
   background-size: cover;
-  padding: 90px 0 150px 56px;
+  height: 680px;
+  padding: 180px 0 0px 56px;
 }
 @media (min-width: 1440px) {
   .xi-col-lg-.col-lg- {
@@ -359,7 +464,7 @@ export default {
   }
 }
 .row_col2 {
-  margin-top: 2%;
+  // margin-top: 2%;
   p {
     font-family: PingFangSC-Regular;
     font-size: 18px;
@@ -385,13 +490,14 @@ export default {
 .col-lg-0 h4 {
   color: #1aa8aa;
   font-family: PingFangSC-Regular;
-  font-size: 32px;
+  font-size: 40px;
+  margin-bottom: 29px;
 }
 
 .col-lg-13 p {
   color: #303030;
   font-family: PingFangSC-Regular;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .nav-tabs-hover {
@@ -776,5 +882,155 @@ export default {
   margin-left: 0;
   margin-right: 0;
   margin: 0 auto;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .xi-col-lg- {
+    .col-lg-0 h4 {
+      font-size: 40px !important; /*no*/
+    }
+    .col-lg-13 p {
+      width: 60%;
+      font-size: 22px !important; /*no*/
+    }
+  }
+  .xi-col-lg-.col-lg- {
+    height: auto !important;
+    padding: 180px 0 301px 70px !important; /*no*/
+  }
+  .responsive-div4 {
+    background-size: contain !important;
+    background-position: center 400px !important; /*no*/
+    height: auto !important;
+    .col-lg- {
+      padding: 120px 80px 715px !important; /*no*/
+      text-align: center;
+      .col-lg-01 {
+        width: 100%;
+      }
+      .col-lg-13 p {
+        font-size: 22px !important; /*no*/
+      }
+      h4 {
+        font-size: 36px !important; /*no*/
+      }
+    }
+  }
+  .responsive-div6 {
+    // width: 100% !important;
+    // height: 750px !important;
+    .row {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    // .catch-btn {
+    //   width: 40px !important; /*no*/
+    //   height: 40px !important; /*no*/
+    // }
+    // .catch-btn-left {
+    //   left: -5px !important;
+    // }
+    // .catch-btn-right {
+    //   right: -5px !important;
+    // }
+    h4 {
+      font-size: 28px !important; /*no*/
+    }
+    // .row-div {
+    //   width: 309px !important; /*no*/
+    //   height: 198px !important; /*no*/
+    // }
+    // .more {
+    //   font-size: 24px !important; /*no*/
+    // }
+    .caption {
+      height: auto;
+    }
+    .thumbnail .caption h5 {
+      font-size: 20px !important; /*no*/
+    }
+  }
+  .nav,
+  .nav-tabs,
+  .nav-justified {
+    padding-left: 32px;
+  }
+  .nav-tabs-hover {
+    a {
+      font-size: 20px !important; /*no*/
+    }
+  }
+  .responsive-div {
+    height: auto !important; /*no*/
+    background-position: right bottom !important; /*no*/
+  }
+  .bes_1 h4 {
+    font-size: 36px !important; /*no*/
+    padding-top: 116px !important; /*no*/
+    padding-bottom: 29px !important; /*no*/
+  }
+  .bes_2 p {
+    font-size: 22px !important; /*no*/
+    padding-bottom: 84px !important; /*no*/
+  }
+  .text-muted {
+    font-size: 24px !important; /*no*/
+    padding-bottom: 103px !important; /*no*/
+  }
+  .responsive-div3 {
+    h4 {
+      font-size: 36px !important; /*no*/
+    }
+    .list-group .list-group-item {
+      font-size: 18px !important; /*no*/
+    }
+  }
+  .responsive-div2 {
+    .row_list .col-md-3,
+    .row_list .col-lg-3,
+    .row_list .col-sm-4,
+    .row_list .col-xs-12 {
+      margin-left: 0 !important; /*no*/
+    }
+    .container {
+      width: 100%;
+    }
+    .bes_1 {
+      padding-right: 0 !important; /*no*/
+    }
+    .bes_1 h4,
+    .bes_2 p {
+      width: 100%;
+      padding-left: 0 !important; /*no*/
+      text-align: center;
+    }
+    .row_list h5 a {
+      font-size: 26px !important; /*no*/
+    }
+    .row_list {
+      > div {
+        width: 50% !important; /*no*/
+        height: 180px !important; /*no*/
+      }
+      li {
+        font-size: 18px !important; /*no*/
+      }
+    }
+  }
+  .responsive-div5 {
+    h4 {
+      font-size: 28px !important; /*no*/
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 800px) {
+  .responsive-div6 {
+    width: 1161px !important;
+    height: 708px !important;
+    .row-div {
+      width: 377px !important;
+      height: 240px !important;
+    }
+  }
 }
 </style>

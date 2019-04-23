@@ -66,7 +66,7 @@
     </div>
     <div class="row scheme">
       <div class="scheme-1">
-        <div class="scheme-2 col-sm-13 col-sm-6 col-md-6 col-lg-6 col-xs-6">
+        <div class="scheme-2 col-sm-13 col-sm-6 col-md-6 col-lg-6 col-xs-12">
           <div class="thumbnail">
             <h2>产品中心</h2>
             <p class="top">农村户厕一体化生物处理建设</p>
@@ -77,11 +77,11 @@
                  alt="">
           </div>
         </div>
-        <div class="scheme-2 col-sm-13 col-sm-6 col-md-6 col-lg-6 col-xs-6">
+        <div class="scheme-2 col-sm-13 col-sm-6 col-md-6 col-lg-6 col-xs-12">
           <div class="thumbnail">
             <h2>互联网+智慧方案</h2>
-            <p class="top">农村户厕一体化生物处理设备</p>
-            <p class="center">利用微生物降解原理，对生活污水进行截流、吸附和分解，最终实现对污水完全净化并循环利用的新型农村生活污水处理设备</p>
+            <p class="top">高效率、低成本管护运维</p>
+            <p class="center">借助云计算、loT 物联网、大数据、智能运维 App、用户端智能家居 App 等前沿科技产品，数据双向互通，故障自动报警。</p>
             <router-link to="/net"
                          class="all">了解所有方案</router-link>
             <img src="../../images/fa.png"
@@ -142,14 +142,16 @@
         <div class="row">
           <div class="bottom_intro bottom_intro2 col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <h4>褒奖</h4>
-            <div class="col-sm-4 col-lg-4 col-md-4 col-xs-6"
-                 v-for="(item,index) in examples1"
-                 :key="index">
-              <div class="thumbnail thumbnail-bj"
-                   @click="showimage(item.img)"
-                   :style="'background:url('+item.img+') no-repeat center center/cover'">
-                <div class="caption">
-                  <h5>{{item.text}}</h5>
+            <div class="bj">
+              <div class="col-sm-4 col-lg-4 col-md-4 col-xs-6"
+                   v-for="(item,index) in examples1"
+                   :key="index">
+                <div class="thumbnail thumbnail-bj"
+                     @click="showimage(item.img)"
+                     :style="'background:url('+item.img+') no-repeat center center/cover'">
+                  <div class="caption">
+                    <h5>{{item.text}}</h5>
+                  </div>
                 </div>
               </div>
             </div>
@@ -189,7 +191,7 @@ export default {
         { title: '四川省农业厅副厅长杨波参观公司产品', img: require('../../images/n1/n1.jpg'), id: 0, date: '2019-03-08', detail: '3月8日，四川省农业厅副厅长杨波及各地市负责农村改厕的领导、专家在德阳市罗江区领导的陪同下参观公司安装在罗江区金山镇大井村的农村户厕一体化生物处理设备，公司讲解员向与会的领导、专家详细介绍了产品的工艺和性能。杨厅长对公司的产品提出了好评并希望这种产品能为四川省农村环境治理作出贡献，与会的领导、专家也对生态洁的一体化生物处理设备称赞不已。' },
         { title: '农业农村部部长韩长赋参观公司产品', img: require('../../images/n1/n2.jpg'), id: 1, date: '2019-10-09', detail: '2018年10月9日，全国首届农村卫生厕所新技术新产品展示交流会在山东淄博国际会展中心盛大开幕，生态洁公司受邀参加。交流会期间，农业农村部部长韩长赋到公司展位参观了公司产品并进行了指导。韩部长对生态洁公司的农村户厕一体化生物处理设备给予了充分肯定，赞扬公司产品将农村改厕和污水处理结合在一起，一步到位，是一种真正意义上的“厕所革命”好产品。' },
         { title: '住建部总工程师陈宜明参观公司产品', img: require('../../images/n1/n3.jpg'), id: 2, date: '2019-03-08', detail: '2018年10月13日，住建部总工程师陈宜明到第七届中国国际住宅产业暨建筑工业化产品与设备博览会生态洁公司展位参观。在公司展品旁，他详细了解了农村户厕一体化生物处理设备的工艺、运行、维护等情况，对农村改厕和一体化生物处理模式大加赞赏，希望生态洁公司再接再厉。继续为全国农村“厕所革命”做出更大的贡献。本次展会由住房和城乡建设部主办。' },
-        { title: '山东省莱芜市莱城区领导观摩生态洁产品', img: require('../../images/n1/n4.jpg'), id: 3, date: '2019-03-08', detail: ' 2018年6月19日，莱芜市莱城区委书记马宝岭，区长秦蕾带领区五大班子以及区直部门及各乡镇领导观摩公司安装在口镇的农村户厕一体化生物处理设备。在口镇林家庄和栖龙湾村安装现场。马书记及各位领导详细询问了设备运行情况，并提出了指导意见。希望生态洁继续努力，为莱芜的农村厕改和污水治理工作作出持续贡献' }
+        { title: '山东省莱城市区领导观摩生态洁产品', img: require('../../images/n1/n4.jpg'), id: 3, date: '2019-03-08', detail: ' 2018年6月19日，莱芜市莱城区委书记马宝岭，区长秦蕾带领区五大班子以及区直部门及各乡镇领导观摩公司安装在口镇的农村户厕一体化生物处理设备。在口镇林家庄和栖龙湾村安装现场。马书记及各位领导详细询问了设备运行情况，并提出了指导意见。希望生态洁继续努力，为莱芜的农村厕改和污水治理工作作出持续贡献' }
       ],
       examples1: [],
       examples2: [
@@ -323,24 +325,113 @@ export default {
     width: 100% !important;
   }
   .responsive-div .thumbnail {
-    width: 300px !important;
+    width: 100% !important;
+    height: 100% !important;
     margin-left: 0 !important;
   }
   .col-sm-4,
   .col-lg-4,
   .col-md-4,
   .col-xs-6 {
-    width: 48% !important;
+    width: 457px !important;
   }
   .catch-btn-left {
-    top: 480px !important;
-    left: -20px !important;
+    top: 220px !important;
+    left: -40px !important;
     z-index: 10000;
   }
   .catch-btn-right {
-    top: 480px !important;
-    right: -30px !important;
+    top: 220px !important;
+    right: -40px !important;
     z-index: 10000;
+  }
+  .scheme-2 {
+    width: 100% !important;
+  }
+  .scheme-1 {
+    .col-sm-13 {
+      h2 {
+        font-size: 48px;
+      }
+      .top {
+        font-size: 36px;
+      }
+      .center {
+        font-size: 28px;
+        width: 60% !important;
+      }
+      .all {
+        font-size: 26px;
+        margin-top: 69px;
+      }
+      img {
+        margin-top: -230px;
+      }
+    }
+  }
+  .map {
+    .examples {
+      > div {
+        padding-bottom: 0 !important;
+      }
+      .thumbnail {
+        flex-wrap: wrap;
+        img {
+          width: 300px !important; /*no*/
+          height: 194px !important; /*no*/
+        }
+        .caption {
+          margin-left: 0 !important;
+          .title {
+            width: 100% !important;
+            font-size: 32px !important;
+            line-height: 30px !important;
+            margin-top: 31px !important;
+          }
+          .detail {
+            font-size: 24px !important;
+          }
+          .learn_detail {
+            font-size: 22px !important;
+          }
+        }
+      }
+    }
+    .more_news {
+      font-size: 22px !important;
+      padding: 17px 30px !important;
+    }
+  }
+  .container-bj {
+    // .row {
+    //   padding-left: 30px !important;
+    // }
+    .thumbnail.thumbnail-bj {
+      margin-left: 20px !important;
+    }
+    .col-sm-4,
+    .col-lg-4,
+    .col-md-4,
+    .col-xs-6 {
+      flex-shrink: 0;
+      width: 457px !important;
+      height: 290px !important;
+      margin-left: 24px !important;
+      &:first-of-type {
+        margin-left: 0px !important;
+      }
+    }
+  }
+  .bj {
+    width: 100%;
+    height: 400px !important;
+    display: flex;
+    overflow: auto;
+  }
+  .responsive-div {
+    .bottom_intro {
+      padding: 0 !important;
+    }
   }
 }
 .environment .row {
@@ -724,7 +815,7 @@ export default {
       overflow: hidden;
     }
     .title {
-      width: 80%;
+      width: 100%;
       height: 52px;
       line-height: 26px;
       font-size: 18px;

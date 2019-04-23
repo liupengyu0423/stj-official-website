@@ -7,7 +7,7 @@
              alt=""
              class="img-responsive">
         <div class="row row_col1">
-          <div class="row1 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="row1 col-lg-6 col-md-6 col-sm-8 col-xs-12">
             <h4>互联网+ 智能厕所
             </h4>
             <p>借助云计算、IoT 物联网、大数据、智能运维 App、用户端智能家居 App 等前沿科技产品，让每一台生态洁环保厕所都插上科技的翅膀，数据双向互联互通，故障自动报警，售后工单自动派发，真正实现高效率、低成本的管护运维。</p>
@@ -19,8 +19,8 @@
              alt=""
              class="img-responsive">
         <div class="row row_col1">
-          <div class="row1 col-lg-6 col-md-6 col-sm-12 col-xs-12"></div>
-          <div class="row1 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="row1 col-lg-6 col-md-6 col-sm-8 col-xs-12"></div>
+          <div class="row1 col-lg-6 col-md-6 col-sm-8 col-xs-12">
             <h4>IoT 终端设备
             </h4>
             <p class="top">每一台生态洁厕所，都是一台智能设备。</p>
@@ -33,7 +33,7 @@
              alt=""
              class="img-responsive">
         <div class="row row_col1">
-          <div class="row1 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="row1 col-lg-6 col-md-6 col-sm-8 col-xs-12">
             <h4>运维 APP
             </h4>
             <p class="top">每一台生态洁厕所，都是高效运维的典范。</p>
@@ -46,8 +46,8 @@
              alt=""
              class="img-responsive">
         <div class="row row_col1">
-          <div class="row1 col-lg-6 col-md-6 col-sm-12 col-xs-12"></div>
-          <div class="row1 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="row1 col-lg-6 col-md-6 col-sm-8 col-xs-12"></div>
+          <div class="row1 col-lg-6 col-md-6 col-sm-8 col-xs-12">
             <h4>智能家居 APP
             </h4>
             <p class="top">每一台生态洁厕所，都是用户的智能家居。</p>
@@ -105,6 +105,26 @@ export default {
   .net .xi-col-lg-3 .row,
   .net .xi-col-lg-4 .row {
     padding: 40px 0 0 20px !important;
+  }
+  .net .xi-col-lg-2 .row .row1,
+  .net .xi-col-lg-4 .row .row1 {
+    width: 100% !important;
+    padding-left: 40% !important;
+  }
+  .net .xi-col-lg- .row .row1,
+  .net .xi-col-lg-3 .row .row1 {
+    width: 100% !important;
+    padding-right: 40% !important;
+  }
+  .net .xi-col-lg-.col-lg- p,
+  .net .xi-col-lg-2.col-lg- p,
+  .net .xi-col-lg-3.col-lg- p,
+  .net .xi-col-lg-4.col-lg- p {
+    line-height: 28px !important;
+    margin-top: 10px !important;
+  }
+  .net .xi-col-lg-.col-lg- h4 {
+    padding-top: 0px !important;
   }
 }
 .net {
@@ -269,6 +289,57 @@ export default {
     color: #fff;
     font-size: 9px;
     line-height: 16px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .net .xi-col-lg-.col-lg- .row {
+    padding: 40px 0 0 50px !important; /*no*/
+  }
+  .net .xi-col-lg-2 .row,
+  .net .xi-col-lg-3 .row,
+  .net .xi-col-lg-4 .row {
+    padding: 80px 0 0 50px !important; /*no*/
+  }
+  .net .xi-col-lg-2 .row .row1,
+  .net .xi-col-lg-4 .row .row1 {
+    width: 100% !important;
+    padding-left: 50% !important;
+  }
+  .net .xi-col-lg- .row .row1,
+  .net .xi-col-lg-3 .row .row1 {
+    width: 100% !important;
+    padding-right: 50% !important;
+  }
+  .net .xi-col-lg-.col-lg- h4,
+  .net .xi-col-lg-2 h4,
+  .net .xi-col-lg-3 h4,
+  .net .xi-col-lg-4 h4 {
+    font-size: 36px !important; /*no*/
+  }
+  .net .xi-col-lg-.col-lg- p,
+  .net .xi-col-lg-2 p,
+  .net .xi-col-lg-3 p,
+  .net .xi-col-lg-4 p {
+    font-size: 22px !important; /*no*/
+    line-height: 37px !important; /*no*/
+  }
+}
+@media (min-width: 768px) and (max-width: 800px) {
+  .net .xi-col-lg-.col-lg- .row {
+    padding: 20px 0 0 50px !important; /*no*/
+  }
+  .net .xi-col-lg-.col-lg- h4,
+  .net .xi-col-lg-2 h4,
+  .net .xi-col-lg-3 h4,
+  .net .xi-col-lg-4 h4 {
+    font-size: 28px !important; /*no*/
+  }
+  .net .xi-col-lg-.col-lg- p,
+  .net .xi-col-lg-2 p,
+  .net .xi-col-lg-3 p,
+  .net .xi-col-lg-4 p {
+    font-size: 18px !important; /*no*/
+    line-height: 28px !important; /*no*/
   }
 }
 </style>

@@ -4,7 +4,7 @@
     <div class="container-fluid">
       <div class="col-lg- xi-col-lg-">
         <div class="row row_col1">
-          <div class="col-lg-0 col-lg-6 col-md-6 col-sm-10 col-xs-10">
+          <div class="col-lg-0 col-lg-6 col-md-10 col-sm-10 col-xs-10">
             <h4>响应习主席"厕所革命"的号召<br />为实施乡村振兴战略贡献力量</h4>
           </div>
         </div>
@@ -60,7 +60,7 @@
             </div>
           </div>
           <div class="row row_list">
-            <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+            <div class="col-md-3 col-lg-3 col-sm-4 col-xs-6">
               <h5>
                 <a>一体化</a>
               </h5>
@@ -69,7 +69,7 @@
                 <li>厕所、厨房、洗浴一体化处理。</li>
               </ul>
             </div>
-            <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+            <div class="col-md-3 col-lg-3 col-sm-4 col-xs-6">
               <h5>
                 <a>无害化</a>
               </h5>
@@ -77,7 +77,7 @@
                 <li>排放符合《城镇污水处理厂污染物综合排放标准》，出水达到一级 B 标准，彻底解决农村主要污染源。</li>
               </ul>
             </div>
-            <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+            <div class="col-md-3 col-lg-3 col-sm-4 col-xs-6">
               <h5>
                 <a>智能化</a>
               </h5>
@@ -85,9 +85,7 @@
                 <li>户厕设备由智能物联网 IoT 设备控制驱动，实现故障报警、动态远程控制等功能，与智能管护 App 打通实现高效运维。</li>
               </ul>
             </div>
-          </div>
-          <div class="row row_list">
-            <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+            <div class="col-md-3 col-lg-3 col-sm-4 col-xs-6">
               <h5>
                 <a>中水与肥效回用</a>
               </h5>
@@ -96,7 +94,7 @@
                 <li>支持安全、便捷地肥效回用</li>
               </ul>
             </div>
-            <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+            <div class="col-md-3 col-lg-3 col-sm-4 col-xs-6">
               <h5>
                 <a>适用范围广</a>
               </h5>
@@ -104,7 +102,7 @@
                 <li>适用于平原、干旱、高原、高寒等地区。</li>
               </ul>
             </div>
-            <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+            <div class="col-md-3 col-lg-3 col-sm-4 col-xs-6">
               <h5>
                 <a>维护简单</a>
               </h5>
@@ -152,8 +150,6 @@
                 <li>无需铺设排污管网，可根据地形随处安放，建设费用低</li>
               </ul>
             </div>
-          </div>
-          <div class="row row_list">
             <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
               <h5>
                 <a>外形美观</a>
@@ -185,12 +181,14 @@
            :class="click_group===0?'container responsive-div3 responsive-div3_single':click_group===1?'container responsive-div3 responsive-div3_much':'container responsive-div3 responsive-div3_center'">
         <div class="list-group">
           <h4>产品类型</h4>
-          <a :class="index === click_group?'list-group-item active':'list-group-item'"
-             v-for="(item,index) in list_group_items"
-             :key="index"
-             @click="changegroup(index)">
-            {{item}}
-          </a>
+          <div>
+            <a :class="index === click_group?'list-group-item active':'list-group-item'"
+               v-for="(item,index) in list_group_items"
+               :key="index"
+               @click="changegroup(index)">
+              {{item}}
+            </a>
+          </div>
         </div>
       </div>
       <div class="hahah3">
@@ -234,7 +232,7 @@
                @click="ic_left"></div>
           <h4>应用案例</h4>
           <div class="row">
-            <div class="row-div col-sm-6 col-md-4 col-xs-6 col-lg-4"
+            <div class="row-div col-sm-6 col-md-4 col-xs-12 col-lg-4"
                  v-for="(item,index) in examples"
                  :key="index">
               <div class="thumbnail"
@@ -397,11 +395,11 @@ export default {
   }
   .responsive-div4 {
     width: 100% !important;
-    height: 1000px !important;
-    background: url('../../images/theory.png') no-repeat center 40px !important;
+    height: 900px !important;
+    background: url('../../images/wwww.png') no-repeat center 300px !important;
     background-size: contain !important;
     .col-lg- {
-      padding-top: 600px !important;
+      padding: 120px 0 370px 140px !important;
     }
   }
   .responsive-div5,
@@ -413,7 +411,7 @@ export default {
     }
   }
   .responsive-div6 {
-    height: 800px !important;
+    height: auto !important;
     .catch-btn-left {
       width: 50px;
       height: 50px;
@@ -430,9 +428,18 @@ export default {
       padding-left: 80px;
     }
     .row-div {
-      width: 300px !important;
-      height: 200px !important;
+      width: 600px !important;
+      height: 384px !important;
       margin-bottom: 20px !important;
+    }
+    .more {
+      font-size: 24px !important;
+      padding-bottom: 221px !important;
+    }
+    .caption {
+      h5 {
+        font-size: 24px !important;
+      }
     }
   }
   .row_list {
@@ -443,9 +450,86 @@ export default {
       margin-left: 0 !important;
     }
   }
+  .xi-col-lg- {
+    .col-lg-13 p {
+      width: 65%;
+    }
+  }
+  .nav-tabs.nav-justified {
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-tabs.nav-justified > li {
+    width: 50% !important;
+  }
+  .nav-tabs.nav-justified > li > a {
+    border-radius: 0;
+    font-size: 22px !important;
+  }
+  .responsive-div {
+    text-align: center;
+    .bes_1 h4 {
+      padding-left: 0 !important;
+    }
+    .bes_2 p {
+      padding-left: 0 !important;
+    }
+    .text-muted {
+      padding-left: 0 !important;
+    }
+    .bes_2 {
+      padding-right: 0 !important;
+    }
+  }
+  .responsive-div2 {
+    .row-lg-2 {
+      text-align: center;
+    }
+    .bes_1 h4 {
+      padding-left: 0 !important;
+    }
+    .bes_2 p {
+      padding-left: 0 !important;
+    }
+    .text-muted {
+      padding-left: 0 !important;
+    }
+    .bes_2 {
+      padding-right: 0 !important;
+    }
+    .row_list {
+      padding-left: 60px !important;
+      > div {
+        height: 250px !important;
+      }
+    }
+  }
+  .responsive-div3 .list-group {
+    padding-left: 0 !important;
+    text-align: center;
+    > div {
+      a {
+        margin: auto;
+      }
+    }
+    .list-group-item {
+      border-radius: 0;
+    }
+  }
+  .responsive-div4 {
+    .col-lg- {
+      padding-left: 31px !important;
+      padding-right: 31px !important;
+      text-align: center;
+      .col-xs-8,
+      .col-xs-10 {
+        width: 100%;
+      }
+    }
+  }
 }
 .list-group-item {
-  display: inline-block;
+  display: block;
   flex: 1;
   padding: 0;
   font-size: 0 !important;
@@ -481,7 +565,7 @@ export default {
   }
 }
 .row_col2 {
-  margin-top: 2%;
+  // margin-top: 2%;
   p {
     font-family: PingFangSC-Regular;
     font-size: 18px;
@@ -495,13 +579,14 @@ export default {
 .col-lg-0 h4 {
   color: #1aa8aa;
   font-family: PingFangSC-Regular;
-  font-size: 32px;
+  font-size: 40px;
+  margin-bottom: 29px;
 }
 
 .col-lg-13 p {
   color: #303030;
   font-family: PingFangSC-Regular;
-  font-size: 18px;
+  font-size: 22px;
 }
 .nav {
   box-shadow: #eee 2px 4px 5px;
@@ -628,7 +713,8 @@ export default {
     .col-sm-4,
     .col-xs-12 {
       margin-left: 100px;
-      &:first-of-type {
+      &:first-of-type,
+      &:nth-of-type(4) {
         margin-left: 0;
       }
     }
@@ -752,8 +838,8 @@ export default {
   width: 1440px;
   height: 1100px;
   margin: 0 auto !important;
-  background: url('../../images/wwww.png') no-repeat center bottom;
-  background-size: 1163px 768px;
+  background: url('../../images/wwww.png') no-repeat center 300px;
+  background-size: 1106px 626px;
   .col-lg- {
     width: 100%;
     padding: 120px 0 370px 140px;
@@ -825,24 +911,6 @@ export default {
     margin-left: 40px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
-  .catch-btn {
-    width: 80px;
-    height: 80px;
-  }
-  .catch-btn-left {
-    position: absolute;
-    top: 346px;
-    left: -60px;
-    background: url('../../images/ic_left.png') no-repeat center center/cover;
-  }
-  .catch-btn-right {
-    background: url('../../images/ic_right.png') no-repeat center center/cover;
-    position: absolute;
-    top: 346px;
-    right: -80px;
-  }
-}
 .responsive-div6 {
   position: relative;
   width: 1161px;
@@ -912,5 +980,166 @@ export default {
 .row {
   margin-right: 0;
   margin-left: 0;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .xi-col-lg- {
+    .col-lg-0 h4 {
+      font-size: 40px !important; /*no*/
+    }
+    .col-lg-13 p {
+      width: 60%;
+      font-size: 22px !important; /*no*/
+    }
+  }
+  .xi-col-lg-.col-lg- {
+    height: auto !important;
+    padding: 180px 0 301px 70px !important; /*no*/
+  }
+  .responsive-div4 {
+    background-size: contain !important;
+    background-position: center 400px !important; /*no*/
+    height: auto !important;
+    .col-lg- {
+      padding: 120px 80px 715px !important; /*no*/
+      text-align: center;
+      .col-lg-01 {
+        width: 100%;
+      }
+      .col-lg-13 p {
+        font-size: 22px !important; /*no*/
+      }
+      h4 {
+        font-size: 36px !important; /*no*/
+      }
+    }
+  }
+  .responsive-div6 {
+    width: 100% !important;
+    height: 750px !important;
+    .row {
+      display: flex;
+      justify-content: space-around;
+    }
+    .catch-btn {
+      width: 40px !important; /*no*/
+      height: 40px !important; /*no*/
+    }
+    .catch-btn-left {
+      left: -5px !important;
+    }
+    .catch-btn-right {
+      right: -5px !important;
+    }
+    h4 {
+      font-size: 28px !important; /*no*/
+    }
+    .row-div {
+      width: 309px !important; /*no*/
+      height: 198px !important; /*no*/
+    }
+    .more {
+      font-size: 24px !important; /*no*/
+    }
+    .caption {
+      height: auto;
+    }
+    .thumbnail .caption h5 {
+      font-size: 20px !important; /*no*/
+    }
+  }
+  .nav,
+  .nav-tabs,
+  .nav-justified {
+    padding-left: 32px;
+  }
+  .nav-tabs-hover {
+    a {
+      font-size: 20px !important; /*no*/
+    }
+  }
+  .responsive-div {
+    height: auto !important; /*no*/
+    background-position: right bottom !important; /*no*/
+  }
+  .bes_1 h4 {
+    font-size: 36px !important; /*no*/
+    padding-top: 116px !important; /*no*/
+    padding-bottom: 29px !important; /*no*/
+  }
+  .bes_2 p {
+    font-size: 22px !important; /*no*/
+    padding-bottom: 84px !important; /*no*/
+  }
+  .text-muted {
+    font-size: 24px !important; /*no*/
+    padding-bottom: 103px !important; /*no*/
+  }
+  .responsive-div3 {
+    h4 {
+      font-size: 36px !important; /*no*/
+    }
+    .list-group .list-group-item {
+      font-size: 18px !important; /*no*/
+    }
+  }
+  .responsive-div2 {
+    .row_list .col-md-3,
+    .row_list .col-lg-3,
+    .row_list .col-sm-4,
+    .row_list .col-xs-12 {
+      margin-left: 0 !important; /*no*/
+    }
+    .container {
+      width: 100%;
+    }
+    .bes_1 {
+      padding-right: 0 !important; /*no*/
+    }
+    .bes_1 h4,
+    .bes_2 p {
+      width: 100%;
+      padding-left: 0 !important; /*no*/
+      text-align: center;
+    }
+    .row_list h5 a {
+      font-size: 26px !important; /*no*/
+    }
+    .row_list {
+      > div {
+        width: 50% !important; /*no*/
+        height: 180px !important; /*no*/
+      }
+      li {
+        font-size: 18px !important; /*no*/
+      }
+    }
+  }
+  .responsive-div5 {
+    h4 {
+      font-size: 28px !important; /*no*/
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 800px) {
+  .responsive-div6 {
+    width: 1161px !important;
+    height: 708px !important;
+    .row-div {
+      width: 377px !important;
+      height: 240px !important;
+    }
+    .caption {
+      height: auto;
+    }
+    .thumbnail .caption h5 {
+      font-size: 14px !important; /*no*/
+    }
+    .catch-btn-left {
+      left: -80px !important;
+    }
+    .catch-btn-right {
+      right: -80px !important;
+    }
+  }
 }
 </style>

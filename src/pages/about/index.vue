@@ -119,10 +119,10 @@
               <h4>荣誉奖项</h4>
               <p>通过了ISO9001质量管理体系、ISO14001环境管理体系和ISO18001职业健康管理体系三个国际标准化管理体系认证。 党、国家和省市部委领导王歧山、李建国、韩长赋、龚正、姜大明、田力普等领导都参观过公司产品，并做出高度评价。
               </p>
+              <div class="catch-btn catch-btn-left"
+                   @click="ic_left">
+              </div>
               <div class="qqqqq">
-                <div class="catch-btn catch-btn-left"
-                     @click="ic_left">
-                </div>
                 <div class="col-sm-4 col-md-4 col-xs-6 col-lg-4"
                      v-for="(item,index) in examples1"
                      :key="index">
@@ -134,9 +134,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="catch-btn catch-btn-right"
-                     @click="ic_right">
-                </div>
+              </div>
+              <div class="catch-btn catch-btn-right"
+                   @click="ic_right">
               </div>
             </div>
           </div>
@@ -299,13 +299,13 @@ export default {
     width: 300px !important;
   }
   .catch-btn-left {
-    top: 320px !important;
-    left: 10px !important;
+    top: 440px !important;
+    left: 20px !important;
     z-index: 10000;
   }
   .catch-btn-right {
-    top: 320px !important;
-    right: -10px !important;
+    top: 440px !important;
+    right: -5px !important;
     z-index: 10000;
   }
   .col-sm-4,
@@ -313,9 +313,36 @@ export default {
   .col-md-4,
   .col-xs-6 {
     width: 46% !important;
+    margin-left: 10px;
+    &:first-of-type {
+      margin-left: 0px;
+    }
+  }
+  .about .bottom_intro2 p {
+    padding-left: 20px !important;
+  }
+  .about .responsive-div .qqqqq {
+    .thumbnail {
+      &:first-of-type {
+        margin-left: 0 !important;
+      }
+    }
   }
   .qqqqq {
-    padding-left: 35px;
+    margin: 0 20px 0 45px;
+    width: 100%;
+    height: 400px !important;
+    display: flex;
+    overflow: auto;
+  }
+  .nav.nav-tabs.nav-justified {
+    display: flex;
+    li {
+      width: 33.3%;
+      a {
+        border-radius: 0 !important;
+      }
+    }
   }
 }
 .about {

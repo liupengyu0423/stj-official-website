@@ -319,4 +319,21 @@ export default {
     }
   }
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .caption {
+    .title {
+      font-size: 20px !important; /*no*/
+    }
+    .date {
+      font-size: 16px !important; /*no*/
+    }
+    .learn_detail {
+      font-size: 16px !important; /*no*/
+    }
+  }
+  .news .pagination > li > a,
+  .news .pagination > li > span {
+    font-size: 16px !important; /*no*/
+  }
+}
 </style>
