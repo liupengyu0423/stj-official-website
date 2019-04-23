@@ -901,6 +901,7 @@ export default {
       color: #fff;
       font-family: PingFangSC-Regular;
       font-size: 18px;
+      margin: 0 !important;
     }
   }
   .more {

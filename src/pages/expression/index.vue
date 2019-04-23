@@ -121,7 +121,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@media (max-width: 768px) {
+@media (max-width: 760px) {
   .expression .row.examples > div.col-xs-6 {
     width: 47% !important;
   }
@@ -130,6 +130,12 @@ export default {
     justify-content: flex-start !important;
     align-items: flex-start !important;
     padding-top: 0 !important;
+  }
+  .expression .nav-tabs.nav-justified {
+    display: flex;
+    li {
+      width: 50%;
+    }
   }
 }
 .expression {
@@ -299,6 +305,7 @@ export default {
           font-family: PingFangSC-Regular;
           font-size: 14px;
           width: 100% !important;
+          margin: 0 !important;
         }
       }
     }
