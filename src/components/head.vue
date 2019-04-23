@@ -86,9 +86,22 @@ export default {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     color: #fff !important;
   }
+  .navbar-brand {
+    padding: 5px 10px !important;
+  }
 }
 .caret {
   border-top: 10px dashed #fff;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar-brand {
+    padding: 4px 20px !important;
+  }
+}
+@media (min-width: 1024px) {
+  .navbar-brand {
+    padding: 10px 40px !important;
+  }
 }
 @media (min-width: 770px) {
   .caret {
