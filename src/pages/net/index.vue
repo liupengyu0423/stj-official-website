@@ -7,7 +7,7 @@
              alt=""
              class="img-responsive">
         <div class="row row_col1">
-          <div class="row1 col-lg-6 col-md-6 col-sm-8 col-xs-12">
+          <div class="row1 col-lg-4 col-md-6 col-sm-8 col-xs-12">
             <h4>互联网+ 智能厕所
             </h4>
             <p>借助云计算、IoT 物联网、大数据、智能运维 App、用户端智能家居 App 等前沿科技产品，让每一台生态洁环保厕所都插上科技的翅膀，数据双向互联互通，故障自动报警，售后工单自动派发，真正实现高效率、低成本的管护运维。</p>
@@ -33,7 +33,7 @@
              alt=""
              class="img-responsive">
         <div class="row row_col1">
-          <div class="row1 col-lg-6 col-md-6 col-sm-8 col-xs-12">
+          <div class="row1 col-lg-4 col-md-6 col-sm-8 col-xs-12">
             <h4>运维 APP
             </h4>
             <p class="top">每一台生态洁厕所，都是高效运维的典范。</p>
@@ -124,7 +124,7 @@ export default {
     margin-top: 10px !important;
   }
   .net .xi-col-lg-.col-lg- h4 {
-    padding-top: 0px !important;
+    padding-top: 1vw !important;
   }
 }
 .net {
@@ -152,7 +152,7 @@ export default {
       padding-top: 168px;
     }
     h4 {
-      padding-top: 3vw;
+      padding-top: 1vw;
       font-size: 32px;
       line-height: 49px;
       color: #fff;
@@ -289,6 +289,11 @@ export default {
     color: #fff;
     font-size: 9px;
     line-height: 16px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .net .xi-col-lg-.col-lg- .row {
+    padding-top: 100px !important;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
