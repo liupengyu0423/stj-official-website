@@ -335,6 +335,7 @@ export default {
     height: 400px !important;
     display: flex;
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .nav.nav-tabs.nav-justified {
     display: flex;
