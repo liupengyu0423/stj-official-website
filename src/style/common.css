@@ -12,6 +12,7 @@ body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, l
     font-family: 'Microsoft YaHei';
     -webkit-tap-highlight-color:transparent;
     box-sizing: border-box;
+    -webkit-user-select: text;
 }
 
 

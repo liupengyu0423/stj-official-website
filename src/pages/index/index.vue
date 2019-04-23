@@ -335,15 +335,21 @@ export default {
   .col-xs-6 {
     width: 457px !important;
   }
+  .catch-btn {
+    width: 32px !important;
+    height: 32px !important;
+  }
   .catch-btn-left {
     top: 220px !important;
-    left: -40px !important;
+    left: -30px !important;
     z-index: 10000;
+    display: none;
   }
   .catch-btn-right {
     top: 220px !important;
-    right: -40px !important;
+    right: -30px !important;
     z-index: 10000;
+    display: none;
   }
   .scheme-2 {
     width: 100% !important;
@@ -385,7 +391,8 @@ export default {
           .title {
             width: 100% !important;
             font-size: 32px !important;
-            line-height: 30px !important;
+            height: auto !important;
+            line-height: normal !important;
             margin-top: 31px !important;
           }
           .detail {
@@ -431,6 +438,19 @@ export default {
   .responsive-div {
     .bottom_intro {
       padding: 0 !important;
+    }
+  }
+  .map .examples > div {
+    border-top: none !important;
+  }
+  .container-fluid-map {
+    padding: 0 !important;
+    padding-bottom: 100px !important;
+  }
+  .map .examples .thumbnail {
+    padding: 38px 20px !important;
+    img {
+      width: 100% !important;
     }
   }
 }
@@ -480,8 +500,8 @@ export default {
 }
 @media (max-width: 768px) {
   .catch-btn {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
   }
   .container-bj {
     background: #ebf4f4;
@@ -524,6 +544,9 @@ export default {
     position: absolute;
     top: 346px;
     right: -80px;
+  }
+  .row.examples > div {
+    padding-left: 10px;
   }
 }
 // @media (min-width: 1440px) {
