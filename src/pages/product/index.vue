@@ -4,7 +4,7 @@
     <div class="container-fluid">
       <div class="col-lg- xi-col-lg-">
         <div class="row row_col1">
-          <div class="col-lg-0 col-lg-6 col-md-10 col-sm-10 col-xs-10">
+          <div class="col-lg-0 col-lg-6 col-md-10 col-sm-10 col-xs-12">
             <h4>响应习主席"厕所革命"的号召<br />为实施乡村振兴战略贡献力量</h4>
           </div>
         </div>
@@ -375,18 +375,50 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.nav-tabs-hover.active {
+  color: #1aa8aa;
+  // border-bottom: 2px solid #40f2d0 !important;
+}
+.nav-tabs-hover.active a {
+  color: #1aa8aa !important;
+  border-bottom: 2px solid #40f2d0 !important;
+}
 @media (max-width: 760px) {
-  .responsive-div,
+  .nav-tabs-hover.active {
+    color: #1aa8aa;
+    border-bottom: 2px solid #40f2d0 !important;
+  }
+  .nav-tabs-hover.active a {
+    color: #1aa8aa !important;
+    border-bottom: none !important;
+  }
+  .xi-col-lg-.col-lg- {
+    padding: 180px 0 0 26px !important;
+  }
   .responsive-div3,
   .responsive-div4 {
     background-size: 693px 460px;
     background-position: center 30px !important;
     width: 100% !important;
     height: 980px !important;
-    .row-lg-1,
     .list-group,
     .col-lg- {
       padding-top: 400px !important;
+    }
+  }
+  .responsive-div {
+    width: 100% !important;
+    height: auto !important;
+    background: #ebf4f4 !important;
+    .row-lg-1 {
+      padding-top: 116px !important;
+      padding-bottom: 103px !important;
+    }
+    .bes_1 h4 {
+      padding-top: 0 !important;
+    }
+    .text-muted {
+      padding-bottom: 0 !important;
     }
   }
   .responsive-div2,
@@ -417,15 +449,20 @@ export default {
       height: 50px;
       top: 407px;
       left: 10px;
+      display: none;
     }
     .catch-btn-right {
       width: 50px;
       height: 50px;
       top: 407px;
       right: 10px;
+      display: none;
     }
     .row {
-      padding-left: 80px;
+      // padding-left: 80px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
     .row-div {
       width: 600px !important;
@@ -602,13 +639,7 @@ export default {
   padding: 0 15px 29px;
   // border-bottom: 1px solid #fff;
 }
-.nav-tabs-hover.active {
-  color: #1aa8aa;
-}
-.nav-tabs-hover.active a {
-  color: #1aa8aa !important;
-  border-bottom: 2px solid #40f2d0 !important;
-}
+
 .nav-tabs > li > a {
   border: none;
 }
@@ -1059,20 +1090,29 @@ export default {
   }
   .responsive-div {
     height: auto !important; /*no*/
+    background: #ebf4f4 !important;
     background-position: right bottom !important; /*no*/
+    text-align: center;
+  }
+  .bes_1,
+  .bes_2 {
+    padding-right: 0 !important;
   }
   .bes_1 h4 {
     font-size: 36px !important; /*no*/
     padding-top: 116px !important; /*no*/
     padding-bottom: 29px !important; /*no*/
+    padding-left: 0 !important;
   }
   .bes_2 p {
     font-size: 22px !important; /*no*/
     padding-bottom: 84px !important; /*no*/
+    padding-left: 0 !important;
   }
   .text-muted {
     font-size: 24px !important; /*no*/
     padding-bottom: 103px !important; /*no*/
+    padding-left: 0 !important;
   }
   .responsive-div3 {
     h4 {

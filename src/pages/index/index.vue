@@ -434,6 +434,7 @@ export default {
     height: 400px !important;
     display: flex;
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .responsive-div {
     .bottom_intro {
@@ -655,10 +656,8 @@ export default {
   }
   @media (min-width: 1440px) {
     .scheme-2 {
-      width: 600px;
-      /* no */
-      height: 100%;
-      /* no */
+      width: 600px; /* no */
+      height: 100%; /* no */
     }
     img {
       margin-top: -88px !important;
@@ -910,8 +909,7 @@ export default {
         box-sizing: border-box;
         width: 648px;
         /* no */
-        margin-bottom: 37px; /* no */
-        // padding-left: 96px; /* no */
+        margin-bottom: 37px; /* no */ // padding-left: 96px; /* no */
         padding-bottom: 33px; /* no */
       }
     }
