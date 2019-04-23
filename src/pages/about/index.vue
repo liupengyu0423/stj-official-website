@@ -302,17 +302,18 @@ export default {
     top: 440px !important;
     left: 20px !important;
     z-index: 10000;
+    display: none;
   }
   .catch-btn-right {
     top: 440px !important;
     right: -5px !important;
     z-index: 10000;
+    display: none;
   }
   .col-sm-4,
   .col-lg-4,
   .col-md-4,
   .col-xs-6 {
-    width: 46% !important;
     margin-left: 10px;
     &:first-of-type {
       margin-left: 0px;
@@ -599,6 +600,7 @@ export default {
         color: #303030;
         font-family: PingFangSC-Regular;
         font-size: 18px;
+        margin: 0 !important;
       }
     }
     .more {

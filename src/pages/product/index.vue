@@ -1006,6 +1006,7 @@ export default {
     color: #747c77;
     text-align: center;
     font-family: PingFangSC-Light;
+    margin-bottom: 0;
   }
 }
 .row {

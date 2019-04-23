@@ -99,7 +99,7 @@ export default {
 <style lang="scss" scoped>
 @media (max-width: 760px) {
   .net .xi-col-lg-.col-lg- .row {
-    padding: 20px 0 0 20px !important;
+    padding: 15px 0 0 20px !important;
   }
   .net .xi-col-lg-2 .row,
   .net .xi-col-lg-3 .row,
