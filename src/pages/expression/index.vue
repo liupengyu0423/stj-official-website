@@ -121,6 +121,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.modal-header {
+  border-bottom: none !important;
+}
 @media (max-width: 760px) {
   .expression .row.examples > div.col-xs-6 {
     width: 47% !important;
@@ -293,7 +296,10 @@ export default {
       padding: 0;
       background-size: auto 100%;
       background-position: center;
-      cursor: url('../../images/big.png'), auto;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.8;
+      }
       .caption {
         position: absolute;
         bottom: 0;

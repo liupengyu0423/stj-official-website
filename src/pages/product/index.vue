@@ -55,8 +55,8 @@
                 </div>
               </div>
               <div class="row row_col2">
-                <div class="bes_2 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                  <p>与中科院微生物合作，针对中国农村生活所排放的粪便、生活污水特点，<br />开发出适合中国农村实情的新型农村污水处理设备。
+                <div class="bes_2 col-lg-7 col-md-12 col-sm-12 col-xs-12">
+                  <p>与中科院微生物合作，针对中国农村生活所排放的粪便、生活污水特点，开发出适合中国农村实情的新型农村污水处理设备。
                   </p>
                 </div>
               </div>
@@ -205,7 +205,8 @@
             </div>
             <div class="row row_col2">
               <div class="col-lg-01 col-lg-13 col-lg-5 col-md-5 col-sm-5 col-xs-8">
-                <p>采用倒置 A2/O 和接触氧化法工艺的基础上，通过在降解反应器内添加一定优化配置的生物强化菌剂，对污染物进行高效降解，实现对污水的精华并循环再利用的产品。 <br/>排出的水指标符合国家排放标准，可用于绿化、灌溉等。</p>
+                <p>采用倒置 A2/O 和接触氧化法工艺的基础上，通过在降解反应器内添加一定优化配置的生物强化菌剂，对污染物进行高效降解，实现对污水的精华并循环再利用的产品。</p>
+                <p>排出的水指标符合国家排放标准，可用于绿化、灌溉等。</p>
               </div>
             </div>
           </div>
@@ -378,6 +379,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.modal-header {
+  border-bottom: none !important;
+}
 .nav-tabs-hover.active {
   color: #1aa8aa;
   // border-bottom: 2px solid #40f2d0 !important;
@@ -405,6 +409,8 @@ export default {
   .nav-tabs-hover.active a {
     color: #1aa8aa !important;
     border-bottom: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
   .xi-col-lg-.col-lg- {
     padding: 180px 0 0 26px !important;
@@ -441,8 +447,8 @@ export default {
   }
   .responsive-div4 {
     width: 100% !important;
-    height: 900px !important;
-    background: url('../../images/wwww.png') no-repeat center 300px !important;
+    height: 850px !important;
+    background: url('../../images/wwww.png') no-repeat center 380px !important;
     background-size: contain !important;
     .col-lg- {
       padding: 120px 0 370px 140px !important;
@@ -451,9 +457,12 @@ export default {
   .responsive-div5,
   .responsive-div6 {
     width: 100% !important;
-    height: 1000px !important;
+    height: auto !important;
     img {
       padding: 0 20px;
+    }
+    .two {
+      margin-top: 72px !important; /*no*/
     }
   }
   .responsive-div6 {
@@ -543,10 +552,16 @@ export default {
       text-align: center;
     }
     .bes_1 h4 {
-      padding-left: 0 !important;
+      font-size: 18px !important; /*no*/
+      padding-left: 70px !important; /*no*/
+      padding-right: 70px !important; /*no*/
     }
     .bes_2 p {
       padding-left: 0 !important;
+      font-size: 11px !important; /*no*/
+      padding-left: 70px !important; /*no*/
+      padding-right: 70px !important; /*no*/
+      padding-bottom: 0 !important;
     }
     .text-muted {
       padding-left: 0 !important;
@@ -557,8 +572,17 @@ export default {
     .row_list {
       padding-left: 60px !important;
       > div {
-        height: 250px !important;
+        height: 230px !important;
+        margin-top: 36.5px !important; /*no*/
+        li {
+          font-size: 11px !important; /*no*/
+          margin-top: 10px !important; /*no*/
+        }
       }
+    }
+    .row_list h5 {
+      font-size: 14px !important; /*no*/
+      font-family: PingFangSC-Semibold;
     }
   }
   .responsive-div3 .list-group {
@@ -710,7 +734,7 @@ export default {
   width: 1440px;
   height: 560px;
   margin: 0 auto !important;
-  background: url('../../images/wc.png') #ebf4f4 no-repeat;
+  background: #ebf4f4;
   background-size: 693px 460px;
   background-position: 90% center;
 }
@@ -810,12 +834,21 @@ export default {
 .row_col1 .bes_1,
 .row_col2 .bes_2 {
   padding-left: 0;
+  padding-right: 0;
 }
 .bes_1 h4 {
   font-size: 32px;
   color: #303030;
   padding: 120px 0 32px 140px;
   font-family: PingFangSC-Semibold;
+}
+.responsive-div {
+  .bes_1 h4,
+  .bes_2 p,
+  .text-muted {
+    padding-left: 0;
+    text-align: center;
+  }
 }
 .bes_2 p {
   font-size: 18px;
@@ -889,8 +922,8 @@ export default {
   width: 1440px;
   height: 1100px;
   margin: 0 auto !important;
-  background: url('../../images/wwww.png') no-repeat center 300px;
-  background-size: 1106px 626px;
+  background: url('../../images/wwww.png') no-repeat center 360px;
+  // background-size: 1106px 626px;
   .col-lg- {
     width: 100%;
     padding: 120px 0 370px 140px;
@@ -901,6 +934,9 @@ export default {
     .col-lg-13 {
       p {
         font-size: 18px;
+        &:last-of-type {
+          margin-top: 30px;
+        }
       }
     }
   }
@@ -931,15 +967,15 @@ export default {
 }
 .catch-btn-left {
   position: absolute;
-  top: 346px;
+  top: 340px;
   left: -60px;
   background: url('../../images/ic_left.png') no-repeat center center/cover;
 }
 .catch-btn-right {
   background: url('../../images/ic_right.png') no-repeat center center/cover;
   position: absolute;
-  top: 346px;
-  right: -40px;
+  top: 340px;
+  right: -60px;
 }
 @media (max-width: 768px) {
   .catch-btn {
@@ -970,6 +1006,9 @@ export default {
   // padding: 0 140px !important;
   box-sizing: border-box;
   background: #ebf4f4;
+  .row {
+    padding-left: 15px;
+  }
   .row-div {
     width: 377px;
     height: 240px;
@@ -992,7 +1031,10 @@ export default {
     padding: 0;
     border: 1px solid #e8e8e8 !important;
     border-radius: 0;
-    cursor: url('../../images/big.png'), auto;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
     .caption {
       position: absolute;
       bottom: 0;
@@ -1003,7 +1045,7 @@ export default {
       h5 {
         color: #fff;
         font-family: PingFangSC-Regular;
-        font-size: 20px;
+        font-size: 20px; /*no*/
         width: 100% !important;
         margin: 0 !important;
       }
@@ -1078,9 +1120,11 @@ export default {
     }
     .catch-btn-left {
       left: -5px !important;
+      display: none;
     }
     .catch-btn-right {
       right: -5px !important;
+      display: none;
     }
     h4 {
       font-size: 28px !important; /*no*/
@@ -1090,7 +1134,7 @@ export default {
       height: 198px !important; /*no*/
     }
     .more {
-      font-size: 24px !important; /*no*/
+      font-size: 16px !important; /*no*/
     }
     .caption {
       height: auto;
@@ -1129,6 +1173,7 @@ export default {
     font-size: 22px !important; /*no*/
     padding-bottom: 84px !important; /*no*/
     padding-left: 0 !important;
+    margin-top: 30px !important; /*no*/
   }
   .text-muted {
     font-size: 24px !important; /*no*/
@@ -1159,7 +1204,9 @@ export default {
     .bes_1 h4,
     .bes_2 p {
       width: 100%;
-      padding-left: 0 !important; /*no*/
+      padding-left: 70px !important;
+      padding-right: 70px !important;
+      padding-bottom: 0 !important;
       text-align: center;
     }
     .row_list h5 a {
@@ -1169,9 +1216,11 @@ export default {
       > div {
         width: 50% !important; /*no*/
         height: 180px !important; /*no*/
+        margin-top: 40px !important; /*no*/
       }
       li {
         font-size: 18px !important; /*no*/
+        margin-top: 20px !important;
       }
     }
   }
@@ -1183,11 +1232,11 @@ export default {
 }
 @media (min-width: 768px) and (max-width: 800px) {
   .responsive-div6 {
-    width: 1161px !important;
+    // width: 1161px !important;
     height: 708px !important;
     .row-div {
-      width: 377px !important;
-      height: 240px !important;
+      width: 452px !important;
+      height: 251px !important;
     }
     .caption {
       height: auto;

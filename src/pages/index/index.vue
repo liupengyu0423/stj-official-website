@@ -295,7 +295,7 @@ export default {
   }
   .swiper-container {
     width: 100%;
-    height: 760px !important;
+    height: 680px !important;
   }
   .environment .row .thumbnail-envir {
     min-width: 0 !important;
@@ -608,7 +608,10 @@ export default {
     right: -80px;
   }
   .row.examples > div {
-    padding-left: 10px;
+    padding-left: 40px;
+  }
+  .map .examples > div .caption {
+    margin-left: 20px !important;
   }
 }
 // @media (min-width: 1440px) {
@@ -881,7 +884,10 @@ export default {
       height: 190px;
       margin-right: 0;
       display: inline-block;
-      cursor: url('../../images/big.png'), auto;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.8;
+      }
     }
     .learn_detail {
       font-size: 12px;
@@ -1043,7 +1049,10 @@ export default {
   .thumbnail-bj {
     background-size: cover;
     border: 1px solid #e8e8e8 !important;
-    cursor: url('../../images/big.png'), auto;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
   }
   .thumbnail {
     // height: 30vh;

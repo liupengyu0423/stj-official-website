@@ -36,7 +36,7 @@
             </div>
             <div class="row row_col2">
               <div class="bes_2 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <p>利用经过优化的微生物菌剂，对人体排泄物进行高效分解，并将微量残<br />留物转化成生态有机肥的高科技产品。
+                <p>利用经过优化的微生物菌剂，对人体排泄物进行高效分解，并将微量残留物转化成生态有机肥的高科技产品。
                 </p>
               </div>
             </div>
@@ -257,6 +257,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.modal-header {
+  border-bottom: none !important;
+}
 .nav-tabs-hover.active {
   color: #1aa8aa;
   // border-bottom: 2px solid #40f2d0 !important;
@@ -303,8 +306,10 @@ export default {
   }
   .responsive-div {
     width: 100% !important;
-    height: auto !important;
-    background: #ebf4f4 !important;
+    height: 1000px !important;
+    background-size: 600px 420px !important;
+    // background: url('../../images/wrashroom.png') #ebf4f4 !important;
+    background-position: center 450px !important;
     .row-lg-1 {
       padding-top: 116px !important;
       padding-bottom: 103px !important;
@@ -400,6 +405,8 @@ export default {
     font-size: 11px !important; /*no*/
     font-family: PingFangSC-Medium;
     color: #1aa8aa;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
   .responsive-div {
     text-align: center;
@@ -407,7 +414,8 @@ export default {
       padding-left: 0 !important;
     }
     .bes_2 p {
-      padding-left: 0 !important;
+      padding-left: 85px !important;
+      padding-right: 85px !important;
     }
     .text-muted {
       padding-left: 0 !important;
@@ -621,6 +629,10 @@ export default {
   .row_list {
     padding: 0 0 118px 140px;
     // line-height: 23px;
+    > div {
+      height: 180px;
+      margin-top: 40px;
+    }
     h5 {
       font-size: 14px;
       margin-top: 30px;
@@ -659,7 +671,8 @@ export default {
     .col-sm-4,
     .col-xs-12 {
       margin-left: 100px;
-      &:first-of-type {
+      &:first-of-type,
+      &:nth-of-type(4) {
         margin-left: 0;
       }
     }
@@ -714,7 +727,7 @@ export default {
 .bes_2 p {
   font-size: 18px;
   color: #303030;
-  padding: 0 0 88px 140px;
+  padding: 0 50% 88px 140px;
   font-family: PingFangSC-Regular;
 }
 .text-muted {
@@ -898,7 +911,10 @@ export default {
     border: none;
     padding: 0;
     border-radius: 0;
-    cursor: url('../../images/big.png'), auto;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
   }
   // @media screen and (max-width: 550px) {
   //   .thumbnail {
@@ -969,12 +985,17 @@ export default {
     }
   }
   .responsive-div6 {
-    // width: 100% !important;
+    width: 100% !important;
     // height: 750px !important;
+    padding-bottom: 140px; /*no*/
     .row {
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
+      &:before,
+      &:after {
+        display: none !important;
+      }
     }
     // .catch-btn {
     //   width: 40px !important; /*no*/
@@ -989,10 +1010,10 @@ export default {
     h4 {
       font-size: 28px !important; /*no*/
     }
-    // .row-div {
-    //   width: 309px !important; /*no*/
-    //   height: 198px !important; /*no*/
-    // }
+    .row-div {
+      width: 309px !important; /*no*/
+      height: 198px !important; /*no*/
+    }
     // .more {
     //   font-size: 24px !important; /*no*/
     // }
@@ -1014,9 +1035,10 @@ export default {
     }
   }
   .responsive-div {
-    height: auto !important; /*no*/
-    background: #ebf4f4 !important;
-    background-position: right bottom !important; /*no*/
+    height: 900px !important; /*no*/
+    background-size: 600px 420px !important; /*no*/
+    // background: #ebf4f4 !important;
+    background-position: center 440px !important; /*no*/
     text-align: center;
   }
   .bes_1,
@@ -1032,7 +1054,8 @@ export default {
   .bes_2 p {
     font-size: 22px !important; /*no*/
     padding-bottom: 84px !important; /*no*/
-    padding-left: 0 !important;
+    padding-left: 200px !important;
+    padding-right: 200px !important;
   }
   .text-muted {
     font-size: 24px !important; /*no*/
@@ -1087,11 +1110,23 @@ export default {
 }
 @media (min-width: 768px) and (max-width: 800px) {
   .responsive-div6 {
-    width: 1161px !important;
+    width: 90% !important;
     height: auto !important;
-    .row-div {
-      width: 377px !important;
-      height: 240px !important;
+    // .row-div {
+    //   width: 452px !important;
+    //   height: 251px !important;
+    // }
+    .row {
+      &:before,
+      &:after {
+        contain: '' !important;
+        display: none !important;
+      }
+      .row-div {
+        &:last-of-type {
+          display: none;
+        }
+      }
     }
   }
 }

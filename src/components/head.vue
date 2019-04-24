@@ -129,7 +129,15 @@ export default {
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .navbar-brand {
-    padding: 4px 20px !important;
+    padding: 20px 20px !important;
+    img {
+      width: 200px !important;
+      height: 50px !important;
+    }
+  }
+  .float {
+    font-size: 12px !important; /*no*/
+    margin-top: 30px !important;
   }
 }
 @media (min-width: 1024px) {

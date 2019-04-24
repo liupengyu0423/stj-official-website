@@ -271,6 +271,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.modal-header {
+  border-bottom: none !important;
+}
 @media (max-width: 760px) {
   .about .container-fluid .xi-col-lg-.col-lg- .row {
     padding-left: 40px !important;
@@ -634,14 +637,14 @@ export default {
 }
 .catch-btn-left {
   position: absolute;
-  top: 230px;
+  top: 560px;
   left: -80px;
   background: url('../../images/ic_left.png') no-repeat center center/cover;
 }
 .catch-btn-right {
   background: url('../../images/ic_right.png') no-repeat center center/cover;
   position: absolute;
-  top: 230px;
+  top: 560px;
   right: -100px;
 }
 @media (max-width: 768px) {
@@ -672,14 +675,14 @@ export default {
   }
   .catch-btn-left {
     position: absolute;
-    top: 230px;
+    top: 560px;
     left: -60px;
     background: url('../../images/ic_left.png') no-repeat center center/cover;
   }
   .catch-btn-right {
     background: url('../../images/ic_right.png') no-repeat center center/cover;
     position: absolute;
-    top: 230px;
+    top: 560px;
     right: -80px;
   }
 }
@@ -697,7 +700,10 @@ export default {
   .thumbnail-bj {
     background-size: cover;
     border: 1px solid #e8e8e8 !important;
-    cursor: url('../../images/big.png'), auto;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
   }
 }
 </style>

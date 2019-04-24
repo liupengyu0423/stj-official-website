@@ -15,6 +15,12 @@ body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, l
     -webkit-user-select: text;
 }
 
+.carousel-inner {
+  width: 1000px;
+  border-radius: 0;
+  height: 800px;
+  margin: 0 auto;
+}
 
 html{
     min-height: 100%;

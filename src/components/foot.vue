@@ -62,6 +62,54 @@ export default {
     right: 40px !important;
   }
 }
+@media (max-width: 760px) {
+  footer {
+    padding-top: 44px !important; /*no*/
+  }
+  footer .footer_logo {
+    top: 44px !important; /*no*/
+    width: 115px !important; /*no*/
+    height: 18px !important; /*no*/
+  }
+  .call {
+    margin-left: 32px !important; /*no*/
+  }
+  .quickly,
+  .call {
+    .quickly_title,
+    .call_title {
+      font-size: 11px !important; /*no*/
+    }
+    .quickly_li,
+    .call_li {
+      a {
+        font-size: 9px !important; /*no*/
+      }
+    }
+  }
+  .hot_line_bot {
+    font-size: 12px !important; /*no*/
+  }
+  .hot_line {
+    margin-top: 30px !important; /*no*/
+  }
+  .bottom p {
+    font-size: 10px !important; /*no*/
+    &:last-of-type {
+      padding-left: 0 !important;
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  footer {
+    padding-top: 44px !important; /*no*/
+  }
+  footer .footer_logo {
+    top: 44px !important; /*no*/
+    width: 200px !important; /*no*/
+    height: 36px !important; /*no*/
+  }
+}
 footer {
   width: 100%;
   background: #2a2f2f;

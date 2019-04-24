@@ -74,6 +74,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.modal-header {
+  border-bottom: none !important;
+}
 .detail {
   .container {
     margin-bottom: 3em;

@@ -143,6 +143,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.modal-header {
+  border-bottom: none !important;
+}
 @media (max-width: 768px) {
   .row.examples .col-xs-4 {
     width: 31% !important;
@@ -207,7 +210,10 @@ export default {
       margin: 0;
       width: 100%;
       height: 18vw;
-      cursor: url('../../images/big.png'), auto;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.8;
+      }
     }
     .caption.caption2 {
       padding: 0;
