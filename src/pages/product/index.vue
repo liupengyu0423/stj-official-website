@@ -486,6 +486,7 @@ export default {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      padding-left: 0 !important;
     }
     .row-div {
       width: 600px !important;
@@ -531,6 +532,7 @@ export default {
     font-size: 11px !important; /*no*/
     font-family: PingFangSC-Medium;
     color: #1aa8aa;
+    cursor: pointer;
   }
   .responsive-div {
     text-align: center;
@@ -615,6 +617,7 @@ export default {
   padding: 0;
   font-size: 0 !important;
   border: none;
+  cursor: pointer;
   img {
     width: 100%;
     height: 100%;
@@ -696,6 +699,7 @@ export default {
 }
 .nav-tabs.nav-justified > li > a {
   border-bottom: none;
+  cursor: pointer;
 }
 .nav-tabs.nav-justified > .active > a,
 .nav-tabs.nav-justified > .active > a:focus,
@@ -970,12 +974,14 @@ export default {
   top: 340px;
   left: -60px;
   background: url('../../images/ic_left.png') no-repeat center center/cover;
+  cursor: pointer;
 }
 .catch-btn-right {
   background: url('../../images/ic_right.png') no-repeat center center/cover;
   position: absolute;
   top: 340px;
   right: -60px;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .catch-btn {
@@ -1113,6 +1119,7 @@ export default {
     .row {
       display: flex;
       justify-content: space-around;
+      padding-left: 0 !important;
     }
     .catch-btn {
       width: 40px !important; /*no*/

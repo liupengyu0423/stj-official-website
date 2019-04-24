@@ -243,6 +243,7 @@ export default {
   .nav-tabs.nav-justified > li > a {
     border-bottom: none;
     padding: 0 15px 0;
+    cursor: pointer;
   }
   .nav-tabs.nav-justified {
     // border-bottom: 1px solid #f3f3f3;

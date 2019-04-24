@@ -268,6 +268,9 @@ export default {
   color: #1aa8aa !important;
   border-bottom: 2px solid #40f2d0 !important;
 }
+.nav {
+  box-shadow: #eee 0.013889rem 0.027778rem 0.034722rem;
+}
 @media (max-width: 760px) {
   .line1,
   .line2 {
@@ -344,6 +347,9 @@ export default {
   }
   .responsive-div6 {
     height: auto !important;
+    .row {
+      padding-left: 0 !important;
+    }
     .catch-btn-left {
       width: 50px;
       height: 50px;
@@ -407,6 +413,7 @@ export default {
     color: #1aa8aa;
     padding-left: 0 !important;
     padding-right: 0 !important;
+    cursor: pointer;
   }
   .responsive-div {
     text-align: center;
@@ -414,8 +421,9 @@ export default {
       padding-left: 0 !important;
     }
     .bes_2 p {
-      padding-left: 85px !important;
-      padding-right: 85px !important;
+      padding-left: 95px !important;
+      padding-right: 95px !important;
+      padding-bottom: 60px !important;
     }
     .text-muted {
       padding-left: 0 !important;
@@ -591,6 +599,7 @@ export default {
 }
 .nav-tabs.nav-justified > li > a {
   border-bottom: none;
+  cursor: pointer;
 }
 .nav-tabs.nav-justified > .active > a,
 .nav-tabs.nav-justified > .active > a:focus,
@@ -835,12 +844,14 @@ export default {
   top: 346px;
   left: -60px;
   background: url('../../images/ic_left.png') no-repeat center center/cover;
+  cursor: pointer;
 }
 .catch-btn-right {
   background: url('../../images/ic_right.png') no-repeat center center/cover;
   position: absolute;
   top: 346px;
   right: -40px;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .catch-btn {
@@ -890,6 +901,9 @@ export default {
   box-sizing: border-box;
   // background: #ebf4f4;
   // margin-top: 50px;
+  .row {
+    padding-left: 15px;
+  }
   .row-div {
     width: 377px;
     height: 240px;
@@ -992,6 +1006,7 @@ export default {
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
+      padding-left: 0 !important;
       &:before,
       &:after {
         display: none !important;

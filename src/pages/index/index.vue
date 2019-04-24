@@ -553,12 +553,14 @@ export default {
   top: 346px;
   left: -40px;
   background: url('../../images/ic_left.png') no-repeat center center/cover;
+  cursor: pointer;
 }
 .catch-btn-right {
   background: url('../../images/ic_right.png') no-repeat center center/cover;
   position: absolute;
   top: 346px;
   right: -60px;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .catch-btn {
@@ -720,10 +722,8 @@ export default {
   }
   @media (min-width: 1440px) {
     .scheme-2 {
-      width: 600px;
-      /* no */
-      height: 100%;
-      /* no */
+      width: 600px; /* no */
+      height: 100%; /* no */
     }
     img {
       margin-top: -88px !important;
@@ -978,8 +978,7 @@ export default {
         box-sizing: border-box;
         width: 648px;
         /* no */
-        margin-bottom: 37px; /* no */
-        // padding-left: 96px; /* no */
+        margin-bottom: 37px; /* no */ // padding-left: 96px; /* no */
         padding-bottom: 33px; /* no */
       }
     }

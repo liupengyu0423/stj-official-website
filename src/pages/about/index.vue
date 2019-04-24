@@ -457,6 +457,7 @@ export default {
     color: #303030 !important;
     display: inline;
     font-size: 16px;
+    cursor: pointer;
   }
   .nav-tabs.nav-justified {
     position: -webkit-sticky; /* Safari */
@@ -468,6 +469,7 @@ export default {
   .nav-tabs.nav-justified > li > a {
     border-bottom: none;
     padding: 0 15px 29px;
+    cursor: pointer;
   }
   .nav-tabs-hover.active {
     color: #1aa8aa;
@@ -640,12 +642,14 @@ export default {
   top: 560px;
   left: -80px;
   background: url('../../images/ic_left.png') no-repeat center center/cover;
+  cursor: pointer;
 }
 .catch-btn-right {
   background: url('../../images/ic_right.png') no-repeat center center/cover;
   position: absolute;
   top: 560px;
   right: -100px;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .catch-btn {
