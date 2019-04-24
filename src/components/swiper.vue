@@ -61,11 +61,11 @@ export default {
   height: 760px;
   .swiper-slide1 {
     background: url('../images/banner1.png') no-repeat center center;
-    background-size: cover;
+    background-size: auto 100%;
   }
   .swiper-slide2 {
     background: url('../images/banner2.png') no-repeat center center;
-    background-size: cover;
+    background-size: auto 100%;
   }
   .swiper-button-prev,
   .swiper-container-rtl .swiper-button-next {
@@ -83,6 +83,16 @@ export default {
 @media (min-width: 1440px) {
   .swiper-container {
     height: 760px; /* no */
+  }
+}
+@media (max-width: 760px) {
+  .swiper-slide1 {
+    background: url('../images/banner_p.png') no-repeat center center !important;
+    background-size: cover !important;
+  }
+  .swiper-slide2 {
+    background: url('../images/banner_p2.png') no-repeat center center !important;
+    background-size: cover !important;
   }
 }
 </style>

@@ -121,9 +121,13 @@ const webpackConfig = merge(baseWebpackConfig, {
     ]),
     new PrerenderSpaPlugin({
       staticDir: path.join(__dirname, '../dist'),
-      routes: ['/index', '/product', '/expression', '/news', '/newsDetail', '/leader', '/leaderDetail', '/washroom', '/about', '/net'],
-      renderer: new PrerenderSpaPlugin.PuppeteerRenderer({//这样写renderAfterTime生效了
-        renderAfterTime: 5000
+      routes: ['/', '/index', '/product', '/expression', '/news', '/newsDetail', '/leader', '/leaderDetail', '/washroom', '/about', '/net'],
+      renderer: new Renderer({
+        inject: {
+          foo: 'bar'
+        },
+        renderAfterDocumentEvent: 'render-event',
+        renderAfterTime: 1000
       })
     })
   ]

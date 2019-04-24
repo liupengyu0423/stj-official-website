@@ -80,6 +80,9 @@ export default {
 
 <style lang="scss" scoped>
 @media (max-width: 760px) {
+  .container-fluid {
+    padding: 0 !important;
+  }
   .nav > li > a {
     font-size: 14px !important; /*no*/
   }
@@ -87,7 +90,38 @@ export default {
     color: #fff !important;
   }
   .navbar-brand {
-    padding: 5px 10px !important;
+    padding: 20px 0 18px 24px !important;
+    img {
+      width: 213px !important;
+      height: 60px !important;
+    }
+  }
+  .float {
+    font-size: 24px !important;
+    color: #1aa8aa !important;
+    font-family: PingFangSC-Medium;
+    margin-top: 28px !important;
+    margin-right: 63px !important;
+  }
+  .navbar-toggle {
+    border: none !important;
+    border-radius: 0 !important;
+    margin-right: 0 !important;
+    padding: 16px 25px 16px 0 !important;
+  }
+  .navbar-default .navbar-toggle:focus,
+  .navbar-default .navbar-toggle:hover {
+    background-color: #ffffff;
+  }
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #1aa8aa !important;
+  }
+  .navbar-toggle .icon-bar {
+    width: 32px !important;
+  }
+  .container-fluid > .navbar-header {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
   }
 }
 .caret {
@@ -127,7 +161,7 @@ export default {
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 99999999;
 }
 .container-fluid {
   background: #fff;

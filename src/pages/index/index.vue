@@ -40,8 +40,8 @@
            class="img-responsive"> -->
       <div class="intro_text">
         <p class="intro_title">为农村厕所革命和生态文明建设做出贡献</p>
-        <p>生态洁是国内唯一一家取得驰名商标的环保厕所和污水处理设备研发制造企业</p>
-        <p>专注产品研发近20年，在全国10多个省区累计使用超过100万套</p>
+        <p class="intro_text-p">生态洁是国内唯一一家取得驰名商标的环保厕所和污水处理设备研发制造企业</p>
+        <p class="intro_text-p">专注产品研发近20年，在全国10多个省区累计使用超过100万套</p>
         <div class="instro-radius-div">
           <ul class="instro-radius-ul">
             <li class="instro-radius">
@@ -90,7 +90,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid map">
+    <div class="container-fluid map container-fluid-map1">
       <h4>产品覆盖分布图</h4>
       <img src="../../images/map.png"
            alt=""
@@ -284,9 +284,18 @@ export default {
       padding-left: 30px !important;
     }
   }
+  .map h4 {
+    padding-top: 128px !important;
+    font-size: 48px !important;
+  }
+  .list-group-item-p {
+    height: 100% !important;
+    top: 0 !important;
+    padding: 27px 18px 0 29px !important;
+  }
   .swiper-container {
     width: 100%;
-    height: 375px !important;
+    height: 760px !important;
   }
   .environment .row .thumbnail-envir {
     min-width: 0 !important;
@@ -295,25 +304,45 @@ export default {
     background: url('../../images/envir.png') no-repeat center center;
     background-size: cover;
     min-width: 0 !important;
-    height: 160px;
+    height: 140px !important;
+    .list-group-item-p {
+      padding: 27px 50px 0 50px !important;
+    }
   }
   .thumbnail-innocuity {
     background: url('../../images/innocuity.png') no-repeat center center;
     background-size: cover;
     min-width: 0 !important;
-    height: 160px;
+    height: 140px !important;
+    .list-group-item-p {
+      padding-top: 49px !important;
+    }
   }
   .thumbnail-integration {
     background: url('../../images/integration.png') no-repeat center center;
     background-size: cover;
     min-width: 0 !important;
-    height: 160px;
+    height: 140px !important;
+  }
+  .intro .intro_text .intro_text-p {
+    padding: 0 80px !important;
   }
   .instro-radius {
     margin-left: 20px;
     &:first-of-type {
       margin-left: 0;
     }
+  }
+  .environment,
+  .environment .row {
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden;
+  }
+  .environment .row {
+    width: 102%;
+    margin-left: -1% !important;
   }
   .col-sm-13 .center {
     width: 90% !important;
@@ -357,17 +386,20 @@ export default {
   .scheme-1 {
     .col-sm-13 {
       h2 {
-        font-size: 48px;
+        font-size: 24px; /*no*/
       }
       .top {
-        font-size: 36px;
+        font-size: 18px; /*no*/
+        margin-bottom: 21px; /*no*/
       }
       .center {
-        font-size: 28px;
+        font-size: 14px; /*no*/
         width: 60% !important;
+        font-family: PingFangSC-Light;
+        color: #3e403f;
       }
       .all {
-        font-size: 26px;
+        font-size: 14px; /*no*/
         margin-top: 69px;
       }
       img {
@@ -375,10 +407,19 @@ export default {
       }
     }
   }
+  .container-fluid-map {
+    .news_title {
+      padding-bottom: 0 !important;
+    }
+  }
   .map {
     .examples {
+      padding-top: 0 !important;
       > div {
         padding-bottom: 0 !important;
+        &:first-of-type {
+          padding-top: 0 !important;
+        }
       }
       .thumbnail {
         flex-wrap: wrap;
@@ -396,7 +437,9 @@ export default {
             margin-top: 31px !important;
           }
           .detail {
-            font-size: 24px !important;
+            font-size: 14px !important; /*no*/
+            color: #3e403f;
+            font-family: PingFangSC-Light;
           }
           .learn_detail {
             font-size: 22px !important;
@@ -413,6 +456,21 @@ export default {
     // .row {
     //   padding-left: 30px !important;
     // }
+    .responsive-div {
+      margin-top: 64px !important; /*no*/
+      .thumbnail {
+        border-radius: 0 !important;
+      }
+    }
+    .caption {
+      height: 36px !important; /*no*/
+      h5 {
+        font-size: 14px !important; /*no*/
+      }
+    }
+    .bottom_intro h4 {
+      font-size: 24px; /*no*/
+    }
     .thumbnail.thumbnail-bj {
       margin-left: 20px !important;
     }
@@ -453,6 +511,9 @@ export default {
     img {
       width: 100% !important;
     }
+  }
+  .spure_div {
+    margin-left: 40px !important;
   }
 }
 .environment .row {
@@ -656,8 +717,10 @@ export default {
   }
   @media (min-width: 1440px) {
     .scheme-2 {
-      width: 600px; /* no */
-      height: 100%; /* no */
+      width: 600px;
+      /* no */
+      height: 100%;
+      /* no */
     }
     img {
       margin-top: -88px !important;
@@ -909,7 +972,8 @@ export default {
         box-sizing: border-box;
         width: 648px;
         /* no */
-        margin-bottom: 37px; /* no */ // padding-left: 96px; /* no */
+        margin-bottom: 37px; /* no */
+        // padding-left: 96px; /* no */
         padding-bottom: 33px; /* no */
       }
     }
@@ -932,8 +996,7 @@ export default {
   }
   @media (max-width: 1440px) {
     .examples {
-      padding: 38px 30px;
-      /* no */
+      padding: 38px 30px; /* no */
     }
   }
   @media (min-width: 2000px) {
@@ -1017,6 +1080,14 @@ export default {
     font-size: 0.9rem;
     color: #747c77;
     text-align: center;
+  }
+}
+@media (min-width: 1440px) {
+  .container-fluid-map1 {
+    width: 1440px;
+  }
+  .spure_div {
+    margin-left: 40px !important;
   }
 }
 </style>

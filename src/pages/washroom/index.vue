@@ -19,7 +19,10 @@
             :class="index===click?'active nav-tabs-hover':'nav-tabs-hover'"
             v-for="(item,index) in items"
             :key="index">
-          <a @click="changeActive(index)">{{item.name}}</a>
+          <a @click="changeActive(index)">{{item.name}}
+            <span :class="click===0?'line1':'line2'"
+                  v-if="click===index"></span>
+          </a>
         </li>
       </ul>
       <div class="hahah1">
@@ -263,9 +266,20 @@ export default {
   border-bottom: 2px solid #40f2d0 !important;
 }
 @media (max-width: 760px) {
+  .line1,
+  .line2 {
+    display: inline-block;
+    width: 100px;
+    height: 2px; /*no*/
+    background: #40f2d0;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    margin-left: -50px;
+  }
   .nav-tabs-hover.active {
     color: #1aa8aa;
-    border-bottom: 2px solid #40f2d0 !important;
+    // border-bottom: 2px solid #40f2d0 !important;
   }
   .nav-tabs-hover.active a {
     color: #1aa8aa !important;
@@ -376,10 +390,16 @@ export default {
   }
   .nav-tabs.nav-justified > li {
     width: 50% !important;
+    padding: 15.5px 40px !important; /*no*/
+    &:last-of-type {
+      line-height: 60px;
+    }
   }
   .nav-tabs.nav-justified > li > a {
     border-radius: 0;
-    font-size: 22px !important;
+    font-size: 11px !important; /*no*/
+    font-family: PingFangSC-Medium;
+    color: #1aa8aa;
   }
   .responsive-div {
     text-align: center;
