@@ -22,12 +22,12 @@
       </li>
     </ul>
     <div class="row examples">
-      <div class="col-sm-6 col-md-4 col-xs-6 col-lg-4"
+      <div class="col-sm-6 col-md-4 col-xs-12 col-lg-4"
            v-for="(item,index) in click===0?examples1:examples2"
            :key="index">
         <div class="thumbnail"
              @click="showimage(item.img)"
-             :style="'background:url('+item.img+') no-repeat center center;background-size:cover;'">
+             :style="'background:url('+item.img+') no-repeat center center/cover'">
           <div class="caption">
             <h5>{{item.text}}</h5>
           </div>
@@ -130,15 +130,30 @@ export default {
   }
   .expression .row.examples {
     display: flex;
-    justify-content: flex-start !important;
-    align-items: flex-start !important;
-    padding-top: 0 !important;
+    padding-top: 100px !important;
+    padding-bottom: 200px !important;
+    > div {
+      width: 600px !important;
+      height: 384px !important;
+      margin-bottom: 10px !important;
+    }
   }
   .expression .nav-tabs.nav-justified {
     display: flex;
     li {
       width: 50%;
     }
+  }
+  .nav-tabs.nav-justified > li {
+    width: 50% !important;
+    padding: 15.5px 40px !important; /*no*/
+    &:last-of-type {
+      line-height: 60px;
+    }
+  }
+  .nav-tabs.nav-justified > li a {
+    font-family: PingFangSC-Medium;
+    padding: 0 !important;
   }
 }
 .expression {
@@ -176,14 +191,14 @@ export default {
     }
   }
   .container_banner {
-    background: url('../../images/expre_banner.png') no-repeat center center;
+    background: url("../../images/expre_banner.png") no-repeat center center;
     background-size: cover;
   }
   .line1,
   .line2 {
     display: inline-block;
     width: 100px;
-    height: 2px;
+    height: 2px; /*no*/
     background: #40f2d0;
     position: absolute;
     bottom: 0;
@@ -320,12 +335,12 @@ export default {
       width: 432px;
       height: 274px;
     }
-    @media screen and (max-width: 700px) {
-      > div {
-        width: 45%; /* no */
-        height: 120px; /* no */
-      }
-    }
+    // @media screen and (max-width: 700px) {
+    //   > div {
+    //     width: 45%; /* no */
+    //     height: 120px; /* no */
+    //   }
+    // }
     @media screen and (min-width: 1440px) {
       > div {
         width: 432px; /* no */

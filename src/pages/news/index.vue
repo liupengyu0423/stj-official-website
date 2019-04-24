@@ -11,7 +11,7 @@
     </div>
     <div class="row examples"
          id="mao">
-      <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4 col-sm"
+      <div class="col-sm-4 col-md-4 col-xs-12 col-lg-4 col-sm"
            v-for="(item,index) in examples"
            :key="index">
         <div class="thumbnail">
@@ -146,7 +146,7 @@ export default {
 .modal-header {
   border-bottom: none !important;
 }
-@media (max-width: 768px) {
+@media (max-width: 760px) {
   .row.examples .col-xs-4 {
     width: 31% !important;
   }
@@ -159,10 +159,36 @@ export default {
     margin-right: 0 !important;
     margin-left: 0 !important;
   }
+  .row.examples {
+    padding: 38px 30px !important; /*no*/
+    .thumbnail {
+      padding: 38px 20px !important;
+      img {
+        height: 194px !important; /*no*/
+      }
+      .caption {
+        .title {
+          font-size: 32px !important;
+        }
+        .date {
+          font-size: 12px !important; /*no*/
+        }
+        .detail {
+          font-size: 14px !important; /*no*/
+        }
+        .learn_detail {
+          font-size: 14px !important;
+        }
+      }
+    }
+  }
+  .news .pagination > li > a {
+    font-size: 14px !important; /*no*/
+  }
 }
 .news {
   .container_banner {
-    background: url('../../images/news_banner.png') no-repeat center center;
+    background: url("../../images/news_banner.png") no-repeat center center;
     background-size: cover;
   }
   .col-sm {
