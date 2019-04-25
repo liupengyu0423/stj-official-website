@@ -201,9 +201,10 @@ export default {
       border: none;
     }
   }
-  // .row {
-  //   margin-right: 0;
-  // }
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
   .row.examples {
     padding: 2% 2%;
     display: flex;
@@ -367,6 +368,11 @@ export default {
   .news .pagination > li > a,
   .news .pagination > li > span {
     font-size: 16px !important; /*no*/
+  }
+  .news .row.examples {
+    padding-left: 0;
+    padding-right: 0;
+    display: initial !important;
   }
 }
 </style>
