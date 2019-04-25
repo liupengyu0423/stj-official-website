@@ -144,6 +144,9 @@ export default {
     // margin-top: 10px !important;
     font-size: 11px !important; /*no*/
   }
+  .net .xi-col-lg-.col-lg- p {
+    width: auto !important;
+  }
   .net .xi-col-lg-.col-lg- h4 {
     padding-top: 0 !important;
   }

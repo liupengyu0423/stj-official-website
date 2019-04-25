@@ -154,6 +154,10 @@ export default {
   .nav-tabs.nav-justified > li a {
     font-family: PingFangSC-Medium;
     padding: 0 !important;
+    font-size: 11px !important; /*no*/
+  }
+  .expression .row.examples .thumbnail .caption h5 {
+    font-size: 24px !important;
   }
 }
 .expression {
@@ -191,7 +195,7 @@ export default {
     }
   }
   .container_banner {
-    background: url("../../images/expre_banner.png") no-repeat center center;
+    background: url('../../images/expre_banner.png') no-repeat center center;
     background-size: cover;
   }
   .line1,
@@ -328,6 +332,7 @@ export default {
           font-size: 14px;
           width: 100% !important;
           margin: 0 !important;
+          line-height: 21.5px;
         }
       }
     }

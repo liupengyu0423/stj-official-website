@@ -160,12 +160,16 @@ export default {
           font-size: 32px !important;
         }
         .date {
-          font-size: 12px;
+          font-size: 22px !important;
         }
         .learn_detail {
-          font-size: 14px;
+          font-size: 22px !important;
         }
       }
+    }
+    > div.col-sm {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
     }
   }
   .news .pagination > li > a {
@@ -174,7 +178,7 @@ export default {
 }
 .news {
   .container_banner {
-    background: url("../../images/leader_banner.png") no-repeat center center;
+    background: url('../../images/leader_banner.png') no-repeat center center;
     background-size: cover;
   }
   .col-sm {
@@ -197,9 +201,9 @@ export default {
       border: none;
     }
   }
-  .row {
-    margin-right: 0;
-  }
+  // .row {
+  //   margin-right: 0;
+  // }
   .row.examples {
     padding: 2% 2%;
     display: flex;

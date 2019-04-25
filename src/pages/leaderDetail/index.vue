@@ -110,4 +110,14 @@ export default {
     }
   }
 }
+@media (max-width: 760px) {
+  .detail .container .detail_mid span {
+    font-size: 22px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .detail .container p.detail_mid span {
+    font-size: 16px !important; /*no*/
+  }
+}
 </style>

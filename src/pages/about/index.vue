@@ -20,7 +20,10 @@
           :class="index===click?'active nav-tabs-hover':'nav-tabs-hover'"
           v-for="(item,index) in items"
           :key="index">
-        <a @click="changeActive(index,item.href)">{{item.name}}</a>
+        <a @click="changeActive(index,item.href)">{{item.name}}
+          <span :class="click===0?'line1':click===1?'line2':'line3'"
+                v-if="click===index"></span>
+        </a>
       </li>
     </ul>
     <div class="container container_intro"
@@ -117,7 +120,7 @@
           <div class="row">
             <div class="bottom_intro bottom_intro2 col-lg-12 col-md-12 col-sm-12 col-xs-12">
               <h4>荣誉奖项</h4>
-              <p>通过了ISO9001质量管理体系、ISO14001环境管理体系和ISO18001职业健康管理体系三个国际标准化管理体系认证。 党、国家和省市部委领导王歧山、李建国、韩长赋、龚正、姜大明、田力普等领导都参观过公司产品，并做出高度评价。
+              <p>通过ISO9001质量管理体系、ISO14001环境管理体系和ISO18001职业健康管理体系三个国际标准化管理体系认证。 党、国家和省市部委领导王歧山、李建国、韩长赋、龚正、姜大明、田力普等领导都参观过公司产品，并做出高度评价。
               </p>
               <div class="catch-btn catch-btn-left"
                    @click="ic_left">
@@ -274,7 +277,26 @@ export default {
 .modal-header {
   border-bottom: none !important;
 }
+.line1,
+.line2,
+.line3 {
+  display: inline-block;
+  width: 100px;
+  height: 2px; /*no*/
+  background: #40f2d0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -50px;
+}
 @media (max-width: 760px) {
+  .line1,
+  .line2,
+  .line3 {
+    width: 80px;
+    margin-left: -40px;
+    bottom: -15px;
+  }
   .about .container-fluid .xi-col-lg-.col-lg- .row {
     padding-left: 40px !important;
   }
@@ -292,11 +314,33 @@ export default {
     left: 0 !important;
   }
   .container.container_intro2 .row .bottom_intro {
+    padding: 0 20px 0 38px !important;
+  }
+  .container.container_intro2 .row .bottom_intro.bottom_intro2 {
     padding: 0 20px !important;
   }
   .container-bj .responsive-div {
     width: 100% !important;
   }
+  .container-bj {
+    .col-sm-4,
+    .col-lg-4,
+    .col-md-4,
+    .col-xs-6 {
+      flex-shrink: 0;
+      width: 457px !important;
+      height: 290px !important;
+      margin-left: 24px !important;
+      &:first-of-type {
+        margin-left: 0px !important;
+      }
+      .thumbnail-bj {
+        width: 100% !important;
+        height: 100% !important;
+      }
+    }
+  }
+
   .responsive-div .thumbnail,
   .thumbnail-bj {
     width: 300px !important;
@@ -327,6 +371,7 @@ export default {
   }
   .about .responsive-div .qqqqq {
     .thumbnail {
+      margin-bottom: 0 !important;
       &:first-of-type {
         margin-left: 0 !important;
       }
@@ -335,17 +380,30 @@ export default {
   .qqqqq {
     margin: 0 20px 0 45px;
     width: 100%;
-    height: 400px !important;
+    height: 300px !important;
     display: flex;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
+  }
+  .responsive-div .caption {
+    height: 36px !important; /*no*/
+    padding: 8px 0 7px 14px !important;
+    h5 {
+      font-size: 14px !important; /*no*/
+      line-height: 28px !important; /*no*/
+    }
   }
   .nav.nav-tabs.nav-justified {
     display: flex;
     li {
       width: 33.3%;
+      line-height: 60px;
       a {
         border-radius: 0 !important;
+        font-family: PingFangSC-Medium;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        font-size: 11px !important; /*no*/
       }
     }
   }
@@ -457,6 +515,7 @@ export default {
     color: #303030 !important;
     display: inline;
     font-size: 16px;
+    padding: 0 15px 29px;
     cursor: pointer;
   }
   .nav-tabs.nav-justified {
@@ -465,6 +524,9 @@ export default {
     top: 0;
     z-index: 1000;
     background: #fff;
+  }
+  .nav-tabs.nav-justified > li {
+    position: relative;
   }
   .nav-tabs.nav-justified > li > a {
     border-bottom: none;
@@ -480,11 +542,11 @@ export default {
     // border-bottom: 2px solid #40f2d0 !important;
     padding: 0 15px 29px;
   }
-  .nav > .active > a,
+
   .nav > li > a:focus,
   .nav > li > a:hover {
     background: #fff;
-    border-bottom: 2px solid #40f2d0 !important;
+    // border-bottom: 2px solid #40f2d0 !important;
     padding: 0 15px 29px;
   }
   .nav-tabs > li > a:hover {
