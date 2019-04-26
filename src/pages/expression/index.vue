@@ -79,29 +79,32 @@ export default {
       items: [{ name: '农村户厕污水一体化生物处理设备', href: 'unify' }, { name: '生物环保厕所', href: 'wrashroom' }],
       click: 0,
       examples1: [
-        { text: '农村户厕一体化生物处理设备(单户）', img: require('../../images/l2/l1.jpg') },
-        { text: '农村户厕一体化生物处理设备（单户）', img: require('../../images/l2/l2.jpg') },
-        { text: '农村户厕一体化生物处理设备（单户）', img: require('../../images/l2/l3.png') },
-        { text: '农村户厕一体化生物处理设备（多户）', img: require('../../images/l2/l4.png') },
-        { text: '农村户厕一体化生物处理设备（小集中）', img: require('../../images/l2/l5.jpg') },
-        { text: '农村户厕一体化生物处理设备（村集中）', img: require('../../images/l2/l6.jpg') }
+        { text: '内蒙鄂托克旗', img: require('../../images/l3/l1.jpg') },
+        { text: '新疆喀什', img: require('../../images/l3/l2.jpg') },
+        { text: '广西上林县', img: require('../../images/l3/l3.jpg') },
+        { text: '陕西洛川县', img: require('../../images/l3/l4.jpg') },
+        { text: '青海门源县', img: require('../../images/l3/l5.jpg') },
+        { text: '宁夏利通区', img: require('../../images/l3/l6.jpg') },
+        { text: '宁夏灵武市', img: require('../../images/l3/l7.jpg') },
+        { text: '山东齐河县', img: require('../../images/l3/l8.jpg') },
+        { text: '山东荣成市', img: require('../../images/l3/l9.jpg') }
       ],
       examples2: [
-        { text: '街头站立式环保厕所', img: require('../../images/c2/c1.jpg') },
-        { text: '街头站立式环保厕所', img: require('../../images/c2/c2.jpg') },
-        { text: '微生物降解环保厕所', img: require('../../images/c2/c3.jpg') },
-        { text: '微生物降解环保厕所', img: require('../../images/c2/c4.jpg') },
-        { text: '泡沫封堵式环保厕所', img: require('../../images/c2/c5.jpg') },
-        { text: '水循环式环保厕所', img: require('../../images/c2/c6.jpg') },
-        { text: '水冲式环保厕所', img: require('../../images/c2/c7.jpg') },
-        { text: '流动环保厕所', img: require('../../images/c2/c8.jpg') },
-        { text: '单体环保厕所', img: require('../../images/c2/c9.jpg') },
-        { text: '单体环保厕所', img: require('../../images/c2/c10.jpg') },
-        { text: '广场舞用环保厕所', img: require('../../images/c2/c11.jpg') },
-        { text: '旅游景点环保厕所', img: require('../../images/c2/c12.jpg') },
-        { text: '拖车式环保厕所', img: require('../../images/c2/c13.jpg') },
-        { text: '固定式环保厕所', img: require('../../images/c2/c14.jpg') },
-        { text: '火车用环保厕所', img: require('../../images/c2/c15.jpg') }
+        { text: '北京八达岭长城', img: require('../../images/y2/y1.jpg') },
+        { text: '奥林匹克水上公园', img: require('../../images/y2/y2.jpg') },
+        { text: '上海奉贤', img: require('../../images/y2/y3.jpg') },
+        { text: '宁波', img: require('../../images/y2/y4.jpg') },
+        { text: '西安北门', img: require('../../images/y2/y5.jpg') },
+        { text: '西安街头', img: require('../../images/y2/y6.jpg') },
+        { text: '重庆街头', img: require('../../images/y2/y7.jpg') },
+        { text: '新疆阿克苏多浪公园', img: require('../../images/y2/y8.jpg') },
+        { text: '济南泉城广场', img: require('../../images/y2/y9.jpg') },
+        { text: '青岛世园会', img: require('../../images/y2/y10.jpg') },
+        { text: '青岛奥帆赛', img: require('../../images/y2/y11.jpg') },
+        { text: '泰山西天门', img: require('../../images/y2/y12.jpg') },
+        { text: '曲阜孔庙', img: require('../../images/y2/y13.jpg') },
+        { text: '威海海边', img: require('../../images/y2/y14.jpg') },
+        { text: '济南铁路局', img: require('../../images/y2/y15.jpg') }
       ]
     }
   },
@@ -313,6 +316,7 @@ export default {
       height: 100%;
       position: relative;
       border: none;
+      border-radius: 0 !important;
       padding: 0;
       background-size: auto 100%;
       background-position: center;
