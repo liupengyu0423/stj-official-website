@@ -1054,6 +1054,7 @@ export default {
         font-size: 20px; /*no*/
         width: 100% !important;
         margin: 0 !important;
+        line-height: 20px;
       }
     }
   }

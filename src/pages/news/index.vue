@@ -220,11 +220,12 @@ export default {
     margin-left: 0;
   }
   .row.examples {
-    padding: 2% 2%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    // padding: 2% 2%;
+    // display: flex;
+    // flex-wrap: wrap;
+    // align-items: center;
+    // justify-content: center;
+    // display: inline-block;
     h4 {
       font-size: 40px;
       text-align: center;
@@ -323,36 +324,42 @@ export default {
   //     padding: 60px 500px 11% !important; /* no */
   //   }
   // }
-  @media (min-width: 1300px) {
+  @media (min-width: 1440px) {
     .row.examples {
-      padding: 60px 25px 11% !important; /* no */
+      width: 1380px; /* no */
+      margin: 0 auto;
     }
   }
-  @media (min-width: 1400px) {
-    .row.examples {
-      padding: 60px 40px 11% !important; /* no */
-    }
-  }
-  @media (min-width: 1600px) {
-    .row.examples {
-      padding: 60px 100px 11% !important; /* no */
-    }
-  }
-  @media (min-width: 1800px) {
-    .row.examples {
-      padding: 60px 200px 11% !important; /* no */
-    }
-  }
-  @media (min-width: 2100px) {
-    .row.examples {
-      padding: 60px 300px 11% !important; /* no */
-    }
-  }
-  @media (min-width: 2500px) {
-    .row.examples {
-      padding: 60px 400px 11% !important; /* no */
-    }
-  }
+  // @media (min-width: 1300px) {
+  //   .row.examples {
+  //     padding: 60px 25px 11% !important; /* no */
+  //   }
+  // }
+  // @media (min-width: 1400px) {
+  //   .row.examples {
+  //     padding: 60px 40px 11% !important; /* no */
+  //   }
+  // }
+  // @media (min-width: 1600px) {
+  //   .row.examples {
+  //     padding: 60px 100px 11% !important; /* no */
+  //   }
+  // }
+  // @media (min-width: 1800px) {
+  //   .row.examples {
+  //     padding: 60px 200px 11% !important; /* no */
+  //   }
+  // }
+  // @media (min-width: 2100px) {
+  //   .row.examples {
+  //     padding: 60px 300px 11% !important; /* no */
+  //   }
+  // }
+  // @media (min-width: 2500px) {
+  //   .row.examples {
+  //     padding: 60px 400px 11% !important; /* no */
+  //   }
+  // }
   .navbar {
     margin-bottom: 0;
   }

@@ -150,6 +150,7 @@ export default {
   }
   .row.examples {
     padding: 38px 30px !important; /*no*/
+    display: block !important;
     .thumbnail {
       padding: 38px 20px !important;
       img {
@@ -206,11 +207,12 @@ export default {
     margin-left: 0;
   }
   .row.examples {
-    padding: 2% 2%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    // padding: 2% 2%;
+    // display: flex;
+    // flex-wrap: wrap;
+    // align-items: center;
+    // justify-content: center;
+    // display: inline-block;
     h4 {
       font-size: 40px;
       text-align: center;
@@ -289,11 +291,12 @@ export default {
       }
     }
   }
-  // @media (min-width: 1440px) {
-  //   .row.examples {
-  //     padding: 0 50px; /* no */
-  //   }
-  // }
+  @media (min-width: 1440px) {
+    .row.examples {
+      width: 1380px; /* no */
+      margin: 0 auto;
+    }
+  }
   // @media (min-width: 1300px) {
   //   .row.examples {
   //     padding: 60px 150px 11% !important; /* no */
@@ -304,36 +307,46 @@ export default {
   //     padding: 60px 500px 11% !important; /* no */
   //   }
   // }
-  @media (min-width: 1300px) {
-    .row.examples {
-      padding: 60px 25px 11% !important; /* no */
-    }
-  }
-  @media (min-width: 1400px) {
-    .row.examples {
-      padding: 60px 40px 11% !important; /* no */
-    }
-  }
-  @media (min-width: 1600px) {
-    .row.examples {
-      padding: 60px 100px 11% !important; /* no */
-    }
-  }
-  @media (min-width: 1800px) {
-    .row.examples {
-      padding: 60px 200px 11% !important; /* no */
-    }
-  }
-  @media (min-width: 2100px) {
-    .row.examples {
-      padding: 60px 300px 11% !important; /* no */
-    }
-  }
-  @media (min-width: 2500px) {
-    .row.examples {
-      padding: 60px 400px 11% !important; /* no */
-    }
-  }
+  // @media (min-width: 1300px) {
+  //   .row.examples {
+  //     padding: 60px 25px 11% !important; /* no */
+  //   }
+  // }
+  // @media (min-width: 1480px) {
+  //   .row.examples {
+  //     padding: 60px 40px 11% !important; /* no */
+  //     margin-left: 20px;
+  //   }
+  // }
+  // @media (min-width: 1600px) {
+  //   .row.examples {
+  //     padding: 60px 100px 11% !important; /* no */
+  //     margin-left: 10px;
+  //   }
+  // }
+  // @media (min-width: 1650px) {
+  //   .row.examples {
+  //     margin-left: 35px;
+  //   }
+  // }
+  // @media (min-width: 1800px) {
+  //   .row.examples {
+  //     padding: 60px 200px 11% !important; /* no */
+  //     margin-left: 40px;
+  //   }
+  // }
+  // @media (min-width: 2100px) {
+  //   .row.examples {
+  //     padding: 60px 300px 11% !important; /* no */
+  //     margin-left: 50px;
+  //   }
+  // }
+  // @media (min-width: 2500px) {
+  //   .row.examples {
+  //     padding: 60px 400px 11% !important; /* no */
+  //     margin-left: 60px;
+  //   }
+  // }
   .navbar {
     margin-bottom: 0;
   }
