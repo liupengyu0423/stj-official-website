@@ -16,10 +16,10 @@ body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, l
 }
 
 .carousel-inner {
-  width: 1000px;
-  border-radius: 0;
-  height: 800px;
-  margin: 0 auto;
+  width: 800px !important;
+  border-radius: 0 !important;
+  height: auto !important;
+  margin: 200px auto !important;
 }
 
 html{

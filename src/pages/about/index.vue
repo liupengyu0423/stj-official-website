@@ -15,6 +15,7 @@
         </div>
       </div>
     </div>
+    <div id="unify"></div>
     <ul class="nav nav-tabs nav-justified">
       <li role="presentation"
           :class="index===click?'active nav-tabs-hover':'nav-tabs-hover'"
@@ -26,8 +27,7 @@
         </a>
       </li>
     </ul>
-    <div class="container container_intro"
-         id="unify">
+    <div class="container container_intro">
       <div class="row"
            v-for="(item,index) in click===0?intro1:click===1?intro2:intro3"
            :key="index">
@@ -39,8 +39,8 @@
         </div>
       </div>
     </div>
-    <div class="responsive-div6"
-         id="profile">
+    <div id="profile"></div>
+    <div class="responsive-div6">
       <h4>发展历程</h4>
       <div class="row">
         <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
@@ -104,8 +104,8 @@
         </div>
       </div>
     </div>
-    <div class="container container_intro2 container_intro3"
-         id="message">
+    <div id="message"></div>
+    <div class="container container_intro2 container_intro3">
       <div class="row">
         <div class="bottom_intro col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <p class="title">生态洁产品广泛运用到包括</p>
@@ -289,7 +289,22 @@ export default {
   left: 50%;
   margin-left: -50px;
 }
+#profile {
+  padding: 40px 0;
+  background: #ebf4f4;
+}
+#message {
+  padding: 40px 0;
+}
+
 @media (max-width: 760px) {
+  #profile {
+    padding: 60px 0;
+    background: #ebf4f4;
+  }
+  #message {
+    padding: 60px 0;
+  }
   .line1,
   .line2,
   .line3 {
@@ -407,8 +422,30 @@ export default {
       }
     }
   }
+  .about .row p,
+  .about .text {
+    font-size: 14px !important; /*no*/
+  }
+  // .about p.laster {
+  //   margin-bottom: 50px !important; /*no*/
+  // }
+  .about .bottom_intro .title {
+    // padding-top: 10px !important;
+  }
+  .about h6 {
+    // margin-top: 10px !important;
+  }
+  .about .responsive-div6 h4 {
+    padding-top: 40px; /*no*/
+  }
 }
 .about {
+  // #profile {
+  //   height: 40px; /*no*/
+  // }
+  // #message {
+  //   height: -0px; /*no*/
+  // }
   .responsive-div6 {
     padding: 6vw 12vw 5vw !important;
     box-sizing: border-box;
@@ -416,6 +453,7 @@ export default {
     h4 {
       text-align: center;
       margin-bottom: 72px;
+      margin-top: 35px;
       font-family: PingFangSC-Semibold;
       font-size: 32px;
     }
@@ -428,11 +466,14 @@ export default {
         font-size: 32px;
         color: #1aa8aa;
         &:last-of-type {
-          position: relative;
+          // position: relative;
+          padding: 0;
+          padding-left: 3vw;
+          margin-left: -24.5px;
           img {
-            position: absolute;
-            top: 0;
-            left: 20px;
+            // position: absolute;
+            // top: 0;
+            // left: 20px;
             width: 49px;
             height: 49px;
           }
@@ -572,7 +613,7 @@ export default {
     font-family: PingFangSC-Light;
   }
   p.laster {
-    margin-bottom: 7.95vw;
+    margin-bottom: 4vw;
     font-family: PingFangSC-Light;
   }
   p.two_title {
@@ -732,6 +773,16 @@ export default {
   }
   .bottom_intro {
     // margin-left: 40px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  #profile {
+    padding: 45px 0;
+    background: #ebf4f4;
+  }
+  #message {
+    padding: 45px 0;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {

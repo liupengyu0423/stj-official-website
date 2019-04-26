@@ -329,7 +329,7 @@ export default {
         h5 {
           color: #fff;
           font-family: PingFangSC-Regular;
-          font-size: 20px; /*no*/
+          font-size: 18px;
           width: 100% !important;
           margin: 0 !important;
           line-height: 21.5px;
