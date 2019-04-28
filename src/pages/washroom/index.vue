@@ -208,6 +208,7 @@ export default {
     }
   },
   created () {
+    _gaq.push(['_trackEvent', 'jump', '产品中心-生物环保厕所', 'washroom']);
   },
   methods: {
     ic_left () {
@@ -230,9 +231,9 @@ export default {
     },
     changeActive (index) {
       if (index) {
-        location.href = '/#/washroom'
+        location.href = '/products/bio-toilet'
       } else {
-        location.href = '/#/product'
+        location.href = '/products/rural-household-toilet'
       }
     },
     changegroup (index) {
@@ -259,6 +260,11 @@ export default {
 <style lang="scss" scoped>
 .modal-header {
   border-bottom: none !important;
+}
+.unify {
+  .navbar-sticky {
+    position: static;
+  }
 }
 .nav-tabs-hover.active {
   color: #1aa8aa;

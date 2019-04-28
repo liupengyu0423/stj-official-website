@@ -8,7 +8,6 @@
 export default {
   name: 'App',
   updated () {
-    console.log(1)
     window.scrollTo(0, 0)
   },
   mounted () {

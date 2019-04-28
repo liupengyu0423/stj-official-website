@@ -226,6 +226,7 @@ export default {
     Swiper
   },
   created () {
+    _gaq.push(['_trackEvent', 'jump', '生态洁首页', 'home']);
     this.examples1 = this.examples2
   },
   methods: {
@@ -248,7 +249,6 @@ export default {
       }
     },
     blowimg () {
-      console.log($('img.intro_img').zoomify())
       $('img.intro_img').zoomify();
     },
     learn_detail (news) {

@@ -56,24 +56,23 @@ export default {
   data () {
     return {
       tab: [
-        { tab_C: '首页', tab_E: 'index' },
-        { tab_C: '产品中心', tab_E: 'product' },
-        { tab_C: '互联网+', tab_E: 'net' },
-        { tab_C: '应用案例', tab_E: 'expression' },
-        { tab_C: '领导关怀', tab_E: 'leader' },
-        { tab_C: '新闻中心', tab_E: 'news' },
-        { tab_C: '关于我们', tab_E: 'about' }
+        { tab_C: '首页', tab_E: '/' },
+        { tab_C: '产品中心', tab_E: '/products/rural-household-toilet' },
+        { tab_C: '互联网+', tab_E: '/internet-plus' },
+        { tab_C: '应用案例', tab_E: '/cases/rural-household-toilet' },
+        { tab_C: '领导关怀', tab_E: '/government-officials' },
+        { tab_C: '新闻中心', tab_E: '/news/page/1' },
+        { tab_C: '关于我们', tab_E: '/about' }
       ],
       item_tab: [
-        { tab_C: '农村户厕污水一体化生物处理设备', tab_E: 'product' },
-        { tab_C: '生物环保厕所', tab_E: 'washroom' }
+        { tab_C: '农村户厕污水一体化生物处理设备', tab_E: '/products/rural-household-toilet' },
+        { tab_C: '生物环保厕所', tab_E: '/products/bio-toilet' }
       ],
       hash: ''
     }
   },
   created () {
     this.hash = location.hash
-    console.log(location.hash)
   }
 }
 </script>

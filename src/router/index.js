@@ -4,42 +4,45 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [{
     path: '/',
-    redirect: '/index'
-  },
-  {
-    path: '/index',
     name: 'index',
     component: () => import('@/pages/index/index.vue'),
     meta: '官网首页'
   },
   {
-    path: '/product',
+    path: '/products/rural-household-toilet',
     name: 'product',
     component: () => import('@/pages/product/index.vue'),
     meta: '产品中心'
   },
   {
-    path: '/expression',
+    path: '/cases/rural-household-toilet',
     name: 'expression',
     component: () => import('@/pages/expression/index.vue'),
     meta: '应用案例'
   },
   {
-    path: '/news',
+    path: '/cases/bio-toilet',
+    name: 'expression',
+    component: () => import('@/pages/expression2/index.vue'),
+    meta: '应用案例'
+  },
+  {
+    path: '/news/page/:id',
     name: 'news',
     component: () => import('@/pages/news/index.vue'),
-    meta: '应用案例'
+    meta: '新闻中心'
   },
   {
-    path: '/newsDetail',
+    path: '/news/:id',
     name: 'newsDetail',
     component: () => import('@/pages/newsDetail/index.vue'),
-    meta: '应用案例'
+    meta: '新闻详情'
   },
   {
-    path: '/leader',
+    path: '/government-officials',
     name: 'leader',
     component: () => import('@/pages/leader/index.vue'),
     meta: '领导关怀'
@@ -51,7 +54,7 @@ export default new Router({
     meta: '领导关怀'
   },
   {
-    path: '/washroom',
+    path: '/products/bio-toilet',
     name: 'washroom',
     component: () => import('@/pages/washroom/index.vue'),
     meta: '产品中心'
@@ -63,7 +66,7 @@ export default new Router({
     meta: '关于我们'
   },
   {
-    path: '/net',
+    path: '/internet-plus',
     name: 'net',
     component: () => import('@/pages/net/index.vue'),
     meta: '互联网+'

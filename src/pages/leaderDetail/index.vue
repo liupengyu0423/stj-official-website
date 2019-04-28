@@ -55,6 +55,7 @@ export default {
     }
   },
   created () {
+    _gaq.push(['_trackEvent', 'jump', '领导关怀详情', 'leader-detail']);
     this.data = JSON.parse(localStorage.getItem('news'))
   },
   methods: {

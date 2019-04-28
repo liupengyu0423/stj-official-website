@@ -93,7 +93,7 @@ export default {
     }
   },
   created () {
-
+    _gaq.push(['_trackEvent', 'jump', '互联网+', 'net+']);
   },
   methods: {
 

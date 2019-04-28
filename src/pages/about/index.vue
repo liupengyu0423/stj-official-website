@@ -233,6 +233,7 @@ export default {
     }
   },
   created () {
+    _gaq.push(['_trackEvent', 'jump', '关于我们', 'about']);
     this.examples1 = this.examples2
   },
   methods: {
@@ -276,6 +277,11 @@ export default {
 <style lang="scss" scoped>
 .modal-header {
   border-bottom: none !important;
+}
+.about {
+  .navbar-sticky {
+    position: static;
+  }
 }
 .line1,
 .line2,

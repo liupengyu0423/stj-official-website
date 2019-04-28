@@ -42,10 +42,8 @@ export default {
   },
   methods: {
     onEditorChange (event) {
-      console.log(event)
     },
     submit () {
-      console.log(this.content)
     }
   },
   components: {

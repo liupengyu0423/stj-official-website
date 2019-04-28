@@ -37,12 +37,12 @@
           </a>
         </li>
         <li>
-          <a href="#mao"
+          <a href="#/news/page/1"
              :class="num==='one'?'active':''"
              @click="tab('one')">1</a>
         </li>
         <li>
-          <a href="#mao"
+          <a href="#/news/page/2"
              :class="num==='two'?'active':''"
              @click="tab('two')">2</a>
         </li>
@@ -116,11 +116,12 @@ export default {
     CommonFoot
   },
   created () {
+    _gaq.push(['_trackEvent', 'jump', '新闻中心', 'news']);
     this.examples = this.examples1
   },
   methods: {
     learn_detail (news) {
-      location.href = '/#/newsDetail?id' + news.id
+      location.href = '/news/' + news.id
       localStorage.setItem('news', JSON.stringify(news))
     },
     showimage (source) {

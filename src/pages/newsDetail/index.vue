@@ -55,6 +55,7 @@ export default {
     }
   },
   created () {
+    _gaq.push(['_trackEvent', 'jump', '新闻详情', 'news-details']);
     this.data = JSON.parse(localStorage.getItem('news'))
   },
   methods: {

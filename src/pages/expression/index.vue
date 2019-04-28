@@ -110,6 +110,11 @@ export default {
   },
   methods: {
     changeActive (index) {
+      if (index) {
+        location.href = '/cases/bio-toilet'
+      } else {
+        location.href = '/cases/rural-household-toilet'
+      }
       this.click = index
     },
     showimage (source) {
@@ -119,6 +124,9 @@ export default {
     close () {
       $("#ShowImage_Form").modal('hide');
     }
+  },
+  created () {
+    _gaq.push(['_trackEvent', 'jump', '应用案例', 'examples']);
   }
 }
 </script>
@@ -126,6 +134,11 @@ export default {
 <style lang="scss" scoped>
 .modal-header {
   border-bottom: none !important;
+}
+.expression {
+  .navbar-sticky {
+    position: static;
+  }
 }
 @media (max-width: 760px) {
   .expression .row.examples > div.col-xs-6 {

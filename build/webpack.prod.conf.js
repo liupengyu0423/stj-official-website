@@ -122,7 +122,8 @@ const webpackConfig = merge(baseWebpackConfig, {
     ]),
     new PrerenderSpaPlugin({
       staticDir: path.join(__dirname, '../dist'),
-      routes: ['/', '/index', '/product', '/expression', '/news', '/newsDetail', '/leader', '/leaderDetail', '/washroom', '/about', '/net'],
+      routes: ['/', '/products', '/cases', '/cases', '/news', '/news', '/government-officials', '/about', '/internet-plus'],
+      // routes: ['/', '/about', '/expression', '/expression2', '/index', '/leader', '/leaderDetail', '/net', '/news', '/newsDetail', '/product', '/washroom'],
       renderer: new Renderer({
         inject: {
           foo: 'bar'

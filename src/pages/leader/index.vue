@@ -107,11 +107,12 @@ export default {
     CommonFoot
   },
   created () {
+    _gaq.push(['_trackEvent', 'jump', '领导关怀', 'leader']);
     this.examples = this.examples1
   },
   methods: {
     learn_detail (news) {
-      location.href = '/#/newsDetail?id' + news.id
+      location.href = '/news/' + news.id
       localStorage.setItem('news', JSON.stringify(news))
     },
     showimage (source) {
