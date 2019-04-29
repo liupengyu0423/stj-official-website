@@ -14,37 +14,37 @@ export default new Router({
   {
     path: '/products/rural-household-toilet',
     name: 'product',
-    component: () => import('@/pages/product/index.vue'),
+    component: () => import('@/pages/products/rural-household-toilet.vue'),
     meta: '产品中心'
   },
   {
     path: '/cases/rural-household-toilet',
     name: 'expression',
-    component: () => import('@/pages/expression/index.vue'),
+    component: () => import('@/pages/cases/rural-household-toilet.vue'),
     meta: '应用案例'
   },
   {
     path: '/cases/bio-toilet',
     name: 'expression',
-    component: () => import('@/pages/expression2/index.vue'),
+    component: () => import('@/pages/cases/bio-toilet.vue'),
     meta: '应用案例'
   },
   {
     path: '/news/page/:id',
     name: 'news',
-    component: () => import('@/pages/news/index.vue'),
+    component: () => import('@/pages/news/page.vue'),
     meta: '新闻中心'
   },
   {
     path: '/news/:id',
     name: 'newsDetail',
-    component: () => import('@/pages/newsDetail/index.vue'),
+    component: () => import('@/pages/news/index.vue'),
     meta: '新闻详情'
   },
   {
     path: '/government-officials',
     name: 'leader',
-    component: () => import('@/pages/leader/index.vue'),
+    component: () => import('@/pages/government-officials/index.vue'),
     meta: '领导关怀'
   },
   {
@@ -56,7 +56,7 @@ export default new Router({
   {
     path: '/products/bio-toilet',
     name: 'washroom',
-    component: () => import('@/pages/washroom/index.vue'),
+    component: () => import('@/pages/products/bio-toilet.vue'),
     meta: '产品中心'
   },
   {
@@ -68,7 +68,7 @@ export default new Router({
   {
     path: '/internet-plus',
     name: 'net',
-    component: () => import('@/pages/net/index.vue'),
+    component: () => import('@/pages/internet-plus/index.vue'),
     meta: '互联网+'
   }
   ]
